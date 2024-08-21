@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Changan Bold";
+  src: local("CHANGANUNITYPE-BOLD"),
+    url("./assets/fonts/CHANGANUNITYPE-BOLD.otf") format("truetype");
+}
