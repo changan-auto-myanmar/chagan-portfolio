@@ -4,6 +4,7 @@ export default {
     extend: {
       fontFamily: {
         changan: ["Changan Bold"],
+        poppin: ["Poppin"],
       },
     },
   },

@@ -7,3 +7,13 @@
   src: local("CHANGANUNITYPE-BOLD"),
     url("./assets/fonts/CHANGANUNITYPE-BOLD.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "Poppin";
+  src: local("Poppins-Regular"),
+    url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+body {
+  @apply font-poppin;
+}
