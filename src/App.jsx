@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Service from "./pages/Service";
 import PageNotFound from "./pages/PageNotFound";
 import Navbar from "./components/Navbar";
+import CarModel from "./pages/CarModel";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/car-model" element={<CarModel />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Service />} />
           <Route path="*" element={<PageNotFound />} />

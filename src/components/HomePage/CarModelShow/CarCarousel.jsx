@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 import { SwiperButtonNext, SwiperButtonPrev } from "./../../SwiperBtn";
 
 const CarCarousel = ({ tab }) => {
-  console.log(typeof tab, tab);
+  // console.log(typeof tab, tab);
   return (
     <div className="w-[800px] relative">
       <Swiper slidesPerView={1} modules={[Navigation]} navigation>
