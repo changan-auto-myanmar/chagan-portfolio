@@ -8,11 +8,11 @@ const Showroom = ({ showroom, index }) => {
         isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="w-full md:w-3/5 h-[440px] w-[660px] ">
+      <div className=" md:w-3/5 h-[440px]  ">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
-          className="w-full h-full rounded-lg"
+          className="w-[660px] h-full rounded-lg"
         />
       </div>
       <div className="w-full md:w-2/5 flex flex-col justify-between h-[350px]">
