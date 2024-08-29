@@ -36,10 +36,10 @@ function ServiceShow() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5">
         {services.map((service) => (
           <div
-            className="relative flex flex-col items-center justify-end h-[450px] bg-cover bg-center overflow-hidden shadow-lg border border-gray-700"
+            className="relative flex flex-col items-center justify-end w-[385px] h-[605px] bg-cover bg-center overflow-hidden shadow-lg border border-gray-700"
             key={service.id}
           >
-            <div className="absolute inset-0 bg-black ">
+            <div className="absolute inset-0 bg-black w-full h-[605px]">
               <img src={service.image} className="w-full h-full" />
             </div>
             {/* Dark overlay */}

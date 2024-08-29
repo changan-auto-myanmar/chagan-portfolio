@@ -8,7 +8,7 @@ const Showroom = ({ showroom, index }) => {
         isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="w-full md:w-3/5 h-[350px] ">
+      <div className="w-full md:w-3/5 h-[440px] w-[660px] ">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
