@@ -1,9 +1,13 @@
-import CarBanner from "../components/CarModel/CarBanner";
+import CarBrandBanner from "../components/CarModel/CarBrandBanner";
+import Footer from "../components/Footer";
+import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
 
 function CarModel() {
   return (
     <div>
-      <CarBanner />
+      <CarBrandBanner />
+      <ShowroomList />
+      <Footer />
     </div>
   );
 }

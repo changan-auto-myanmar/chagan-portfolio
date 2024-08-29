@@ -6,6 +6,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import { SwiperButtonNext, SwiperButtonPrev } from "./../../SwiperBtn";
+import { Link } from "react-router-dom";
 
 const CarCarousel = ({ tab }) => {
   // console.log(typeof tab, tab);
@@ -20,13 +21,13 @@ const CarCarousel = ({ tab }) => {
             <img src={item.img} className="" />
             <div className="text-center absolute bottom-0">
               <h2 className="text-xl font-semibold pt-3">{item.name}</h2>
-              <a
-                href="#"
+              <Link
+                to={`/car-detail/${item.id}`}
                 className="mt-2 inline-block border border-black px-4 py-2 text-black rounded hover:bg-white hover:text-black"
               >
                 EXPLORE
                 <MdArrowRightAlt className="inline-block ms-10 text-3xl" />
-              </a>
+              </Link>
             </div>
           </SwiperSlide>
         ))}

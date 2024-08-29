@@ -24,7 +24,7 @@ const Navbar = () => {
           <Link to="/services" className="text-gray-300 hover:text-white">
             Services
           </Link>
-          <Link to="/services" className="text-gray-300 hover:text-white">
+          <Link to="/new" className="text-gray-300 hover:text-white">
             New & Event
           </Link>
           <Link to="/contact" className="text-gray-300 hover:text-white">
