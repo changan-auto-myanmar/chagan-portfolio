@@ -12,8 +12,13 @@ export const tabs = [
     id: "1",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={changan} className="w-[35px] h-[35px]" />
-        <p className="text-[14px] font-changan font-bold">CHANGAN</p>
+        <img
+          src={changan}
+          className=" w-[50px] h-[50px] md:w-[35px] md:h-[35px]"
+        />
+        <p className="text-[8px] font-changan font-bold hidden md:block">
+          CHANGAN
+        </p>
       </div>
     ),
     content: [
@@ -33,8 +38,10 @@ export const tabs = [
     id: "2",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={kaicene} className="w-[35px] h-[35px]" />
-        <p className="text-[14px] font-changan font-bold">KAICENE</p>
+        <img src={kaicene} className="w-[50px] h-[50px] w-[35px] h-[35px]" />
+        <p className="text-[8px] font-changan font-bold hidden md:block">
+          KAICENE
+        </p>
       </div>
     ),
     content: [
@@ -54,8 +61,10 @@ export const tabs = [
     id: "3",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={deepal} className="w-[35px] h-[35px]" />
-        <p className="text-[14px] font-changan font-bold">DEEPAL</p>
+        <img src={deepal} className="w-[50px] h-[50px] w-[35px] h-[35px]" />
+        <p className="text-[8px] font-changan font-bold hidden md:block">
+          DEEPAL
+        </p>
       </div>
     ),
     content: [

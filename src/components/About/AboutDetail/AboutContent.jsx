@@ -15,7 +15,7 @@ As one of the top four automobile groups in China and the top selling domestic C
   ];
   return (
     <div className="container mx-auto mt-10 p-6">
-      <p className="text-[32px] font-changan font-bold">About CHANGAN</p>
+      <p className="header-text font-changan font-bold">About CHANGAN</p>
       <div className="flex flex-col gap-12">
         {showrooms.map((showroom, index) => (
           <AboutDetail key={index} showroom={showroom} index={index} />

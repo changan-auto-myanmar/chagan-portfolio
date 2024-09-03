@@ -8,18 +8,18 @@ const Showroom = ({ showroom, index }) => {
         isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className=" md:w-3/5 h-[440px]  ">
+      <div className=" md:w-3/5 lg:h-[440px]  ">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
           className="w-[660px] h-full rounded-lg"
         />
       </div>
-      <div className="w-full md:w-2/5 flex flex-col justify-between h-[350px]">
-        <h2 className="text-[32px] font-changan font-bold">
+      <div className="w-full md:w-2/5 flex flex-col justify-between lg:h-[350px]">
+        <h2 className="herder-text font-changan font-bold">
           {showroom.name} Showroom
         </h2>
-        <p className="text-[20px] mt-5">{showroom.description}</p>
+        <p className="body-text lg:text-[20px] mt-5">{showroom.description}</p>
         <p>
           <a
             href={`tel:${showroom.phone}`}
@@ -27,7 +27,7 @@ const Showroom = ({ showroom, index }) => {
           >
             <span className="flex items-center">
               <MdOutlineLocalPhone />
-              <span className="ms-5">{showroom.phone}</span>
+              <span className="ms-5 body-text">{showroom.phone}</span>
             </span>
           </a>
         </p>

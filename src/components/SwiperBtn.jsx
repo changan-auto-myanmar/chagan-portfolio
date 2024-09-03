@@ -7,7 +7,7 @@ export const SwiperButtonNext = ({ children }) => {
   const swiper = useSwiper();
   return (
     <button
-      className="bg-white hover:bg-gray-900 shadow shadow-gray-500 hover:text-white text-black font-bold py-4 px-4 rounded "
+      className="bg-white hover:bg-gray-900 shadow shadow-gray-500 hover:text-white text-black font-bold p-2 md:p-4 rounded "
       onClick={() => swiper.slideNext()}
     >
       {children ? children : <IoMdArrowDropright className="text-3xl" />}
@@ -19,7 +19,7 @@ export const SwiperButtonPrev = ({ children }) => {
   const swiper = useSwiper();
   return (
     <button
-      className="bg-white hover:bg-gray-900 shadow shadow-gray-500 hover:text-white text-black font-bold py-4 px-4 rounded "
+      className="bg-white hover:bg-gray-900 shadow shadow-gray-500 hover:text-white text-black font-bold p-2 md:p-4 rounded "
       onClick={() => swiper.slidePrev()}
     >
       {children ? children : <IoMdArrowDropleft className="text-3xl" />}

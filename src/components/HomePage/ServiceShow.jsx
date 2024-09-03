@@ -23,23 +23,23 @@ function ServiceShow() {
     },
   ];
   return (
-    <div className="p-[64px]">
-      <h1 className="text-[32px] font-changan font-bold">
+    <div className="p-5 lg:p-20">
+      <h1 className="header-text font-changan font-bold">
         Service for our Customer
       </h1>
-      <p className="mt-3 text-[20px]">
+      <p className="mt-3 body-text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
         numquam eum dolorem sed fuga architecto iusto dolore ut et cumque rerum
         animi quibusdam, cum doloribus possimus perspiciatis? Tempore, odio
         deleniti.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-5">
+      <div className="grid grid-cols-1 sm:grid-cols-3 mt-5">
         {services.map((service) => (
           <div
-            className="relative flex flex-col items-center justify-end w-[385px] h-[605px] bg-cover bg-center overflow-hidden shadow-lg border border-gray-700"
+            className="relative flex flex-col items-center justify-end h-[450px] md:h-[600px] bg-cover bg-center overflow-hidden shadow-lg border border-gray-700"
             key={service.id}
           >
-            <div className="absolute inset-0 bg-black w-full h-[605px]">
+            <div className="absolute inset-0 bg-black ">
               <img src={service.image} className="w-full h-full" />
             </div>
             {/* Dark overlay */}

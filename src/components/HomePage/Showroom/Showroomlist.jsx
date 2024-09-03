@@ -20,10 +20,10 @@ const ShowroomList = () => {
   ];
   return (
     <div className="container mx-auto mt-10 p-6">
-      <p className="text-[32px] font-changan font-bold">
+      <p className="header-text font-changan font-bold">
         Our Showroom in Myanmar
       </p>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col lg:gap-12">
         {showrooms.map((showroom, index) => (
           <Showroom key={index} showroom={showroom} index={index} />
         ))}

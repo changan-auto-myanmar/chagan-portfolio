@@ -46,7 +46,7 @@ function CarBrandBanner() {
       <Swiper
         modules={[EffectFade]}
         effect="fade"
-        className="relative"
+        className="relative h-[300px] md:h-[500px"
         onSlideChange={handleSlideChange}
       >
         {carModelarray.map((item) => (
@@ -54,12 +54,12 @@ function CarBrandBanner() {
             <div className="brightness-50 bg-black">
               <img src={item.img} className="w-full h-[500px]" />
             </div>
-            <p className="absolute bottom-[64px] left-0 z-10 ps-[64px] text-white text-[64px] font-changan font-bold">
+            <p className="absolute bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold">
               {item.name}
             </p>
           </SwiperSlide>
         ))}
-        <div className="absolute bottom-[64px] right-0 z-10 pe-[64px] space-x-[24px]">
+        <div className="absolute bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
           <SwiperButtonPrev />
           <SwiperButtonNext />
         </div>

@@ -11,12 +11,12 @@ import { Link } from "react-router-dom";
 const CarCarousel = ({ tab }) => {
   // console.log(typeof tab, tab);
   return (
-    <div className="w-[800px] relative">
+    <div className="w-screen lg:w-[800px] px-10 relative">
       <Swiper slidesPerView={1} modules={[Navigation]} navigation>
         {tab.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="flex items-center flex-col h-[350px]"
+            className="flex items-center flex-col h-[300px] md:h-[350px]"
           >
             <img src={item.img} className="" />
             <div className="text-center absolute bottom-0">
@@ -31,10 +31,10 @@ const CarCarousel = ({ tab }) => {
             </div>
           </SwiperSlide>
         ))}
-        <div className="absolute top-[50%] translate-y-[-50%] left-0  z-10">
+        <div className="absolute top-[50%] translate-y-[-50%] left-0  z-10 hidden lg:block">
           <SwiperButtonPrev />
         </div>
-        <div className="absolute top-[50%] translate-y-[-50%] right-0 z-10">
+        <div className="absolute top-[50%] translate-y-[-50%] right-0 z-10 hidden lg:block">
           <SwiperButtonNext />
         </div>
       </Swiper>

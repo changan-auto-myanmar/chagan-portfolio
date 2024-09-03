@@ -6,7 +6,7 @@ import content3 from "./../../../assets/images/content3.png";
 import content4 from "./../../../assets/images/content1.png";
 import Content from "./Content";
 
-const tabs = [
+export const tabs = [
   {
     id: "1",
     label: "News",

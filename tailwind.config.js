@@ -6,6 +6,10 @@ export default {
         changan: ["Changan Bold"],
         poppin: ["Poppin"],
       },
+      fontSize: {
+        header: ["18px"],
+        body: ["14px"],
+      },
     },
   },
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],

@@ -8,15 +8,15 @@ const AboutDetail = ({ showroom, index }) => {
         isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="w-full md:w-1/2 h-[350px] ">
+      <div className="w-full md:w-1/2 md:h-[350px] ">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
           className="w-full h-full rounded-lg"
         />
       </div>
-      <div className="w-full md:w-1/2 flex flex-col justify-between h-[350px]">
-        <p className="text-[20px] mt-5">{showroom.description}</p>
+      <div className="w-full md:w-1/2 flex flex-col justify-between md:h-[350px]">
+        <p className="body-text mt-5">{showroom.description}</p>
       </div>
     </div>
   );

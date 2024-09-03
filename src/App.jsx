@@ -9,11 +9,13 @@ import CarDetail from "./pages/CarDetail";
 import NewAndEvent from "./pages/NewAndEvent";
 import NewDetail from "./pages/NewDetail";
 import ContactUs from "./pages/ContactUs";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
       <div>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

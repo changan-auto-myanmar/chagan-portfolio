@@ -1,5 +1,3 @@
-import React from "react";
-
 const NewDetailArray = [
   {
     id: 1,
@@ -32,8 +30,8 @@ function NewDetailContent() {
     <div className="container mx-auto mt-10 px-6">
       {NewDetailArray.map((newdetail) => (
         <div key={newdetail.id} className="mt-10">
-          <p className="text-[32px] font-bold mt-5">{newdetail.title}</p>
-          <p className="text-[20px] mt-5">{newdetail.content}</p>
+          <p className="header-text font-bold mt-5">{newdetail.title}</p>
+          <p className="body-text mt-5">{newdetail.content}</p>
         </div>
       ))}
     </div>

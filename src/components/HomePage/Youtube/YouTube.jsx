@@ -7,14 +7,14 @@ function YouTube() {
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Left Column: Title */}
         <div className="text-left">
-          <h2 className="text-[32px] font-bold text-black font-changan">
+          <h2 className="header-text font-bold text-black font-changan">
             Changan Youtube Videos
           </h2>
         </div>
 
         {/* Right Column: Description and Button */}
         <div className="col-span-2">
-          <p className=" mb-10 text-[20px]">
+          <p className=" mb-10 body-text mt-5 md:mt-0">
             As one of the top four automobile groups in China and the top
             selling domestic Chinese automotive brand, Changan Automobile boasts
             an industrial history stretching back 157 years.
@@ -23,7 +23,7 @@ function YouTube() {
             href="https://www.youtube.com/@ChanganMyanmarMotor"
             className="inline-flex items-center px-4 py-2 border border-gray-400 rounded hover:bg-gray-100 "
           >
-            <span className="mr-10">VIEW YOUTUBE CHANNEL</span>
+            <span className="mr-10 body-text">VIEW YOUTUBE CHANNEL</span>
             <MdArrowRightAlt className="text-3xl" />
           </a>
         </div>

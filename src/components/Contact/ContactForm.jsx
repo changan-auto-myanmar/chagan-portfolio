@@ -4,18 +4,18 @@ const ContactForm = () => {
   return (
     <div className="flex flex-col md:flex-row p-8 bg-white">
       <div className="md:w-1/3 mb-8 md:mb-0">
-        <h1 className="text-3xl font-bold font-changan">
+        <h1 className="header-text font-bold font-changan">
           Contact Us Today We ' Are Here to Help
         </h1>
 
-        <p className="mt-4 text-gray-700">
+        <p className="body-text mt-4 text-gray-700">
           Get in Touch with Us! Whether you’re interested in a test drive, have
           questions about a vehicle, or need assistance with financing, we’re
           here to help. Fill out the form below, and our team will get back to
           you promptly.
         </p>
       </div>
-      <div className="md:w-2/3 px-10">
+      <div className="md:w-2/3 md:px-10">
         <form className="space-y-10">
           <input
             type="text"
@@ -26,12 +26,12 @@ const ContactForm = () => {
             <input
               type="email"
               placeholder="Email"
-              className="flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
+              className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
+              className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
             />
           </div>
           <div className="flex space-x-4">

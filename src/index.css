@@ -17,3 +17,11 @@
 body {
   @apply font-poppin;
 }
+
+.header-text {
+  @apply text-header md:text-[24px] lg:text-[32px];
+}
+
+.body-text {
+  @apply text-body md:text-[18px] lg:text-[24px];
+}
