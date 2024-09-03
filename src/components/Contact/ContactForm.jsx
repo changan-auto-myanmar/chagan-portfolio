@@ -2,7 +2,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col md:flex-row p-8 bg-white">
+    <div className="flex flex-col md:flex-row p-6 lg:p-[64px] bg-white">
       <div className="md:w-1/3 mb-8 md:mb-0">
         <h1 className="header-text font-bold font-changan">
           Contact Us Today We ' Are Here to Help
