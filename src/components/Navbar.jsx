@@ -44,7 +44,7 @@ const Navbar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full lg:block lg:w-auto pb-5 transition-all duration-300 ease-in-out`}
+          } w-full lg:block lg:w-auto transition-all duration-300 ease-in-out`}
           id="navbar-default"
         >
           <div className="space-x-4 flex flex-col lg:flex-row items-center ">
@@ -90,7 +90,7 @@ const Navbar = () => {
             >
               Contact Us
             </Link>
-            <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0">
+            <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0 pb-5 lg:pb-0">
               <a href="#">
                 <FaFacebook className="text-white text-xl" />
               </a>
