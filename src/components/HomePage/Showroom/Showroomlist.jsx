@@ -19,7 +19,7 @@ const ShowroomList = () => {
     },
   ];
   return (
-    <div className="container mx-auto mt-10 p-6">
+    <div className="p-5 lg:p-20">
       <p className="header-text font-changan font-bold">
         Our Showroom in Myanmar
       </p>

@@ -5,7 +5,7 @@ const YouTubeVideoGrid = () => {
   ];
 
   return (
-    <div className="container mx-auto py-6">
+    <div className="mt-5 md:mt-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {videos.map((video) => (
           <div key={video.id} className="relative">

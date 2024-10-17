@@ -1,20 +1,46 @@
-import about from "./../../assets/images/aboutchangan.png";
+import { Link } from "react-router-dom";
+import about from "./../../assets/images/aboutChagan.jpeg";
+import { MdArrowRightAlt } from "react-icons/md";
 
 function AboutChangan() {
   return (
-    <div className="relative">
-      <img src={about} className="w-full h-[400px] md:h-[400px]" />
-      <div className="bg-blue-800 absolute bottom-0 right-0 w-full md:w-3/4 h-2/5 md:h-3/5 flex flex-col justify-center items-center px-5 md:px-10 text-white">
-        <div>
-          <p className="header-text font-changan font-bold mb-5">
+    <div className="mt-20">
+      <div className="w-full h-[220px] md:h-[200px] lg:h-[300px] overflow-hidden relative ">
+        <img
+          src={about}
+          className="object-cover translate-y-[10%] md:-translate-y-[50%]"
+          alt="About Changan"
+        />
+        <div className="absolute bottom-0 left-0 ms-6 md:ms-10">
+          <h2 className="header-text text-primary font-changan font-bold mb-4">
             About Our Changan
-          </p>
-          <p className="body-text md:text-[20px]">
-            About Our Changan As one of the top four automobile groups in China
-            and the top selling domestic Chinese automotive brand, Changan
-            Automobile boasts an industrial history stretching back 157 years.
-          </p>
+          </h2>
         </div>
+
+        <div className="absolute bottom-5 right-0 me-6 md:me-10">
+          <Link
+            to="/new"
+            className="flex bg-white text-primary items-center px-1 md:px-2 lg:px-4 py-1 md:py-2 lg:py-4 rounded-sm border border-primary"
+          >
+            <span className="mr-2 md:mr-5 lg:mr-10 text-sm md:text-md lg:text-xl">
+              Explore Changan
+            </span>
+            <MdArrowRightAlt className="text-xl md:text-2xl lg:text-3xl" />
+          </Link>
+        </div>
+      </div>
+      <div className="bg-primary py-0 md:py-5 py-10">
+        <p className="body-text md:text-[20px] text-white p-6">
+          CHANGAN Automobile is one of the four major Chinese automobile groups,
+          with 40 years of car manufacturing experience, we have 12
+          manufacturing bases and 22 plants worldwide. As a leading Chinese car
+          manufacturer, CHANGAN Automobile has self-owned brands including
+          CHANGAN, NEVO, DEEPAL, AVATR, KAICHENG, and joint venture brands
+          including CHANGAN Ford, CHANGAN Mazda, and JMC. In 2021, the
+          cumulative sales of CHANGAN's self-owned brand exceeded 20 million
+          units. Up till April 2024, the cumulative sales of Chinese brands
+          under CHANGAN exceeded 26.33 million units
+        </p>
       </div>
     </div>
   );

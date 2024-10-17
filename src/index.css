@@ -19,7 +19,7 @@ body {
 }
 
 .header-text {
-  @apply text-header md:text-[24px] lg:text-[32px];
+  @apply text-header md:text-[24px] lg:text-[48px];
 }
 
 .body-text {

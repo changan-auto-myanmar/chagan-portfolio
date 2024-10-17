@@ -19,7 +19,7 @@ function YouTube() {
   };
   console.log(tabs);
   return (
-    <div className="container mx-auto mt-0 md:mt-10 p-6">
+    <div className="p-5 lg:p-20">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Left Column: Title */}
         <div className="text-left">
@@ -62,7 +62,7 @@ function YouTube() {
         </div>
       </div>
 
-      <div className="mt-10 w-full ">
+      <div className="mt-10 w-full">
         <Swiper spaceBetween={30} slidesPerView={"auto"} ref={swiperRef}>
           {tabs.map((tab, index) => (
             <SwiperSlide key={index} className="w-full md:w-1/3">
