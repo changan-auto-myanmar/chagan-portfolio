@@ -19,7 +19,7 @@ function YouTube() {
   };
   console.log(tabs);
   return (
-    <div className="p-5 lg:p-20">
+    <div className="p-5 lg:p-20 lg:pb-5">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Left Column: Title */}
         <div className="text-left">

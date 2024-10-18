@@ -13,6 +13,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
+import BrandOverview from "./BrandOverview";
 
 function CarBrandBanner() {
   const [activeSlideId, setActiveSlideId] = useState(0);
@@ -46,31 +47,36 @@ function CarBrandBanner() {
       <Swiper
         modules={[EffectFade]}
         effect="fade"
-        className="relative h-[300px] md:h-[500px"
+        className="relative h-[300px] md:h-screen overflow-hidden"
         onSlideChange={handleSlideChange}
       >
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="brightness-50 bg-black">
-              <img src={item.img} className="w-full h-[500px]" />
+            <div className="brightness-50 bg-black h-full">
+              <img src={item.img} className="w-full h-full object-cover" />
             </div>
-            <p className="absolute bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold">
+            <p className="absolute bottom-[34px] md:bottom-[124px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold hidden lg:block">
               {item.name}
             </p>
           </SwiperSlide>
         ))}
-        <div className="absolute bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
+        <div className="absolute bottom-[34px] md:bottom-[144px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
           <SwiperButtonPrev />
           <SwiperButtonNext />
         </div>
       </Swiper>
-      <div className="container flex justify-center">
+      {/* car carousel */}
+      <div className="flex justify-center">
         {tabs.map(
           (tab) =>
             tab.id == activeSlideId + 1 && (
               <CarCarousel key={tab.id} tab={tab.content} />
             )
         )}
+      </div>
+      {/* brand Overview */}
+      <div className="mt-5">
+        <BrandOverview id={activeSlideId} />
       </div>
     </div>
   );
