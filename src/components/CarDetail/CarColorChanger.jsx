@@ -15,7 +15,7 @@ const CarColorChanger = () => {
       <h1 className="text-2xl font-bold mb-4 font-changan">
         CS 75 Plus Body Color
       </h1>
-      <div className="relative w-[640px] h-[320px]">
+      <div className="relative ">
         <img
           src={Car}
           alt="Car"

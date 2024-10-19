@@ -18,7 +18,8 @@ function ServiceShow() {
         animi quibusdam, cum doloribus possimus perspiciatis? Tempore, odio
         deleniti.
       </p>
-      <div className="container mx-auto mt-10">
+      {/* service list */}
+      <div className="mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="col-span-1 md:col-span-2 bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">

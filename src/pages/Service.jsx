@@ -1,9 +1,10 @@
 import Banner from "../components/Banner";
-import ServicesList from "../components/ServicePage/ServicesList";
+// import ServicesList from "../components/ServicePage/ServicesList";
 import serviceimg from "./../assets/images/services.png";
-import NewEvent from "../components/HomePage/New&Event/NewEvent";
+// import NewEvent from "../components/HomePage/New&Event/NewEvent";
 import Footer from "../components/Footer";
 import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
+import ServiceShow from "../components/HomePage/ServiceShow";
 
 function Service() {
   const services = {
@@ -13,8 +14,9 @@ function Service() {
   return (
     <>
       <Banner data={services} />
-      <ServicesList />
-      <NewEvent />
+      {/* <ServicesList /> */}
+      <ServiceShow />
+      {/* <NewEvent /> */}
       <ShowroomList />
       <Footer />
     </>
