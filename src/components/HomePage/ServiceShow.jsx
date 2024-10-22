@@ -8,11 +8,11 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function ServiceShow() {
   return (
-    <div className="p-5 lg:p-20">
+    <div className="mt-10 p-5 lg:p-20">
       <h1 className="header-text font-changan font-bold">
         Service for our Customer
       </h1>
-      <p className="mt-4 body-text">
+      <p className="mt-4 text-lg md:text-xl">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
         numquam eum dolorem sed fuga architecto iusto dolore ut et cumque rerum
         animi quibusdam, cum doloribus possimus perspiciatis? Tempore, odio

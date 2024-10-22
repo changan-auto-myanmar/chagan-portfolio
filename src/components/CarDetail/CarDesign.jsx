@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 
 const CarDesign = ({ carDesign }) => {
   console.log(carDesign);
@@ -30,6 +31,12 @@ const CarDesign = ({ carDesign }) => {
                 className="w-full h-auto rounded-lg"
               />
             </SwiperSlide>
+            <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
+              <div className="flex flex-col gap-5">
+                <SwiperButtonPrev />
+                <SwiperButtonNext />
+              </div>
+            </div>
             {/* Add more SwiperSlides as needed */}
           </Swiper>
 

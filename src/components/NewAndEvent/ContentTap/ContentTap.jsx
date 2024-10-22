@@ -41,13 +41,13 @@ const ContentTap = ({ data }) => {
   console.log(content);
 
   return (
-    <div className="container mx-auto flex flex-col items-center">
+    <div className="w-full mx-auto flex flex-col items-center ">
       {data && (
-        <div className="tabs my-10 space-x-4">
+        <div className="my-10 w-full px-10 lg:w-[500px] flex justify-between items-center">
           {tabLabels.map((tab, index) => (
             <button
               key={index}
-              className={`tab-button text-center w-[50px] md:w-[120px] lg:w-[200px] ${
+              className={`text-center ${
                 activeTab === tab ? "bg-white text-blue-500" : ""
               } py-2 px-4 focus:outline-none relative`}
               onClick={() => {

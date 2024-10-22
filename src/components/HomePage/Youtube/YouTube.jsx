@@ -3,7 +3,7 @@ import YouTubeVideoGrid from "./YoutubeVid";
 
 function YouTube() {
   return (
-    <div className="p-5 lg:p-20">
+    <div className="mt-10 p-5 lg:p-20">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Left Column: Title */}
         <div className="text-left">

@@ -3,17 +3,17 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function NewBanner() {
   return (
-    <div className="w-full h-[600px] relative">
+    <div className="w-full h-[300px] md:h-[600px] relative">
       <img
         src={newbanner}
         className="w-full h-full object-cover brightness-50 bg-black"
       />
-      <div className="absolute bottom-5 p-10 md:right-10 z-10  md:ps-[64px] w-full md:w-[450px] backdrop-blur-sm bg-white/60">
+      <div className="absolute bottom-0 mx-5 p-10 md:right-10 z-10  md:ps-[64px] mb-0 md:mb-[200px] lg:mb-[50px] w-auto md:w-[450px] backdrop-blur-sm bg-white/60">
         <div>
           <p className="text-[18px] md:text-[24px] font-bold">
             “The Vast Ocean “ : First batch of DEEPLE handover in Thailand
           </p>
-          <p className="text-[14px] md:text-[16px] mt-5 font-semibold leading-8">
+          <p className="text-[14px] md:text-[16px] mt-5 font-semibold leading-8 hidden lg:block">
             On January 10th, CHANGAN Automotive hosted the first DEEPAL L07 and
             DEEPAL S07 owner delivery ceremony at Asiatique the Riverfront in
             Bangkok under the theme "Touch The Future: Drive With DEEPAL", with

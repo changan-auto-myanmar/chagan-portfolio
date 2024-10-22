@@ -4,35 +4,33 @@ import logo from "./../assets/images/navbar-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-blue-900 text-white py-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="flex flex-col lg:flex-row justify-between px-4 md:px-8">
         {/* Logo and Slogan Section */}
         <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
           <img src={logo} alt="Changan Auto Logo" />
-
-          <p className="md:mt-4 text-[24px] font-semibold text-center md:text-left">
-            Smart, <br />
-            Your Future
-          </p>
+          <span className="text-[24px] font-semibold text-center md:text-left">
+            Smart Your Future
+          </span>
         </Link>
 
         {/* Links Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:flex-2 px-5 md:px-[100px]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:flex-2 ps-0 lg:ps-8 mt-10 lg:mt-0">
           <div>
-            <h3 className="text-lg font-semibold mb-4">Vehicles</h3>
+            <h3 className="text-lg font-semibold mb-4">Brands</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/car-model" className="hover:underline">
-                  Changan
+                  CHANGAN
                 </Link>
               </li>
               <li>
                 <Link to="/car-model" className="hover:underline">
-                  DEPILE
+                  DEEPAL
                 </Link>
               </li>
               <li>
                 <Link to="/car-model" className="hover:underline">
-                  KACHAN
+                  KAICENE
                 </Link>
               </li>
             </ul>

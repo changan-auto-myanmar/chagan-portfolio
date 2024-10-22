@@ -8,7 +8,7 @@ function MissionVision() {
         className="w-full h-[150px] md:h-[400px] object-cover"
       />
 
-      <div className="mt-10 md:px-20">
+      <div className="mt-10 px-5 md:px-20">
         <p className="font-changan header-text mb-5">Our Mission</p>
         <p className="body-text">
           Our mission is to deliver high-quality vehicles, exceptional service,
@@ -21,7 +21,7 @@ function MissionVision() {
           practices.
         </p>
       </div>
-      <div className="mt-20 md:px-20">
+      <div className="mt-10 px-5 md:px-20">
         <p className="font-changan header-text mb-5">Our Vision</p>
         <p className="body-text">
           We strive to go above and beyond for our clients no matter the

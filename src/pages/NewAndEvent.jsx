@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
-import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
+// import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
+import YouTube from "../components/HomePage/Youtube/YouTube";
 import ContentTap from "../components/NewAndEvent/ContentTap/ContentTap";
 import NewBanner from "../components/NewAndEvent/NewBanner";
 
@@ -8,7 +9,7 @@ function NewAndEvent() {
     <div>
       <NewBanner />
       <ContentTap data={true} />
-      <ShowroomList />
+      <YouTube />
       <Footer />
     </div>
   );

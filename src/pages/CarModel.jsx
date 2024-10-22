@@ -5,7 +5,6 @@ function CarModel() {
   return (
     <div>
       <CarBrandBanner />
-
       <Footer />
     </div>
   );

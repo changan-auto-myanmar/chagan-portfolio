@@ -8,7 +8,7 @@ import ServiceShow from "../components/HomePage/ServiceShow";
 
 function Service() {
   const services = {
-    desc: "CHANGAN Offered Services",
+    desc: "Offered Services",
     img: serviceimg,
   };
   return (
