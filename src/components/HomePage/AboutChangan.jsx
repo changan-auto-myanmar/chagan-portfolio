@@ -5,10 +5,10 @@ import { MdArrowRightAlt } from "react-icons/md";
 function AboutChangan() {
   return (
     <div className="mt-20">
-      <div className="w-full h-[220px] md:h-[200px] lg:h-[300px] overflow-hidden relative ">
+      <div className="w-full h-[220px] md:h-[200px] lg:h-[250px] overflow-hidden relative ">
         <img
           src={about}
-          className="object-cover translate-y-[10%] md:-translate-y-[50%]"
+          className="object-cover h-auto translate-y-[10%] md:-translate-y-[50%]"
           alt="About Changan"
         />
         <div className="absolute bottom-0 left-0 ms-6 md:ms-10 hidden lg:block">

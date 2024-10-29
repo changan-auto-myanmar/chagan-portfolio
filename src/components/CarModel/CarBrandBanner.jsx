@@ -14,9 +14,12 @@ import "swiper/css/effect-fade";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
 import BrandOverview from "./BrandOverview";
+import { useParams } from "react-router-dom";
 
 function CarBrandBanner() {
-  const [activeSlideId, setActiveSlideId] = useState(0);
+  const { id } = useParams();
+  const [activeSlideId, setActiveSlideId] = useState(id);
+  // console.log("active", typeof activeSlideId);
   const carModelarray = [
     {
       id: 1,
@@ -35,11 +38,11 @@ function CarBrandBanner() {
     },
   ];
 
-  console.log(tabs);
+  // console.log(tabs);
 
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);
-    console.log("Active Slide ID:", swiper.activeIndex);
+    // console.log("Active Slide ID:", swiper.activeIndex);
   };
 
   return (
@@ -48,6 +51,7 @@ function CarBrandBanner() {
         modules={[EffectFade]}
         effect="fade"
         className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden"
+        initialSlide={activeSlideId}
         onSlideChange={handleSlideChange}
       >
         {carModelarray.map((item) => (
@@ -55,9 +59,9 @@ function CarBrandBanner() {
             <div className="brightness-50 bg-black h-full">
               <img src={item.img} className="w-full h-full object-cover" />
             </div>
-            <p className="absolute bottom-[34px] md:bottom-[64px] lg:bottom-[124px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold hidden lg:block">
+            {/* <p className="absolute bottom-[34px] md:bottom-[64px] lg:bottom-[124px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold hidden lg:block">
               {item.name}
-            </p>
+            </p> */}
           </SwiperSlide>
         ))}
         <div className="absolute bottom-[34px] md:bottom-[84px] lg:bottom-[144px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
@@ -69,10 +73,12 @@ function CarBrandBanner() {
       <div className="flex justify-center">
         {tabs.map(
           (tab) =>
-            tab.id == activeSlideId + 1 && (
-              <CarCarousel key={tab.id} tab={tab.content} />
-            )
+            tab.id == activeSlideId * 1 + 1 &&
+            (console.log("id", tab.id),
+            (<CarCarousel key={tab.id} tab={tab.content} />))
         )}
+
+        {/* <p>{activeSlideId}</p> */}
       </div>
       {/* brand Overview */}
       <div className="mt-5">

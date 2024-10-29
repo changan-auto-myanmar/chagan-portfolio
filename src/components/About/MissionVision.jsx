@@ -3,10 +3,7 @@ import sologran from "./../../assets/images/sologran.png";
 function MissionVision() {
   return (
     <div className=" mx-auto py-6">
-      <img
-        src={sologran}
-        className="w-full h-[150px] md:h-[400px] object-cover"
-      />
+      <img src={sologran} className="w-full h-[150px] md:h-[400px]" />
 
       <div className="mt-10 px-5 md:px-20">
         <p className="font-changan header-text mb-5">Our Mission</p>
