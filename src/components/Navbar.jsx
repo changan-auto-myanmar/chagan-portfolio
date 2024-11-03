@@ -56,7 +56,7 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/car-model"
+              to="/car-model/0"
               className="text-gray-300 hover:text-white p-2"
               onClick={toggleMenu}
             >
