@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import logo from "./../assets/images/navbar-logo.png";
+import { NavLink } from "react-router-dom";
+import logo from "./../assets/images/changanLogo.webp";
 import { FaFacebook, FaYoutube, FaViber } from "react-icons/fa";
 
 const Navbar = () => {
@@ -11,10 +11,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="absolute bg-white p-5   bg-opacity-10 backdrop-blur-sm z-10 w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <div>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="w-8 md:w-14" />
         </div>
 
         <button
@@ -48,48 +48,80 @@ const Navbar = () => {
           id="navbar-default"
         >
           <div className="space-x-4 flex flex-col lg:flex-row items-center ">
-            <Link
+            <NavLink
               to="/"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:text-white hover:opacity-100 p-2 ${
+                  isActive ? "text-white font-bold opacity-100" : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               Home
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/car-model/0"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:text-white p-2 ${
+                  isActive
+                    ? "text-white font-bold hover:opacity-100 opacity-100"
+                    : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               Car Model
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/about"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:text-white p-2 ${
+                  isActive
+                    ? "text-white font-bold hover:opacity-100 opacity-100"
+                    : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               About CHANGAN
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/services"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:text-white p-2 ${
+                  isActive
+                    ? "text-white font-bold hover:opacity-100 opacity-100"
+                    : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               Services
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/new"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:text-white p-2 ${
+                  isActive
+                    ? "text-white font-bold hover:opacity-100 opacity-100"
+                    : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               New & Event
-            </Link>
-            <Link
+            </NavLink>
+            <NavLink
               to="/contact"
-              className="text-gray-300 hover:text-white p-2"
+              className={({ isActive }) =>
+                `text-white hover:opacity-100 hover:text-white p-2 ${
+                  isActive ? "text-white font-bold opacity-100" : "opacity-80"
+                }`
+              }
               onClick={toggleMenu}
             >
               Contact Us
-            </Link>
+            </NavLink>
             <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0 pb-5 lg:pb-0">
               <a href="#">
                 <FaFacebook className="text-white text-xl" />

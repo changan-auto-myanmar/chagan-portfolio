@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import { EffectFade } from "swiper/modules";
+import { motion } from "framer-motion"; // Importing motion
 
 import banner from "./../../assets/images/heroBanner.png";
 import banner2 from "./../../assets/images/banner2.jpg";
@@ -23,14 +24,26 @@ function HeroBanner() {
       <SwiperSlide>
         <img src={banner2} className="w-full h-full object-cover" />
       </SwiperSlide>
-      <div className="absolute bottom-[64px] md:bottom-[94px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px]">
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 40 }}
+        transition={{ duration: 1 }}
+        className="absolute bottom-[64px] md:bottom-[94px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px]"
+      >
         <SwiperButtonPrev />
         <SwiperButtonNext />
-      </div>
-      <p className="absolute bottom-[64px] md:bottom-[94px] left-0 z-10 ps-3   md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold">
+      </motion.div>
+      <motion.p
+        className="absolute bottom-[64px] md:bottom-[94px] left-0 z-10 ps-3   md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 40 }}
+        transition={{ duration: 1 }}
+      >
         CHANGAN,
         <br /> Smart Your Future
-      </p>
+      </motion.p>
     </Swiper>
   );
 }

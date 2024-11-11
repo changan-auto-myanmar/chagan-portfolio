@@ -6,6 +6,7 @@ import CarCarousel from "./CarCarousel";
 import car1 from "./../../../assets/images/正侧 fn.png";
 import car2 from "./../../../assets/images/car.png";
 import car3 from "./../../../assets/images/car2.png";
+import { motion } from "framer-motion"; // Import motion from framer-motion
 
 export const tabs = [
   {
@@ -110,7 +111,15 @@ const TabComponent = () => {
             key={tab.id}
             className={`tab ${activeTab === tab.id ? "" : "hidden"}`}
           >
-            <CarCarousel tab={tab.content} />
+            {/* Wrap CarCarousel in a motion.div */}
+            <motion.div
+              initial={{ opacity: 0, x: 100 }} // Start from the right
+              animate={{ opacity: 1, x: 0 }} // Animate to original position
+              exit={{ opacity: 0, x: -100 }} // Exit to the left
+              transition={{ duration: 0.5 }} // Transition duration
+            >
+              <CarCarousel tab={tab.content} />
+            </motion.div>
           </div>
         ))}
       </div>
