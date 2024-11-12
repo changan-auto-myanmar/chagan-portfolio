@@ -73,9 +73,9 @@ function CarBrandBanner() {
       <div className="flex justify-center">
         {tabs.map(
           (tab) =>
-            tab.id == activeSlideId * 1 + 1 &&
-            (console.log("id", tab.id),
-            (<CarCarousel key={tab.id} tab={tab.content} />))
+            tab.id == activeSlideId * 1 + 1 && (
+              <CarCarousel key={tab.id} tab={tab.content} />
+            )
         )}
 
         {/* <p>{activeSlideId}</p> */}

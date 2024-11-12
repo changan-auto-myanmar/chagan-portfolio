@@ -1,48 +1,64 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
+import { useParams } from "react-router-dom";
 
-const CarDesign = ({ carDesign }) => {
-  console.log(carDesign);
+const CarDesign = ({ carData }) => {
+  const { id } = useParams();
   return (
     <div>
-      {carDesign.map((item) => (
-        <div className="max-w-4xl mx-auto p-4" key={item.name}>
-          <h2 className="text-2xl font-bold mb-4">{item.name} Design</h2>
-
-          <Swiper spaceBetween={30} slidesPerView={"auto"}>
-            <SwiperSlide className="w-[550px]">
-              <img
-                src={item.image}
-                alt="Exterior Design 1"
-                className="w-full h-auto rounded-lg"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="w-[550px]">
-              <img
-                src={item.image}
-                alt="Exterior Design 2"
-                className="w-full h-auto rounded-lg"
-              />
-            </SwiperSlide>
-            <SwiperSlide className="w-[550px]">
-              <img
-                src={item.image}
-                alt="Exterior Design 3"
-                className="w-full h-auto rounded-lg"
-              />
-            </SwiperSlide>
-            <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
-              <div className="flex flex-col gap-5">
-                <SwiperButtonPrev />
-                <SwiperButtonNext />
+      <div className="container mx-auto p-6">
+        {carData[id]?.exterier && (
+          <div>
+            <h2 className="header-text font-bold mb-4">Exterier Design</h2>
+            <Swiper spaceBetween={30} slidesPerView={"auto"}>
+              {carData[id].exterier.map((item, index) => (
+                <SwiperSlide key={index} className="w-[550px]">
+                  <div className="relative">
+                    <img
+                      src={item}
+                      alt="interier"
+                      className="w-full h-[500px]"
+                    />
+                  </div>
+                  <p className="mt-4">{item.desc}</p>
+                </SwiperSlide>
+              ))}
+              <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
+                <div className="flex flex-col gap-5">
+                  <SwiperButtonPrev />
+                  <SwiperButtonNext />
+                </div>
               </div>
-            </div>
-            {/* Add more SwiperSlides as needed */}
-          </Swiper>
+            </Swiper>
+          </div>
+        )}
 
-          <p className="mt-4">{item.desc}</p>
-        </div>
-      ))}
+        {carData[id]?.interier && (
+          <div>
+            <h2 className="header-text mt-5 font-bold mb-4">Interier Design</h2>
+            <Swiper spaceBetween={30} slidesPerView={"auto"}>
+              {carData[id].interier.map((item, index) => (
+                <SwiperSlide key={index} className="w-[550px]">
+                  <div className="relative">
+                    <img
+                      src={item}
+                      alt="interier"
+                      className="w-full h-[500px]"
+                    />
+                  </div>
+                  <p className="mt-4">{item.desc}</p>
+                </SwiperSlide>
+              ))}
+              <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
+                <div className="flex flex-col gap-5">
+                  <SwiperButtonPrev />
+                  <SwiperButtonNext />
+                </div>
+              </div>
+            </Swiper>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,7 +1,9 @@
 import Car from "./../../assets/images/A20W4047f.png";
 import { HiOutlineDownload } from "react-icons/hi";
+// import { carData } from "../HomePage/CarModelShow/TabModel";
 
 function CarBanner() {
+  // console.log(carData);
   return (
     <div className="w-full h-screen relative">
       <img src={Car} className="w-full h-full object-cover" />
