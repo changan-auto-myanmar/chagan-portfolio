@@ -32,13 +32,13 @@ const datas = [
 
 function BrandOverview({ id }) {
   return (
-    <div className="p-5 md:p-10">
+    <div className="p-5 md:p-20">
       <p className="header-text font-changan mb-5 ">
         Brand Overview for {datas[id].name}
       </p>
       <p className="body-text">{datas[id].desc}</p>
       <div className="mt-5">
-        <img src={datas[id].image} className="mx-auto" />
+        <img src={datas[id].image} className="w-full h-full" alt="" />
       </div>
       <p className="body-text my-5">{datas[id].body}</p>
       {datas[id].footer ? (

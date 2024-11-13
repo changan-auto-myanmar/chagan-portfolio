@@ -64,7 +64,7 @@ function CarBrandBanner() {
             </p> */}
           </SwiperSlide>
         ))}
-        <div className="absolute bottom-[34px] md:bottom-[84px] lg:bottom-[144px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
+        <div className="absolute bottom-[34px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
           <SwiperButtonPrev />
           <SwiperButtonNext />
         </div>

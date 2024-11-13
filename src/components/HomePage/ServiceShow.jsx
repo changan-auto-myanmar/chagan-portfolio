@@ -6,8 +6,8 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function ServiceShow() {
   return (
-    <div className="mt-10 ">
-      <div className="p-5 lg:p-20">
+    <div className="mt-10">
+      <div className="p-5 lg:p-0 lg:w-[1000px] mx-auto">
         <h1 className="header-text font-changan font-bold ">
           Service for our Customer
         </h1>
@@ -20,7 +20,7 @@ function ServiceShow() {
       </div>
 
       {/* service list */}
-      <div className="px-5">
+      <div className="px-5 mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-[1000px] mx-auto">
           <div className="col-span-1 md:col-span-2 bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">

@@ -25,7 +25,7 @@ const Showroom = ({ showroom, index }) => {
         <div className="w-full">
           <a
             href={`tel:${showroom.phone}`}
-            className="bg-primary text-white mt-2 sm:mt-5 px-4 sm:px-6 py-2 sm:py-3 rounded w-full inline-block hover:bg-primary/90 flex items-center justify-center text-sm sm:text-base transition-colors"
+            className="bg-primary text-white mt-2 sm:mt-5 px-4 sm:px-6 py-2 sm:py-3 w-full inline-block hover:bg-primary/90 flex items-center justify-center text-sm sm:text-base transition-colors"
           >
             <MdOutlineLocalPhone className="mr-2 h-4 w-4" />
             <span>{showroom.phone}</span>

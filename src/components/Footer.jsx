@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "./../assets/images/navbar-logo.png";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleClick = (path) => {
+    navigate(`car-model/${path}`);
+  };
   return (
-    <footer className="bg-blue-900 text-white py-10 ">
-      <div className="flex flex-col md:flex-row px-4 md:px-8 justify-between">
+    <footer className="bg-blue-900 text-white p-5 lg:p-20 ">
+      <div className="flex flex-col md:flex-row justify-between">
         {/* Logo and Slogan Section */}
         <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
           <img src={logo} alt="Changan Auto Logo" />
@@ -18,20 +22,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Brands</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/car-model" className="hover:underline">
-                  CHANGAN
-                </Link>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <button onClick={() => handleClick(0)}>CHANGAN</button>
               </li>
-              <li>
-                <Link to="/car-model" className="hover:underline">
-                  DEEPAL
-                </Link>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <button onClick={() => handleClick(1)}>DEEPAL</button>
               </li>
-              <li>
-                <Link to="/car-model" className="hover:underline">
-                  KAICENE
-                </Link>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <button onClick={() => handleClick(2)}>KAICENE</button>
               </li>
             </ul>
           </div>
@@ -39,13 +37,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Other Links</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="hover:underline">
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <Link to="/about" className="">
                   About Changan
                 </Link>
               </li>
-              <li>
-                <Link to="/new" className="hover:underline">
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <Link to="/new" className="">
                   News & Events
                 </Link>
               </li>
