@@ -10,7 +10,7 @@ export default function CarBrand() {
   };
   return (
     <div className="py-2 md:py-10 lg:py-10">
-      <h2 className="text-center header-text font-changan font-bold my-8">
+      <h2 className="text-center header-text font-changan font-bold my-10">
         Car Models of our Products
       </h2>
       <div className="flex-col lg:flex-row lg:flex justify-between items-center relative overflow-hidden">

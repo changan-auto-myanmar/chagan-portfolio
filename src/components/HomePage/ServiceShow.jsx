@@ -1,155 +1,105 @@
-import aftersale from "../../assets/images/services/afyersale.png";
-import repair from "./../../assets/images/services/IMG_1344.png";
-import exclusive from "./../../assets/images/services/IMG_6302.png";
-import service from "./../../assets/images/services/IMG_9047.png";
-import spair from "./../../assets/images/services/IMG_9050.png";
+import aftersale from "../../assets/images/services/service.png";
+import paint from "./../../assets/images/services/paint.png";
+import mobile from "./../../assets/images/services/mobile.png";
 
 import { MdArrowRightAlt } from "react-icons/md";
 
 function ServiceShow() {
   return (
-    <div className="mt-10 p-5 lg:p-20">
-      <h1 className="header-text font-changan font-bold">
-        Service for our Customer
-      </h1>
-      <p className="mt-4 text-lg md:text-xl">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat
-        numquam eum dolorem sed fuga architecto iusto dolore ut et cumque rerum
-        animi quibusdam, cum doloribus possimus perspiciatis? Tempore, odio
-        deleniti.
-      </p>
+    <div className="mt-10 ">
+      <div className="p-5 lg:p-20">
+        <h1 className="header-text font-changan font-bold ">
+          Service for our Customer
+        </h1>
+        <p className="mt-5 body-text font-medium">
+          At CHANGAN Myanmar, our skilled technicians provide trusted
+          maintenance and repairs using genuine parts to keep your vehicle safe
+          and reliable. Our 4S-standard workshop ensures every service meets the
+          highest quality standards, giving you confidence on every drive.
+        </p>
+      </div>
+
       {/* service list */}
-      <div className="mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-[1000px] mx-auto">
           <div className="col-span-1 md:col-span-2 bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
-              <div className="w-full md:w-1/2 h-48 md:h-auto">
+              <div className="w-full md:w-1/2">
                 <img
                   src={aftersale}
                   alt="Car with open hood"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-5 md:py-10 md:px-5 flex flex-col justify-between">
-                <h2 className="text-blue-600 text-sm font-semibold">Service</h2>
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 ">
-                    After Sale Service
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    Our technicians offer comprehensive engine, transmission,
-                    suspension, exhaust, electrical repairs, and routine
-                    maintenance. We use advanced diagnostics for accurate
-                    repairs.
-                  </p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-blue-600 font-semibold hover:underline"
-                  >
-                    VIEW SERVICES
-                    <MdArrowRightAlt className="ml-2 h-4 w-4" />
-                  </a>
-                </div>
+              <div className="p-5 md:w-1/2 flex flex-col justify-between">
+                <h3 className="text-2xl font-bold mb-4 ">After Sale Service</h3>
+                <p className="text-gray-600 mb-4">
+                  Providing quality service with Changan Myanmar's highly
+                  qualified technicians, we address customer concerns with
+                  thorough repairs and expert technical support. Genuine parts
+                  are used to ensure vehicle quality and safety in our 4S
+                  standard workshop facility.
+                </p>
+                <a
+                  href="#"
+                  className="inline-flex items-center font-semibold hover:underline"
+                >
+                  VIEW SERVICES
+                  <div className="bg-primary p-1 ms-2 rounded-sm">
+                    <MdArrowRightAlt className="text-white" size={30} />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <img
-              src={repair}
+              src={paint}
               alt="Technician working on car exterior"
-              className="w-full h-48 object-cover"
+              className="w-full object-cover"
             />
             <div className="p-6">
-              <h2 className="text-blue-600 text-sm font-semibold mb-2">
-                Survey
-              </h2>
-              <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
+              <h3 className="text-xl font-bold mb-4">Paint Booth</h3>
               <p className="text-gray-600 mb-4">
-                Our technicians offer comprehensive engine, transmission,
-                suspension, exhaust, electrical repairs, and routine
-                maintenance. We use advanced diagnostics for accurate repairs.
+                Our Changan Myanmar's paint booth is dedicated to quality and
+                customer satisfaction. We use the original genuine paint codes
+                and high-quality coatings, ensuring a perfect finish. An
+                additional warranty on our paint coating provides extra peace of
+                mind.
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-blue-600 font-semibold hover:underline"
+                className="inline-flex items-center font-semibold hover:underline"
               >
                 VIEW SERVICES
-                <MdArrowRightAlt className="ml-2 h-4 w-4" />
+                <div className="bg-primary p-1 ms-2 rounded-sm">
+                  <MdArrowRightAlt className="text-white" size={30} />
+                </div>
               </a>
             </div>
           </div>
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <img
-              src={exclusive}
+              src={mobile}
               alt="Mechanics working under a raised car"
-              className="w-full h-48 object-cover"
+              className="w-full"
             />
             <div className="p-6">
-              <h2 className="text-blue-600 text-sm font-semibold mb-2">
-                Spare Parts
-              </h2>
-              <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
+              <h3 className="text-xl font-bold mb-4">Mobile Service</h3>
               <p className="text-gray-600 mb-4">
-                Our technicians offer comprehensive engine, transmission,
-                suspension, exhaust, electrical repairs, and routine
-                maintenance. We use advanced diagnostics for accurate repairs.
+                Our customer service team provides immediate assistance over the
+                phone, pinpointing breakdown locations and dispatching a mobile
+                service vehicle promptly. We offer quick roadside repairs to
+                help customers in challenging situations.
               </p>
               <a
                 href="#"
-                className="inline-flex items-center text-blue-600 font-semibold hover:underline"
+                className="inline-flex items-center font-semibold hover:underline"
               >
                 VIEW SERVICES
-                <MdArrowRightAlt className="ml-2 h-4 w-4" />
-              </a>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img
-              src={spair}
-              alt="Technician working on car exterior"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h2 className="text-blue-600 text-sm font-semibold mb-2">
-                Survey
-              </h2>
-              <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
-              <p className="text-gray-600 mb-4">
-                Our technicians offer comprehensive engine, transmission,
-                suspension, exhaust, electrical repairs, and routine
-                maintenance. We use advanced diagnostics for accurate repairs.
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-600 font-semibold hover:underline"
-              >
-                VIEW SERVICES
-                <MdArrowRightAlt className="ml-2 h-4 w-4" />
-              </a>
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
-            <img
-              src={service}
-              alt="Mechanics working under a raised car"
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-6">
-              <h2 className="text-blue-600 text-sm font-semibold mb-2">
-                Spare Parts
-              </h2>
-              <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
-              <p className="text-gray-600 mb-4">
-                Our technicians offer comprehensive engine, transmission,
-                suspension, exhaust, electrical repairs, and routine
-                maintenance. We use advanced diagnostics for accurate repairs.
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-600 font-semibold hover:underline"
-              >
-                VIEW SERVICES
-                <MdArrowRightAlt className="ml-2 h-4 w-4" />
+                <div className="bg-primary p-1 ms-2 rounded-sm">
+                  <MdArrowRightAlt className="text-white" size={30} />
+                </div>
               </a>
             </div>
           </div>

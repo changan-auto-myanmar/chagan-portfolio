@@ -29,13 +29,13 @@ function HeroBanner() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 40 }}
         transition={{ duration: 1 }}
-        className="absolute bottom-[64px] md:bottom-[94px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px]"
+        className="absolute bottom-[64px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px]"
       >
         <SwiperButtonPrev />
         <SwiperButtonNext />
       </motion.div>
       <motion.p
-        className="absolute bottom-[64px] md:bottom-[94px] left-0 z-10 ps-3   md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold"
+        className="absolute bottom-[64px] md:bottom-[64px] left-0 z-10 ps-3   md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 40 }}

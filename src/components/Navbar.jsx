@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "./../assets/images/changanLogo.webp";
-import { FaFacebook, FaYoutube, FaViber } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage the menu toggle
@@ -127,10 +127,10 @@ const Navbar = () => {
                 <FaFacebook className="text-white text-xl" />
               </a>
               <a href="#">
-                <FaViber className="text-white text-xl" />
+                <FaYoutube className="text-white text-xl" />
               </a>
               <a href="#">
-                <FaYoutube className="text-white text-xl" />
+                <FaTiktok className="text-white text-xl" />
               </a>
             </div>
           </div>

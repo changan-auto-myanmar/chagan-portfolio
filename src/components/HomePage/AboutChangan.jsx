@@ -4,20 +4,20 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function AboutChangan() {
   return (
-    <div className="mt-20">
+    <div className="mt-10">
       <div className="w-full h-[220px] md:h-[200px] lg:h-[250px] overflow-hidden relative ">
         <img
           src={about}
-          className="object-cover h-auto translate-y-[10%] md:-translate-y-[50%]"
+          className="object-cover w-full h-auto translate-y-[10%] md:-translate-y-[50%]"
           alt="About Changan"
         />
-        <div className="absolute bottom-0 left-0 ms-6 md:ms-10 hidden lg:block">
+        <div className="absolute ps-5 lg:ps-20  bottom-0 left-0 hidden lg:block">
           <h2 className="header-text text-primary font-changan font-bold mb-4">
             About Our Changan
           </h2>
         </div>
 
-        <div className="absolute bottom-5 right-0 me-6 md:me-10 hidden lg:block">
+        <div className="absolute bottom-5 right-0 me-6 md:me-20 hidden lg:block">
           <Link
             to="/new"
             className="flex bg-white text-primary items-center px-1 md:px-2 lg:px-4 py-1 md:py-2 lg:py-4 rounded-sm border border-primary"
@@ -29,7 +29,7 @@ function AboutChangan() {
           </Link>
         </div>
       </div>
-      <div className="bg-primary py-10 lg:py-10 px-6 lg:px-10">
+      <div className="bg-primary py-10 lg:py-10 px-5 lg:px-20">
         <div className="lg:hidden">
           <h2 className="header-text text-white font-changan font-bold mb-4">
             About Our Changan
