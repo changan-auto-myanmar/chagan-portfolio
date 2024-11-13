@@ -4,7 +4,7 @@ import logo from "./../assets/images/navbar-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-blue-900 text-white py-10 ">
-      <div className="flex flex-col md:flex-row px-4 md:px-8">
+      <div className="flex flex-col md:flex-row px-4 md:px-8 justify-between">
         {/* Logo and Slogan Section */}
         <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
           <img src={logo} alt="Changan Auto Logo" />
@@ -14,7 +14,7 @@ const Footer = () => {
         </Link>
 
         {/* Links Section */}
-        <div className="flex md:flex-row justify-between md:space-x-10">
+        <div className="flex md:flex-row justify-between md:space-x-5 lg:space-x-40">
           <div>
             <h3 className="text-lg font-semibold mb-4">Brands</h3>
             <ul className="space-y-2">
