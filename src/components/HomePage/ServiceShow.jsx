@@ -6,7 +6,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function ServiceShow() {
   return (
-    <div className="mt-10">
+    <div className="py-[64px]">
       <div className="p-5 lg:p-0 lg:w-[1000px] mx-auto">
         <h1 className="header-text font-changan font-bold ">
           Service for our Customer

@@ -9,7 +9,7 @@ export default function CarBrand() {
     navigate(`car-model/${path}`);
   };
   return (
-    <div className="py-2 md:py-10 lg:py-10">
+    <div className="py-2 md:py-10 lg:py-[64px] lg:w-[1000px] mx-auto">
       <h2 className="text-center header-text font-changan font-bold my-10">
         Car Models of our Products
       </h2>
@@ -21,7 +21,7 @@ export default function CarBrand() {
           <img
             alt="Changan Auto"
             src={changan}
-            className="-translate-x-0 lg:-translate-x-40 hover:scale-110 transition duration-300"
+            className="-translate-x-0 lg:-translate-x-[100px] hover:scale-110 transition duration-300"
           />
         </div>
         <div
@@ -31,7 +31,7 @@ export default function CarBrand() {
           <img
             alt="Deepal"
             src={deepal}
-            className="-translate-x-0 lg:-translate-x-40 hover:scale-110 transition duration-300"
+            className="-translate-x-0 lg:-translate-x-[100px] hover:scale-110 transition duration-300"
           />
         </div>
         <div
@@ -52,7 +52,7 @@ export default function CarBrand() {
           <img
             alt="Kaicheng"
             src={kaicheng}
-            className="translate-x-0 lg:translate-x-40 hover:scale-110 transition duration-300"
+            className="translate-x-0 lg:translate-x-[100px] hover:scale-110 transition duration-300"
           />
         </div>
       </div>

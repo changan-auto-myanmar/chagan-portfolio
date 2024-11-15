@@ -4,7 +4,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function AboutChangan() {
   return (
-    <div className="mt-10">
+    <div className="py-[64px] lg:w-[1000px] mx-auto">
       <div className="w-full h-[220px] md:h-[200px] lg:h-[250px] overflow-hidden relative ">
         <img
           src={about}
@@ -13,16 +13,16 @@ function AboutChangan() {
         />
 
         <div className="absolute bottom-5 w-full hidden lg:block">
-          <div className="flex justify-between lg:w-[1000px] mx-auto">
+          <div className="flex justify-between px-5">
             <h2 className="header-text text-primary font-changan font-bold mb-4 hidden lg:block">
               About Our Changan
             </h2>
 
             <Link
-              to="/new"
-              className="flex bg-white text-primary items-center px-1 md:px-2 lg:px-4 py-1 md:py-2 lg:py-4 rounded-sm border border-primary"
+              to="/about"
+              className="flex bg-white text-primary items-center px-1 md:px-2 lg:px-10 py-1 md:py-2 lg:py-4 rounded-sm border border-primary hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out"
             >
-              <span className="mr-2 md:mr-5 font-semibold lg:mr-10 text-sm md:text-md lg:text-xl">
+              <span className="mr-2 md:mr-5 font-semibold lg:mr-5 text-sm md:text-md lg:text-xl">
                 EXPLORE CHANGAN
               </span>
               <MdArrowRightAlt className="text-xl md:text-2xl lg:text-3xl" />
@@ -31,13 +31,13 @@ function AboutChangan() {
         </div>
       </div>
       <div className="bg-primary py-10 lg:py-10 px-5">
-        <div className="lg:w-[1000px] mx-auto">
+        <div className="">
           <div className="lg:hidden">
             <h2 className="header-text text-white font-changan font-bold mb-4">
               About Our Changan
             </h2>
           </div>
-          <p className="body-text md:text-[20px] text-white my-6  mx-auto">
+          <p className="body-text md:text-[20px] text-white my-6">
             CHANGAN Automobile is one of the four major Chinese automobile
             groups, with 40 years of car manufacturing experience, we have 12
             manufacturing bases and 22 plants worldwide. As a leading Chinese
@@ -51,12 +51,12 @@ function AboutChangan() {
           <div className="lg:hidden">
             <Link
               to="/new"
-              className="flex w-[200px] bg-white text-primary items-center p-4 rounded-sm border border-primary"
+              className="flex w-[250px] justify-between bg-white text-primary items-center py-4 px-10 rounded-sm border border-primary"
             >
-              <span className="mr-2 md:mr-5 lg:mr-10 font-semibold text-sm md:text-md lg:text-xl">
+              <span className="font-semibold text-sm md:text-md lg:text-xl">
                 EXPLORE CHANGAN
               </span>
-              <MdArrowRightAlt className="text-xl md:text-2xl lg:text-3xl" />
+              <MdArrowRightAlt className="text-2xl" />
             </Link>
           </div>
         </div>

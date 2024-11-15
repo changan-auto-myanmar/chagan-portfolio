@@ -23,5 +23,5 @@ body {
 }
 
 .body-text {
-  @apply text-body md:text-[18px] lg:text-[24px];
+  @apply text-body md:text-[18px] lg:text-[20px];
 }

@@ -32,7 +32,7 @@ const datas = [
 
 function BrandOverview({ id }) {
   return (
-    <div className="p-5 md:p-20">
+    <div className="p-5 lg:w-[1000px] mx-auto leading-loose">
       <p className="header-text font-changan mb-5 ">
         Brand Overview for {datas[id].name}
       </p>

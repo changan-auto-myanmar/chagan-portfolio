@@ -4,7 +4,7 @@ import AboutDetail from "./AboutDetail";
 const AboutContent = () => {
   const showrooms = [
     {
-      description: ` 
+      description: `
 As one of the top four automobile groups in China and the top selling domestic Chinese automotive brand, Changan Automobile boasts an industrial history stretching back 157 years. With 35 years of experience in building and selling passenger vehicles, Changan is an early leader in the Chinese auto industry.`,
       image: abtimg,
     },
@@ -14,8 +14,8 @@ As one of the top four automobile groups in China and the top selling domestic C
     },
   ];
   return (
-    <div className="container mx-auto mt-10 p-6">
-      <p className="header-text font-changan font-bold">About Us</p>
+    <div className="container mx-auto mt-10 px-5 py-[64px] lg:w-[1000px] mx-auto">
+      <p className="header-text font-changan font-bold">About Changan</p>
       <div className="flex flex-col gap-12">
         {showrooms.map((showroom, index) => (
           <AboutDetail key={index} showroom={showroom} index={index} />

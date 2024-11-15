@@ -83,7 +83,7 @@ const Navbar = () => {
               }
               onClick={toggleMenu}
             >
-              About CHANGAN
+              About Us
             </NavLink>
             <NavLink
               to="/services"
