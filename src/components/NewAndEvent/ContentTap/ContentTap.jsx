@@ -41,9 +41,9 @@ const ContentTap = ({ data }) => {
   console.log(content);
 
   return (
-    <div className="w-full mx-auto flex flex-col items-center ">
+    <div className="w-full lg:w-[1000px] mx-auto flex flex-col items-center ">
       {data && (
-        <div className="my-10 w-full px-10 lg:w-[500px] flex justify-between items-center">
+        <div className="my-10 w-full px-10 flex justify-between items-center">
           {tabLabels.map((tab, index) => (
             <button
               key={index}
