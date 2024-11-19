@@ -93,7 +93,7 @@ export const tabs = [
     id: "1",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={changan} />
+        <img src={changan} className="w-[50px] h-[50px]" />
         <p className="text-[8px] font-changan font-bold hidden md:block">
           Changan
         </p>
@@ -118,7 +118,7 @@ export const tabs = [
     id: "2",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={kaicene} />
+        <img src={kaicene} className="w-[50px] h-[50px]" />
         <p className="text-[8px] font-changan font-bold hidden md:block">
           KAICENE
         </p>
@@ -140,8 +140,8 @@ export const tabs = [
   {
     id: "3",
     label: (
-      <div className="flex gap-2 items-center">
-        <img src={deepal} />
+      <div className="flex items-center">
+        <img src={deepal} className="w-[50px] h-[50px]" />
         <p className="text-[8px] font-changan font-bold hidden md:block">
           DEEPAL
         </p>
@@ -191,14 +191,11 @@ const TabComponent = () => {
             className={`tab ${activeTab === tab.id ? "" : "hidden"}`}
           >
             {/* Wrap CarCarousel in a motion.div */}
-            <motion.div
-              initial={{ opacity: 0, x: 100 }} // Start from the right
-              animate={{ opacity: 1, x: 0 }} // Animate to original position
-              exit={{ opacity: 0, x: -100 }} // Exit to the left
-              transition={{ duration: 0.5 }} // Transition duration
+            <div
+            // Transition duration
             >
               <CarCarousel tab={tab.content} />
-            </motion.div>
+            </div>
           </div>
         ))}
       </div>

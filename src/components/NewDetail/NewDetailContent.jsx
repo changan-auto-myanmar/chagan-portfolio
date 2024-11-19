@@ -19,7 +19,7 @@ const NewDetailArray = [
   },
   {
     id: 4,
-    tilte: "The Rise of Technology and Safety",
+    title: "The Rise of Technology and Safety",
     content:
       "The automobile's origins trace back to the late 19th century when pioneers like Karl Benz and Henry Ford introduced their groundbreaking designs. The Benz Patent-Motorwagen, often regarded as the first true automobile, was powered by an internal combustion engine and marked the beginning of a new era in transportation. Henry Ford’s introduction of assembly line production revolutionized manufacturing, making cars more affordable and accessible to the masses.The automobile's origins trace back to the late 19th century when pioneers like Karl Benz and Henry Ford introduced their groundbreaking designs. The Benz Patent-Motorwagen, often regarded as the first true automobile, was powered by an internal combustion engine and marked the beginning of a new era in transportation. Henry Ford’s introduction of assembly line production revolutionized manufacturing, making cars more affordable and accessible to the masses.The automobile's origins trace back to the late 19th century when pioneers like Karl Benz and Henry Ford introduced their groundbreaking designs. The Benz Patent-Motorwagen, often regarded as the first true automobile, was powered by an internal combustion engine and marked the beginning of a new era in transportation. Henry Ford’s introduction of assembly line production revolutionized manufacturing, making cars more affordable and accessible to the masses.The automobile's origins trace back to the late 19th century when pioneers like Karl Benz and Henry Ford introduced their groundbreaking designs. The Benz Patent-Motorwagen, often regarded as the first true automobile, was powered by an internal combustion engine and marked the beginning of a new era in transportation. Henry Ford’s introduction of assembly line production revolutionized manufacturing, making cars more affordable and accessible to the masses.",
   },
@@ -27,7 +27,7 @@ const NewDetailArray = [
 
 function NewDetailContent() {
   return (
-    <div className="container mx-auto mt-10 px-6">
+    <div className="lg:w-[1000px] mx-auto py-[64px] px-5">
       {NewDetailArray.map((newdetail) => (
         <div key={newdetail.id} className="mt-10">
           <p className="header-text font-bold mt-5">{newdetail.title}</p>

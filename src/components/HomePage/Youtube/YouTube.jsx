@@ -3,7 +3,7 @@ import YouTubeVideoGrid from "./YoutubeVid";
 
 function YouTube() {
   return (
-    <div className="mt-10 p-5 lg:px-0 lg:w-[1000px] mx-auto">
+    <div className="mt-10 p-5 lg:px-0 lg:py-[64px] lg:w-[1000px] mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-3">
         {/* Left Column: Title */}
         <div className="text-left">
@@ -13,7 +13,7 @@ function YouTube() {
         </div>
 
         {/* Right Column: Description and Button */}
-        <div className="col-span-2 px-0 md:px-10">
+        <div className="col-span-2 px-0 md:ps-10">
           <p className=" mb-10 body-text mt-5 md:mt-0">
             As one of the top four automobile groups in China and the top
             selling domestic Chinese automotive brand, Changan Automobile boasts

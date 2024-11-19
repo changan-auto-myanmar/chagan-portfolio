@@ -15,7 +15,7 @@ import { AnimatePresence, motion } from "framer-motion";
 function App() {
   const pageVariants = {
     initial: {
-      opacity: 0,
+      opacity: 1,
       x: "-100%",
     },
     in: {

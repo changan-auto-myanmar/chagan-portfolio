@@ -9,8 +9,8 @@ export default {
         poppin: ["Poppin"],
       },
       fontSize: {
-        header: ["18px"],
-        body: ["14px"],
+        header: ["20px"],
+        body: ["16px"],
       },
       colors: {
         primary: "#0B457F",

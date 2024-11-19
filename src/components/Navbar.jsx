@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute bg-white p-5   bg-opacity-10 backdrop-blur-sm z-10 w-full">
+    <nav className="absolute bg-white p-5 bg-opacity-10 backdrop-blur-sm z-10 w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <div>
           <img src={logo} alt="Logo" className="w-8 md:w-14" />
@@ -123,13 +123,13 @@ const Navbar = () => {
               Contact Us
             </NavLink>
             <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0 pb-5 lg:pb-0">
-              <a href="#">
+              <a href="https://www.facebook.com/changanmyanmarmotor">
                 <FaFacebook className="text-white text-xl" />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/@ChanganMyanmarMotor">
                 <FaYoutube className="text-white text-xl" />
               </a>
-              <a href="#">
+              <a href="https://www.tiktok.com/@changan_myanmar">
                 <FaTiktok className="text-white text-xl" />
               </a>
             </div>

@@ -21,18 +21,16 @@ function ServiceShow() {
 
       {/* service list */}
       <div className="px-5 mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:w-[1000px] mx-auto">
-          <div className="col-span-1 md:col-span-2 bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="flex flex-col md:flex-row">
-              <div className="w-full md:w-1/2">
-                <img
-                  src={aftersale}
-                  alt="Car with open hood"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="p-5 md:w-1/2 flex flex-col justify-between">
-                <h3 className="text-2xl font-bold mb-4 ">After Sale Service</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:w-[1000px] mx-auto">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <img
+              src={aftersale}
+              alt="Technician working on car exterior"
+              className="w-full h-[200px] object-cover"
+            />
+            <div className="p-5 lg:h-[350px] flex flex-col justify-between">
+              <div className="">
+                <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
                 <p className="text-gray-600 mb-4">
                   Providing quality service with Changan Myanmar's highly
                   qualified technicians, we address customer concerns with
@@ -40,39 +38,41 @@ function ServiceShow() {
                   are used to ensure vehicle quality and safety in our 4S
                   standard workshop facility.
                 </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center font-semibold hover:underline"
-                >
-                  VIEW SERVICES
-                  <div className="bg-primary p-1 ms-2 rounded-sm">
-                    <MdArrowRightAlt className="text-white" size={30} />
-                  </div>
-                </a>
               </div>
+              <a
+                href="#"
+                className="inline-flex items-center font-semibold hover:text-primary"
+              >
+                VIEW SERVICES
+                <div className="bg-primary p-1 ms-5 rounded-sm">
+                  <MdArrowRightAlt className="text-white" size={30} />
+                </div>
+              </a>
             </div>
           </div>
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <img
               src={paint}
               alt="Technician working on car exterior"
-              className="w-full object-cover"
+              className="w-full h-[200px] object-cover"
             />
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-4">Paint Booth</h3>
-              <p className="text-gray-600 mb-4">
-                Our Changan Myanmar's paint booth is dedicated to quality and
-                customer satisfaction. We use the original genuine paint codes
-                and high-quality coatings, ensuring a perfect finish. An
-                additional warranty on our paint coating provides extra peace of
-                mind.
-              </p>
+            <div className="p-5 lg:h-[350px] flex flex-col justify-between">
+              <div className="">
+                <h3 className="text-xl font-bold mb-4">Paint Booth</h3>
+                <p className="text-gray-600 mb-4">
+                  Our Changan Myanmar's paint booth is dedicated to quality and
+                  customer satisfaction. We use the original genuine paint codes
+                  and high-quality coatings, ensuring a perfect finish. An
+                  additional warranty on our paint coating provides extra peace
+                  of mind.
+                </p>
+              </div>
               <a
                 href="#"
-                className="inline-flex items-center font-semibold hover:underline"
+                className="inline-flex w-full items-center font-semibold hover:text-primary"
               >
                 VIEW SERVICES
-                <div className="bg-primary p-1 ms-2 rounded-sm">
+                <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
               </a>
@@ -82,25 +82,24 @@ function ServiceShow() {
             <img
               src={mobile}
               alt="Mechanics working under a raised car"
-              className="w-full"
+              className="w-full h-[200px]"
             />
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-4">Mobile Service</h3>
-              <p className="text-gray-600 mb-4">
-                Our customer service team provides immediate assistance over the
-                phone, pinpointing breakdown locations and dispatching a mobile
-                service vehicle promptly. We offer quick roadside repairs to
-                help customers in challenging situations.
-              </p>
-              <a
-                href="#"
-                className="inline-flex items-center font-semibold hover:underline"
-              >
+            <div className="p-5 lg:h-[350px] flex flex-col justify-between">
+              <div>
+                <h3 className="text-xl font-bold mb-4">Mobile Service</h3>
+                <p className="text-gray-600 mb-4">
+                  Our customer service team provides immediate assistance over
+                  the phone, pinpointing breakdown locations and dispatching a
+                  mobile service vehicle promptly. We offer quick roadside
+                  repairs to help customers in challenging situations.
+                </p>
+              </div>
+              <button className="inline-flex items-center font-semibold hover:text-primary">
                 VIEW SERVICES
-                <div className="bg-primary p-1 ms-2 rounded-sm">
+                <div className="bg-primary p-1 ms-5  rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
-              </a>
+              </button>
             </div>
           </div>
         </div>

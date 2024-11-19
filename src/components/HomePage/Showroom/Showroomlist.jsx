@@ -6,14 +6,14 @@ const ShowroomList = () => {
     {
       name: "Yangon",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Yangon Showroom - No-38, Mindama Road, Mayangone Tsp, Yangon",
       phone: "+95 9 25 123 2050",
       image: ygn,
     },
     {
       name: "Mandalay",
       description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "Mandalay Showroom - Between 41 & 42 St, Mandalay & Pyin Oo Lwin bypass road, Mandalay",
       phone: "+95 9 25 123 2050",
       image: mdy,
     },

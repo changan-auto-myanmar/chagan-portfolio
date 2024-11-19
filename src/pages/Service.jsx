@@ -4,7 +4,8 @@ import serviceimg from "./../assets/images/services.png";
 // import NewEvent from "../components/HomePage/New&Event/NewEvent";
 import Footer from "../components/Footer";
 import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
-import ServiceShow from "../components/HomePage/ServiceShow";
+// import ServiceShow from "../components/HomePage/ServiceShow";
+import ServiceList from "../components/ServicePage/ServicesList";
 
 function Service() {
   const services = {
@@ -14,8 +15,8 @@ function Service() {
   return (
     <>
       <Banner data={services} />
-      {/* <ServicesList /> */}
-      <ServiceShow />
+      <ServiceList />
+      {/* <ServiceShow /> */}
       {/* <NewEvent /> */}
       <ShowroomList />
       <Footer />

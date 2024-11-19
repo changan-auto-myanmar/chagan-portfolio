@@ -29,8 +29,8 @@ function YouTube() {
         </div>
 
         {/* Right Column: Description and Button */}
-        <div className="col-span-2">
-          <p className=" mb-10 body-text mt-5 md:mt-0">
+        <div className="col-span-2 md:ps-10">
+          <p className="mb-10 body-text mt-5 md:mt-0">
             As one of the top four automobile groups in China and the top
             selling domestic Chinese automotive brand, Changan Automobile boasts
             an industrial history stretching back 157 years.
@@ -63,9 +63,14 @@ function YouTube() {
       </div>
 
       <div className="mt-10 w-full">
-        <Swiper spaceBetween={30} slidesPerView={"auto"} ref={swiperRef}>
+        <Swiper
+          className=""
+          spaceBetween={30}
+          slidesPerView={"auto"}
+          ref={swiperRef}
+        >
           {tabs.map((tab, index) => (
-            <SwiperSlide key={index} className="w-full md:w-1/3">
+            <SwiperSlide key={index} className="xs:w-full sm:w-1/2 lg:w-1/3">
               <Content tab={tab} />
             </SwiperSlide>
           ))}

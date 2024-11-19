@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "./../assets/images/navbar-logo.png";
 import {
   FaFacebook,
@@ -6,23 +6,17 @@ import {
   FaTiktok,
   FaViber,
   FaInstagram,
-  FaTelegram,
 } from "react-icons/fa";
-import { FaY } from "react-icons/fa6";
 
 const Footer = () => {
-  const navigate = useNavigate();
-  const handleClick = (path) => {
-    navigate(`/car-model/${path}`);
-  };
   return (
-    <footer className="bg-primary text-white p-5 lg:p-20">
-      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:justify-between">
+    <footer className="bg-primary text-white p-5 lg:py-[64px]">
+      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:justify-between lg:w-[1000px] mx-auto">
         {/* Logo and Slogan Section */}
         <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
           <img src={logo} alt="Changan Auto Logo" />
           <span className="text-[24px] font-semibold text-center md:text-left">
-            Smart Your Future
+            Smart, Your Future
           </span>
         </Link>
 
@@ -32,13 +26,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Brands</h3>
             <ul className="space-y-5">
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <button onClick={() => handleClick(0)}>CHANGAN</button>
+                <a href="/car-model/0">CHANGAN</a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <button onClick={() => handleClick(1)}>DEEPAL</button>
+                <a href="/car-model/1">DEEPAL</a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <button onClick={() => handleClick(2)}>KAICENE</button>
+                <a href="/car-model/2">KAICENE</a>
               </li>
             </ul>
           </div>
@@ -61,32 +55,39 @@ const Footer = () => {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Visit Us on</h3>
-            <ul className="space-y-5">
+            <ul className="space-y-5 ms-2">
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="#" className="">
-                  <FaFacebook className="inline-block mr-2" />
+                <a
+                  href="https://www.facebook.com/changanmyanmarmotor "
+                  className=""
+                >
+                  <FaFacebook className="inline-block mr-4" />
                   Facebook
                 </a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <FaYoutube className="inline-block mr-2" />
-                <a href="#">YouTube</a>
+                <a href="https://www.youtube.com/@ChanganMyanmarMotor">
+                  <FaYoutube className="inline-block mr-4" />
+                  YouTube
+                </a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <FaTiktok className="inline-block mr-2" />
-                <a href="#">TikTok</a>
+                <a href="https://www.tiktok.com/@changan_myanmar">
+                  <FaTiktok className="inline-block mr-4" />
+                  TikTok
+                </a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <FaViber className="inline-block mr-2" />
-                <a href="#">Viber</a>
+                <a href=" https://invite.viber.com/?g2=AQB5apDgxENNrUzcR%2BXGS2T4fziVsPpXwkuYrvUQeNtjOZS5U8UOCkpy9J6AFqFG">
+                  <FaViber className="inline-block mr-4" />
+                  Viber
+                </a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <FaTelegram className="inline-block mr-2" />
-                <a href="#">Telegram</a>
-              </li>
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <FaInstagram className="inline-block mr-2" />
-                <a href="#">Instragam</a>
+                <a href="https://www.instagram.com/changanmyanmarmotor">
+                  <FaInstagram className="inline-block mr-4" />
+                  Instragam
+                </a>
               </li>
             </ul>
           </div>

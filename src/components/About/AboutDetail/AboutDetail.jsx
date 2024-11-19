@@ -1,11 +1,11 @@
-import { MdOutlineLocalPhone } from "react-icons/md";
+// import { MdOutlineLocalPhone } from "react-icons/md";
 const AboutDetail = ({ showroom, index }) => {
   const isReversed = index % 2 !== 0;
 
   return (
     <div
       className={`flex flex-col md:flex-row gap-6 mt-10 ${
-        isReversed ? "md:flex-row-reverse" : ""
+        isReversed ? "" : "md:flex-row-reverse"
       }`}
     >
       <div className="w-full md:w-1/2 ">

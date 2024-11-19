@@ -1,4 +1,3 @@
-import React from "react";
 import changan from "./../../assets/images/brandoverview/changanoverview.png";
 import deepal from "./../../assets/images/brandoverview/DSC00970.png";
 import kaicheng from "./../../assets/images/brandoverview/IMG_9898.png";
@@ -32,7 +31,7 @@ const datas = [
 
 function BrandOverview({ id }) {
   return (
-    <div className="p-5 lg:w-[1000px] mx-auto leading-loose">
+    <div className="p-5 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
       <p className="header-text font-changan mb-5 ">
         Brand Overview for {datas[id].name}
       </p>

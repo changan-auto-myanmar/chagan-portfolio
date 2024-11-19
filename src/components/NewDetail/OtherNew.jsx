@@ -3,7 +3,7 @@ import ContentTap from "../NewAndEvent/ContentTap/ContentTap";
 
 function OtherNew() {
   return (
-    <div className="container mx-auto p-6 mt-10">
+    <div className="lg:w-[1000px] mx-auto p-5 my-[64px]">
       <p className="header-text font-bold font-changan">
         Other Interesting News
       </p>
