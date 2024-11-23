@@ -3,88 +3,151 @@ import changan from "./../../../assets/images/changan.png";
 import kaicene from "./../../../assets/images/kaicene.png";
 import deepal from "./../../../assets/images/deepal.png";
 import CarCarousel from "./CarCarousel";
-
-// Changan Car Data
-// CS75 Plus
-import cs75plus from "./../../../assets/CS75Plus/CarMockup/CS75Plus-Mo1.png";
-// import cs75plus2 from "./../../../assets/CS75Plus/CarMockup/CS75Plus-Mo2.png";
-
-import cs75gallary from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga1.jpg";
-import cs75gallary2 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga2.jpg";
-import cs75gallary3 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga3.jpg";
-import cs75gallary4 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga4.jpg";
-import cs75gallary5 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga5.jpg";
-import cs75gallary6 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga6.jpg";
-import cs75gallary7 from "./../../../assets/CS75Plus/CarGallery/CS75Plus-Ga7.jpg";
-
-import cs75inter from "./../../../assets/CS75Plus/Interior/CS75Plus-In1.jpg";
-import cs75inter2 from "./../../../assets/CS75Plus/Interior/CS75Plus-In2.jpg";
-import cs75inter3 from "./../../../assets/CS75Plus/Interior/CS75Plus-In3.jpg";
-import cs75inter4 from "./../../../assets/CS75Plus/Interior/CS75Plus-In4.jpg";
-import cs75inter5 from "./../../../assets/CS75Plus/Interior/CS75Plus-In5.jpg";
-import cs75inter6 from "./../../../assets/CS75Plus/Interior/CS75Plus-In6.jpg";
-import cs75inter7 from "./../../../assets/CS75Plus/Interior/CS75Plus-In7.jpg";
-import cs75inter8 from "./../../../assets/CS75Plus/Interior/CS75Plus-In8.jpg";
-import cs75inter9 from "./../../../assets/CS75Plus/Interior/CS75Plus-In9.jpg";
-import cs75inter10 from "./../../../assets/CS75Plus/Interior/CS75Plus-In10.jpg";
-
-import cs75ex from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex1.jpg";
-import cs75ex2 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex2.jpg";
-import cs75ex3 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex3.jpg";
-import cs75ex4 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex4.jpg";
-import cs75ex5 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex5.jpg";
-import cs75ex6 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex6.jpg";
-import cs75ex7 from "./../../../assets/CS75Plus/Exterior/CS75Plus-Ex7.jpg";
-
-// Alsvin
-import alsvin from "./../../../assets/Alsvin/Mockup/alv-mo2.png";
-
-import alvin from "./../../../assets/Alsvin/Interior/alv-in1.jpg";
-import alvin2 from "./../../../assets/Alsvin/Interior/alv-in2.jpg";
-import alvin3 from "./../../../assets/Alsvin/Interior/alv-in3.jpg";
-import alvin4 from "./../../../assets/Alsvin/Interior/alv-in4.jpg";
-import alvin5 from "./../../../assets/Alsvin/Interior/alv-in5.jpg";
-import alvin6 from "./../../../assets/Alsvin/Interior/alv-in6.jpg";
-import alvin7 from "./../../../assets/Alsvin/Interior/alv-in7.png";
-import alvin8 from "./../../../assets/Alsvin/Interior/alv-in8.png";
-
 import car2 from "../../../assets/CS75Plus/CarMockup/CS75Plus-Mo1.png";
 import car3 from "./../../../assets/images/car2.png";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 
 export const carData = [
   {
     id: 0,
-    img: cs75plus,
-    name: "CS 75",
+    img: "https://i.postimg.cc/15SgRtJ4/CS75-Plus-Ga1.jpg",
+    name: "CS 75 Plus",
     gallery: [
-      cs75gallary,
-      cs75gallary2,
-      cs75gallary3,
-      cs75gallary4,
-      cs75gallary5,
-      cs75gallary6,
-      cs75gallary7,
+      "https://i.postimg.cc/15SgRtJ4/CS75-Plus-Ga1.jpg",
+      "https://i.postimg.cc/y6cgz9hw/CS75-Plus-Ga2.jpg",
+      "https://i.postimg.cc/fycJjnTw/CS75-Plus-Ga3.jpg",
+      "https://i.postimg.cc/t4S7zzyV/CS75-Plus-Ga4.jpg",
+      "https://i.postimg.cc/Gp4tgshg/CS75-Plus-Ga5.jpg",
+      "https://i.postimg.cc/T3Ypms86/CS75-Plus-Ga6.jpg",
     ],
     interier: [
-      cs75inter,
-      cs75inter2,
-      cs75inter3,
-      cs75inter4,
-      cs75inter5,
-      cs75inter6,
-      cs75inter7,
-      cs75inter8,
-      cs75inter9,
-      cs75inter10,
+      "https://i.postimg.cc/sXZLJGvM/CS75-Plus-In1.jpg",
+      "https://i.postimg.cc/FHDwFQMH/CS75-Plus-In2.jpg",
+      "https://i.postimg.cc/hGYwx1PF/CS75-Plus-In3.jpg",
+      "https://i.postimg.cc/vmTkcNyL/CS75-Plus-In4.jpg",
+      "https://i.postimg.cc/7ZxpyLQR/CS75-Plus-In5.jpg",
+      "https://i.postimg.cc/1RFxG2qv/CS75-Plus-In6.jpg",
+      "https://i.postimg.cc/FsXMDpbN/CS75-Plus-In8.jpg",
+      "https://i.postimg.cc/tCbchTyg/CS75-Plus-In12.png",
     ],
-    exterier: [cs75ex, cs75ex2, cs75ex3, cs75ex4, cs75ex5, cs75ex6, cs75ex7],
+    exterier: [
+      "https://i.postimg.cc/GhgZrKP0/CS75-Plus-Ex1.jpg",
+      "https://i.postimg.cc/BQnddkKc/CS75-Plus-Ex2.jpg",
+      "https://i.postimg.cc/Qjt3P9gG/CS75-Plus-Ex3.jpg",
+      "https://i.postimg.cc/9Q4sf91D/CS75-Plus-Ex4.jpg",
+      "https://i.postimg.cc/BvHyTGrs/CS75-Plus-Ex5.jpg",
+      "https://i.postimg.cc/hjnYM5nm/CS75-Plus-Ex6.jpg",
+      "https://i.postimg.cc/pTB6SJV6/CS75-Plus-Ex7.jpg",
+    ],
   },
   {
     id: 1,
-    img: alsvin,
+    img: "https://i.postimg.cc/7PQZtps0/alv-in1.jpg",
     name: "Alsvin",
-    interier: [alvin, alvin2, alvin3, alvin4, alvin5, alvin6, alvin7, alvin8],
+    interier: [
+      "https://i.postimg.cc/7PQZtps0/alv-in1.jpg",
+      "https://i.postimg.cc/7hcPC2Gm/alv-in2.jpg",
+      "https://i.postimg.cc/CLBL3mXt/alv-in3.jpg",
+      "https://i.postimg.cc/L93qDQF3/alv-in4.jpg",
+      "https://i.postimg.cc/0Nf8Y3K6/alv-in5.jpg",
+      "https://i.postimg.cc/VN1fb1vQ/alv-in6.jpg",
+      "https://i.postimg.cc/T3n2whRJ/alv-in7.png",
+      "https://i.postimg.cc/28s8rnf5/alv-in8.png",
+    ],
+  },
+  {
+    id: 2,
+    img: "https://i.postimg.cc/Y07HVBGf/banni-Gallary1.jpg",
+    name: "Alsvin",
+    gallery: [
+      "https://i.postimg.cc/Y07HVBGf/banni-Gallary1.jpg",
+      "https://i.postimg.cc/PtFqfLnY/banni-Gallary2.jpg",
+      "https://i.postimg.cc/BbC0f72W/banni-Gallary3.jpg",
+      "https://i.postimg.cc/jjGKH7R1/banni-Gallary4.jpg",
+      "https://i.postimg.cc/kXnCv9d7/banni-Gallary5.jpg",
+      "https://i.postimg.cc/XYP0WCBv/banni-Gallary6.jpg",
+      "https://i.postimg.cc/CLmgvtFk/banni-Gallary7.jpg",
+      "https://i.postimg.cc/cLCNPmHj/banni-Gallary8.jpg",
+    ],
+  },
+  {
+    id: 3,
+    img: "https://i.postimg.cc/J0v4HFhy/D201-1-min.jpg",
+    name: "Single Truck Car",
+    exterier: [
+      "https://i.postimg.cc/DfbK6Q66/57024af7f281d.jpg",
+      "https://i.postimg.cc/MWDZfY3j/57024afd5ba17.jpg",
+      "https://i.postimg.cc/6qRJQwqg/57024b03a5762.jpg",
+      "https://i.postimg.cc/13KS69BZ/57024b066ef87.jpg",
+      "https://i.postimg.cc/MGP8PdgP/57024b09e3ddd.jpg",
+    ],
+    gallery: [
+      "https://i.postimg.cc/KzmKmCKx/KAICENE-BROUCHER-Eidt.jpg",
+      "https://i.postimg.cc/xdDJ4Xnk/truck-banner.jpg",
+      "https://i.postimg.cc/J0v4HFhy/D201-1-min.jpg",
+    ],
+    interier: [
+      "https://i.postimg.cc/6QyjY166/single-In1.jpg",
+      "https://i.postimg.cc/QdNnWdRT/single-In2.jpg",
+      "https://i.postimg.cc/rp3hbCz1/single-In3.jpg",
+      "https://i.postimg.cc/vZP27dsS/single-In4.jpg",
+    ],
+  },
+  {
+    id: 4,
+    img: "https://s.alicdn.com/@sc04/kf/H94693179dbdd4334b035094420034cb7j.jpg_720x720q50.jpg",
+    name: "Double Truck",
+    exterier: [
+      "https://i.postimg.cc/nr7sGmPc/CHANGAN-MS-201-PICK-UP-DC-AC-CD-34-DELANTERO-IZQUIERDO-1070x680px.jpg",
+      "https://i.postimg.cc/Kz134w7T/CHANGAN-MS-201-PICK-UP-DC-AC-CD-34-TRASERO-DERECHO-1070x680px.jpg",
+      "https://i.postimg.cc/NMZ9XDbz/CHANGAN-MS-201-PICK-UP-DC-AC-CD-COSTADO-DERECHO-1070x680px.jpg",
+      "https://i.postimg.cc/G3ssR0mw/doble-cabina.jpg",
+    ],
+    gallery: ["https://i.postimg.cc/j5NT241c/IMG-9898-min.jpg"],
+    interier: [
+      "https://i.postimg.cc/6QyjY166/single-In1.jpg",
+      "https://i.postimg.cc/QdNnWdRT/single-In2.jpg",
+      "https://i.postimg.cc/rp3hbCz1/single-In3.jpg",
+      "https://i.postimg.cc/vZP27dsS/single-In4.jpg",
+    ],
+  },
+  {
+    id: 5,
+    img: "https://i.postimg.cc/NFXWc6sD/XMJ-1101-min.jpg",
+    name: "Deepal S7",
+    exterier: [
+      "https://i.postimg.cc/WN2xWZMs/JXY-0331-L-min.jpg",
+      "https://i.postimg.cc/NMMJg14T/JXY-0646-L-min.jpg",
+      "https://i.postimg.cc/kGRTSqLg/JXY-1440-L4-min.jpg",
+      "https://i.postimg.cc/2jqYGvDV/JXY-1516-L-min.jpp",
+      "https://i.postimg.cc/pVr4xtG7/Wechat-IMG524-L5-min.jpg",
+    ],
+    interier: [
+      "https://i.postimg.cc/DwGKhKZF/min.jpg",
+      "https://i.postimg.cc/pV0vYZ4N/731-min.jpg",
+      "https://i.postimg.cc/vHcsPnw4/min.jpg",
+      "https://i.postimg.cc/kXzdL57f/min.jpg",
+      "https://i.postimg.cc/LsMF60YP/min.jpg",
+      "https://i.postimg.cc/1zchgcwj/731-min.jpg",
+      "https://i.postimg.cc/xCtw5fsG/81gai-min.jpg",
+      "https://i.postimg.cc/FrVN1mxH/8-1gai-min.jpg",
+      "https://i.postimg.cc/8cYq8ygj/min.jpg",
+      "https://i.postimg.cc/CM6yfKnS/728-min.jpg",
+      "https://i.postimg.cc/YS7TwGZf/gai-min.jpg",
+      "https://i.postimg.cc/28PP2Xxt/min.jpg",
+      "https://i.postimg.cc/k5yzMMdr/731-min.jpg",
+      "https://i.postimg.cc/1t5T8x98/1-min.jpg",
+    ],
+    gallery: [
+      "https://i.postimg.cc/NFXWc6sD/XMJ-1101-min.jpg",
+      "https://i.postimg.cc/KYqXrcpP/1-JEH0947-L4-min.jpg",
+      "https://i.postimg.cc/xdTDzN5j/1-JEH9897-L5-min.jpg",
+      "https://i.postimg.cc/1t2L2CQ4/JXY-1999-L5-min.jpg",
+      "https://i.postimg.cc/j5Lp8VBG/XMJ-0760-min.jpg",
+      "https://i.postimg.cc/RCnrKB7t/ZFL-0472-2-min.jpg",
+      "https://i.postimg.cc/zXmskc7c/ZFL-0488-2-min.jpg",
+      "https://i.postimg.cc/SNWw1ftN/0706-HDR-min.jpg",
+    ],
   },
 ];
 
@@ -103,14 +166,20 @@ export const tabs = [
       {
         id: "tab1",
         no: "0",
-        img: cs75plus,
-        name: "CS 75",
+        img: "https://i.postimg.cc/NfNx5fjS/cs75.jpg",
+        name: "CS 75 Plus",
       },
       {
         id: "tab2",
         no: "1",
-        img: alsvin,
+        img: "https://i.postimg.cc/B6r2xXKQ/alv-mo2.png",
         name: "Alsvin",
+      },
+      {
+        id: "tab3",
+        no: "2",
+        img: "https://i.postimg.cc/VNbPkkXW/banni.png",
+        name: "Banni E Star",
       },
     ],
   },
@@ -127,13 +196,15 @@ export const tabs = [
     content: [
       {
         id: "tab1",
-        img: car2,
-        name: "CS 95",
+        no: "3",
+        img: "https://i.postimg.cc/G2JX2BbV/Changan-Startruck-Plus-2-jpg.webp",
+        name: "Single Truck",
       },
       {
         id: "tab2",
-        img: car2,
-        name: "CS 95 Plus",
+        no: "4",
+        img: "https://i.postimg.cc/HxJK301M/double.png",
+        name: "Double Truck",
       },
     ],
   },
@@ -150,13 +221,9 @@ export const tabs = [
     content: [
       {
         id: "tab1",
-        img: car3,
-        name: "CS 45",
-      },
-      {
-        id: "tab2",
-        img: car3,
-        name: "CS 45 Plus",
+        no: "5",
+        img: "https://i.postimg.cc/NQ8cdBW7/0727-03-copy-min.png",
+        name: "DEepal S7",
       },
     ],
   },

@@ -17,6 +17,7 @@ import BrandOverview from "./BrandOverview";
 import { useParams } from "react-router-dom";
 
 function CarBrandBanner() {
+  console.log("carModel", tabs);
   const { id } = useParams();
   const [activeSlideId, setActiveSlideId] = useState(id);
   // console.log("active", typeof activeSlideId);
@@ -28,13 +29,13 @@ function CarBrandBanner() {
     },
     {
       id: 2,
-      name: "DEEPAL Car Model",
-      img: deepel,
+      name: "KAICENE Car Model",
+      img: kaisen,
     },
     {
       id: 3,
-      name: "KAICENE Car Model",
-      img: kaisen,
+      name: "DEEPAL Car Model",
+      img: deepel,
     },
   ];
 

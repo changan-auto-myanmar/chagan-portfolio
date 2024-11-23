@@ -5,9 +5,17 @@ const CarColorChanger = () => {
   const [carColor, setCarColor] = useState("bg-gray-800"); // Default color
 
   const colors = [
-    { name: "Eclipse Black", class: "bg-gray-800" },
-    { name: "Sky Blue", class: "bg-blue-900" },
-    { name: "Sunset Red", class: "bg-red-600" },
+    {
+      name: "Eclipse Black",
+      class: "bg-gray-800",
+      img: "https://i.postimg.cc/NQ8cdBW7/0727-03-copy-min.png",
+    },
+    {
+      name: "Sky Blue",
+      class: "bg-blue-900",
+      img: "https://i.postimg.cc/qRP5jNs3/2-min.png",
+    },
+    // { name: "Sunset Red", class: "bg-red-600" },
   ];
 
   return (
@@ -16,11 +24,13 @@ const CarColorChanger = () => {
         CS 75 Plus Body Color
       </h1>
       <div className="relative ">
-        <img
-          src={Car}
-          alt="Car"
-          className="w-[640px] h-[320px] object-contain"
-        />
+        {colors.find((c) => c.class === carColor)?.img && (
+          <img
+            src={colors.find((c) => c.class === carColor)?.img}
+            alt={colors.find((c) => c.class === carColor)?.name}
+            className="w-[700px] h-[400px] object-cover"
+          />
+        )}
       </div>
       <div className="flex space-x-20 mt-4">
         {colors.map((color) => (
