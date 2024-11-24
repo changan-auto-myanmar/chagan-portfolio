@@ -10,6 +10,11 @@ import CarBrand from "../components/HomePage/CarModelShow/CarBrand";
 const Home = () => {
   return (
     <div>
+      <div className="fixed bottom-10 right-10 ">
+        <button className="bg-primary hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg">
+          Contact Us
+        </button>
+      </div>
       <HeroBanner />
       <CarBrand />
       <AboutChangan />
