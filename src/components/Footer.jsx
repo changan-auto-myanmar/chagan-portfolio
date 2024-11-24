@@ -42,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-5">
               <li className="hover:-translate-x-1 transition-transform duration-300">
                 <Link to="/about" className="">
-                  About Changan
+                  About Us
                 </Link>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">

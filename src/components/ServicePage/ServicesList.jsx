@@ -23,11 +23,11 @@ function ServiceList() {
       <div className="mt-10 w-full">
         <div className="flex flex-col md:flex-row py-[64px] ">
           <div className="md:w-2/5 mb-8 md:mb-0">
-            <h1 className="header-text text-primary font-bold font-changan">
+            <h1 className="header-text text-primary font-bold">
               After Sale Service
             </h1>
 
-            <p className="body-text mt-4 text-gray-700">
+            <p className="xs:text-md md:text-lg mt-4 text-gray-700">
               Providing quality service with Changan Myanmar's highly qualified
               technicians, we address customer concerns with thorough repairs
               and expert technical support. Genuine parts are used to ensure
@@ -60,8 +60,8 @@ function ServiceList() {
               />
 
               <button className="w-full bg-blue-white border border-blue-900 text-black p-2 rounded hover:bg-blue-900 hover:text-white transition">
-                SEND US MESSAGE
-                <MdArrowRightAlt className="inline-block ms-20 text-3xl text-blue-900 hover:text-white" />
+                BOOK SERVICE NOW
+                <MdArrowRightAlt className="inline-block ms-5 text-3xl text-blue-900 hover:text-white" />
               </button>
             </form>
           </div>
@@ -89,7 +89,7 @@ function ServiceList() {
                 className="inline-flex items-center font-semibold hover:underline"
               >
                 VIEW SERVICES
-                <div className="bg-primary p-1 ms-2 rounded-sm">
+                <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
               </a>
@@ -116,7 +116,7 @@ function ServiceList() {
                 className="inline-flex items-center font-semibold hover:underline"
               >
                 VIEW SERVICES
-                <div className="bg-primary p-1 ms-2 rounded-sm">
+                <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
               </a>
