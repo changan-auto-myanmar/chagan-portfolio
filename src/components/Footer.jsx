@@ -29,10 +29,10 @@ const Footer = () => {
                 <a href="/car-model/0">CHANGAN</a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="/car-model/1">DEEPAL</a>
+                <a href="/car-model/1">KAICENE</a>
               </li>
               <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="/car-model/2">KAICENE</a>
+                <a href="/car-model/2">DEEPEL</a>
               </li>
             </ul>
           </div>
