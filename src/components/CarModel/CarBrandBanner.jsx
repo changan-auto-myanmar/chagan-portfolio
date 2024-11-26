@@ -60,10 +60,7 @@ function CarBrandBanner() {
             <div className="brightness-50 bg-black h-full">
               <img src={item.img} className="w-full h-full object-cover" />
             </div>
-            <p
-              className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5
-            xl font-changan font-bold hidden lg:block"
-            >
+            <p className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5xl font-changan font-bold hidden lg:block">
               {item.name}
             </p>
           </SwiperSlide>
