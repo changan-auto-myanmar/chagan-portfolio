@@ -1,3 +1,5 @@
+import { SwiperSlide, Swiper } from "swiper/react";
+import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import changan from "./../../assets/images/brandoverview/changanoverview.png";
 import deepal from "./../../assets/images/brandoverview/DSC00970.png";
 import kaicheng from "./../../assets/images/brandoverview/IMG_9898.png";
@@ -37,7 +39,22 @@ function BrandOverview({ id }) {
       </p>
       <p className="body-text">{datas[id].desc}</p>
       <div className="mt-5">
-        <img src={datas[id].image} className="w-full h-full" alt="" />
+        <Swiper spaceBetween={30} slidesPerView={"auto"}>
+          {/* {carData[id].exterier.map((item, index) => ( */}
+          <SwiperSlide className="w-full md:w-[750px]">
+            <img src={datas[id].image} className="w-full" alt="" />
+          </SwiperSlide>
+          <SwiperSlide className="w-full md:w-[750px]">
+            <img src={datas[id].image} className="w-full" alt="" />
+          </SwiperSlide>
+          {/* ))} */}
+          <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
+            <div className="flex flex-col gap-5">
+              <SwiperButtonPrev />
+              <SwiperButtonNext />
+            </div>
+          </div>
+        </Swiper>
       </div>
       <p className="body-text my-5">{datas[id].body}</p>
       {datas[id].footer ? (
