@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import { EffectFade } from "swiper/modules";
 
-import changan from "./../../assets/images/changan-banner.jpg";
-import deepel from "./../../assets/images/deepal-banner.jpg";
-import kaisen from "./../../assets/images/kaicheng-banner.png";
+import changan from "./../../assets/images/brandoverview/changan.png";
+import deepel from "./../../assets/images/brandoverview/deepal.jpg";
+import kaisen from "./../../assets/images/brandoverview/kaicheng.png";
 import { tabs } from "../HomePage/CarModelShow/TabModel";
 
 // Import Swiper styles
@@ -57,10 +57,15 @@ function CarBrandBanner() {
       >
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="brightness-50 bg-black h-full">
-              <img src={item.img} className="w-full h-full object-cover" />
-            </div>
-            <p className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5xl font-changan font-bold hidden lg:block">
+            {/* <div className="brightness-50 bg-black h-full"> */}
+            <img src={item.img} className="w-full h-full object-cover" />
+            {/* </div> */}
+            <p
+              className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5xl font-changan font-bold hidden lg:block"
+              style={{
+                textShadow: " 2px 2px 4px #0B457F",
+              }}
+            >
               {item.name}
             </p>
           </SwiperSlide>

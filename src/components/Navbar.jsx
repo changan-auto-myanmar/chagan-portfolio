@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute bg-white p-5 bg-opacity-10 backdrop-blur-sm z-10 w-full">
+    <nav className="absolute bg-white p-5 bg-opacity-10 backdrop-blur-sm z-40 w-full">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         <div>
           <img src={logo} alt="Logo" className="w-8 md:w-14" />

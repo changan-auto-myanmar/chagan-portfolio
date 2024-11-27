@@ -3,8 +3,6 @@ import changan from "./../../../assets/images/changan.png";
 import kaicene from "./../../../assets/images/kaicene.png";
 import deepal from "./../../../assets/images/deepal.png";
 import CarCarousel from "./CarCarousel";
-import car2 from "../../../assets/CS75Plus/CarMockup/CS75Plus-Mo1.png";
-import car3 from "./../../../assets/images/car2.png";
 // import { motion } from "framer-motion";
 
 export const carData = [

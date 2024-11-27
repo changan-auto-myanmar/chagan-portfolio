@@ -6,15 +6,19 @@ import NewEvent from "../components/HomePage/New&Event/NewEvent";
 import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
 import Footer from "../components/Footer";
 import CarBrand from "../components/HomePage/CarModelShow/CarBrand";
-import { FaFacebookMessenger } from "react-icons/fa";
+import Messenger from "./../assets/images/messenger.png";
 
 const Home = () => {
   return (
     <div>
       <div className="fixed bottom-5 right-10 z-10">
-        <button className="bg-primary hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow-lg">
-          Contact Us
-        </button>
+        <a
+          href="https://m.me/100830611622590"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={Messenger} className="w-10 h-10 hover:scale-95" />
+        </a>
       </div>
       <HeroBanner />
       <CarBrand />

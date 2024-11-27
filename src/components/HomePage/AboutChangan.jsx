@@ -18,15 +18,16 @@ function AboutChangan() {
               About Our Changan
             </h2>
 
-            <Link
-              to="/about"
+            <a
+              href="https://www.globalchangan.com/"
+              target="_blank"
               className="flex bg-white text-primary items-center px-1 md:px-2 lg:px-10 py-1 md:py-2 lg:py-4 rounded-sm border border-primary hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out"
             >
               <span className="mr-2 md:mr-5 font-semibold lg:mr-5 text-sm md:text-md lg:text-xl">
                 EXPLORE CHANGAN
               </span>
               <MdArrowRightAlt className="text-xl md:text-2xl lg:text-3xl" />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

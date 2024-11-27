@@ -16,7 +16,7 @@ function HeroBanner() {
     <Swiper
       modules={[EffectFade]}
       effect="fade"
-      className="relative h-[300px] md:h-screen"
+      className="relative h-[300px] md:h-screen z-20"
     >
       <SwiperSlide>
         <img src={banner} className="w-full h-full object-cover" />

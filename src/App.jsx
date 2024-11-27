@@ -11,6 +11,7 @@ import NewDetail from "./pages/NewDetail";
 import ContactUs from "./pages/ContactUs";
 import ScrollToTop from "./ScrollToTop";
 import { AnimatePresence, motion } from "framer-motion";
+import "./App.css";
 
 function App() {
   const pageVariants = {

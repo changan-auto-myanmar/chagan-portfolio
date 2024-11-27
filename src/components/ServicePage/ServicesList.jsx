@@ -3,6 +3,7 @@ import paint from "./../../assets/images/services/paint.png";
 import mobile from "./../../assets/images/services/mobile.png";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function ServiceList() {
   return (
@@ -84,15 +85,15 @@ function ServiceList() {
                   of mind.
                 </p>
               </div>
-              <a
-                href="#"
-                className="inline-flex items-center font-semibold hover:underline"
+              <Link
+                to="/services"
+                className="inline-flex w-full items-center font-semibold hover:text-primary"
               >
                 VIEW SERVICES
                 <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -111,15 +112,15 @@ function ServiceList() {
                   repairs to help customers in challenging situations.
                 </p>
               </div>
-              <a
-                href="#"
-                className="inline-flex items-center font-semibold hover:underline"
+              <Link
+                to="/services"
+                className="inline-flex w-full items-center font-semibold hover:text-primary"
               >
                 VIEW SERVICES
                 <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

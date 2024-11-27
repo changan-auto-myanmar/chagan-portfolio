@@ -21,39 +21,41 @@ const Footer = () => {
         </Link>
 
         {/* Links Section */}
-        <div className="flex md:flex-row md:space-x-10 justify-between lg:space-x-20">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Brands</h3>
-            <ul className="space-y-5">
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="/car-model/0">CHANGAN</a>
-              </li>
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="/car-model/1">KAICENE</a>
-              </li>
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <a href="/car-model/2">DEEPEL</a>
-              </li>
-            </ul>
+        <div className="flex flex-col md:flex-row md:space-x-10 lg:space-x-20">
+          <div className="flex space-x-20">
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Brands</h3>
+              <ul className="space-y-5">
+                <li className="hover:-translate-x-1 transition-transform duration-300">
+                  <a href="/car-model/0">CHANGAN</a>
+                </li>
+                <li className="hover:-translate-x-1 transition-transform duration-300">
+                  <a href="/car-model/1">KAICENE</a>
+                </li>
+                <li className="hover:-translate-x-1 transition-transform duration-300">
+                  <a href="/car-model/2">DEEPEL</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Other Links</h3>
+              <ul className="space-y-5">
+                <li className="hover:-translate-x-1 transition-transform duration-300">
+                  <Link to="/about" className="">
+                    About Us
+                  </Link>
+                </li>
+                <li className="hover:-translate-x-1 transition-transform duration-300">
+                  <Link to="/new" className="">
+                    News & Events
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Other Links</h3>
-            <ul className="space-y-5">
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <Link to="/about" className="">
-                  About Us
-                </Link>
-              </li>
-              <li className="hover:-translate-x-1 transition-transform duration-300">
-                <Link to="/new" className="">
-                  News & Events
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
+          <div className="mt-20 md:mt-0">
             <h3 className="text-lg font-semibold mb-4">Visit Us on</h3>
             <ul className="space-y-5 ms-2">
               <li className="hover:-translate-x-1 transition-transform duration-300">

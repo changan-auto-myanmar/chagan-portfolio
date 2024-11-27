@@ -1,7 +1,9 @@
 const YouTubeVideoGrid = () => {
   const videos = [
-    { id: "SC07e2SadcI", title: "Video Title 1" },
-    { id: "V9KSPOtz5ms", title: "Video Title 2" },
+    { id: "6gSQkAwpJgY", title: "Video Title 1" },
+    { id: "EulEQ_1-Ufs", title: "Video Title 2" },
+    { id: "zjCyJUlkyjU", title: "Video Title 3" },
+    { id: "SqoZqG4Ja5Y", title: "Video Title 4" },
   ];
 
   return (
