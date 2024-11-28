@@ -12,7 +12,7 @@ function CarDetail() {
   return (
     <>
       <CarBanner carData={carData} />
-      <CarColorChanger carData={carData[id]?.color} />
+      <CarColorChanger carData={carData[id]?.color} name={carData[id].name} />
       <CarDesign carData={carData} />
       <CarGallary carData={carData} />
       <CarModelShow />

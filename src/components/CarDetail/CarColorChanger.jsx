@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const CarColorChanger = ({ carData }) => {
+const CarColorChanger = ({ carData, name }) => {
   // console.log(carData);
   const [carColor, setCarColor] = useState(1); // Default color
   console.log("carData", carData);
@@ -11,7 +11,7 @@ const CarColorChanger = ({ carData }) => {
     carData.length > 0 && (
       <div className="flex flex-col items-center mt-10">
         <h1 className="text-2xl font-bold mb-4 font-changan">
-          CS 75 Plus Body Color
+          {name} Body Color
         </h1>
         <div className="relative ">
           {carData.find((c) => c.id == carColor)?.image && (
