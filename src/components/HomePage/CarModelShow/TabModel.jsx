@@ -249,7 +249,7 @@ export const tabs = [
         id: "tab1",
         no: "5",
         img: "https://i.postimg.cc/NQ8cdBW7/0727-03-copy-min.png",
-        name: "DEepal S7",
+        name: "Deepal S7",
       },
     ],
   },
