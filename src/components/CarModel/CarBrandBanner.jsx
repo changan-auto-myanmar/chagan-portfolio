@@ -43,16 +43,18 @@ function CarBrandBanner() {
 
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);
-    // console.log("Active Slide ID:", swiper.activeIndex);
+    console.log("Active Slide ID:", swiper.activeIndex);
   };
 
   return (
     <div>
       <Swiper
+        loop={false}
         modules={[EffectFade]}
         effect="fade"
         className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden"
         initialSlide={activeSlideId}
+        slidesPerView={3}
         onSlideChange={handleSlideChange}
       >
         {carModelarray.map((item) => (
@@ -71,8 +73,12 @@ function CarBrandBanner() {
           </SwiperSlide>
         ))}
         <div className="absolute bottom-[34px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
-          <SwiperButtonPrev />
-          <SwiperButtonNext />
+          <button className={activeSlideId === 0 ? "opacity-50" : ""}>
+            <SwiperButtonPrev />
+          </button>
+          <button className={activeSlideId === 2 ? "opacity-50" : ""}>
+            <SwiperButtonNext />
+          </button>
         </div>
       </Swiper>
       {/* car carousel */}

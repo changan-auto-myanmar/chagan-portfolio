@@ -7,7 +7,7 @@ export const SwiperButtonNext = ({ children }) => {
   const swiper = useSwiper();
   return (
     <button
-      className="bg-white hover:bg-gray-900 border border-gray-300 shadow shadow-gray-500 hover:text-white text-black font-bold p-2 md:p-4 rounded "
+      className="bg-white hover:bg-gray-900 border border-gray-300 shadow shadow-gray-500 hover:text-white text-black font-bold p-2 md:p-4 rounded"
       onClick={() => swiper.slideNext()}
     >
       {children ? children : <IoMdArrowDropright className="text-3xl" />}

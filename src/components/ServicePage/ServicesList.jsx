@@ -1,9 +1,7 @@
-import aftersale from "../../assets/images/services/service.png";
 import paint from "./../../assets/images/services/paint.png";
 import mobile from "./../../assets/images/services/mobile.png";
 
 import { MdArrowRightAlt } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 function ServiceList() {
   return (
@@ -85,7 +83,7 @@ function ServiceList() {
                   of mind.
                 </p>
               </div>
-              <Link
+              {/* <Link
                 to="/services"
                 className="inline-flex w-full items-center font-semibold hover:text-primary"
               >
@@ -93,7 +91,7 @@ function ServiceList() {
                 <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
@@ -112,7 +110,7 @@ function ServiceList() {
                   repairs to help customers in challenging situations.
                 </p>
               </div>
-              <Link
+              {/* <Link
                 to="/services"
                 className="inline-flex w-full items-center font-semibold hover:text-primary"
               >
@@ -120,7 +118,7 @@ function ServiceList() {
                 <div className="bg-primary p-1 ms-5 rounded-sm">
                   <MdArrowRightAlt className="text-white" size={30} />
                 </div>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

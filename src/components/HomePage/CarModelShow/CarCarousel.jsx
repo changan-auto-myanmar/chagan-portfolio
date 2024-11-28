@@ -5,7 +5,7 @@ import { MdArrowRightAlt } from "react-icons/md";
 // Import Swiper styles
 import "swiper/css";
 
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { SwiperButtonNext, SwiperButtonPrev } from "./../../SwiperBtn";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -16,8 +16,10 @@ const CarCarousel = ({ tab }) => {
   return (
     <div className="w-screen lg:w-[800px] relative">
       <Swiper
+        loop={true}
         slidesPerView={1}
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
+        pagination={{ clickable: true }}
         navigation
         onSlideChange={(swiper) => {
           //console.log//("Slide changed to index:", swiper.activeIndex);

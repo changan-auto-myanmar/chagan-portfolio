@@ -113,6 +113,34 @@ export const carData = [
     id: 5,
     img: "https://i.postimg.cc/NFXWc6sD/XMJ-1101-min.jpg",
     name: "Deepal S7",
+    color: [
+      {
+        id: 1,
+        image: "https://i.postimg.cc/05mHFz17/Eclipse-Black-min.png",
+        color: "#000000",
+        name: "Eclipse Black",
+      },
+      {
+        id: 2,
+        image: "https://i.postimg.cc/4dyBW3bH/Lunar-Grey-min.png",
+        color: "#A09E9A",
+        name: "Lunar Grey",
+      },
+      {
+        id: 3,
+        image: "https://i.postimg.cc/4dYjmP00/Nebula-Green-min.png",
+        color: "#009b77",
+        name: "Nebula Green",
+        scale: "120",
+      },
+      {
+        id: 4,
+        image: "https://i.postimg.cc/Dyvd60vv/Comet-White-min-1.png",
+        color: "#fff",
+        name: "Comet White",
+        scale: "105",
+      },
+    ],
     exterier: [
       "https://i.postimg.cc/WN2xWZMs/JXY-0331-L-min.jpg",
       "https://i.postimg.cc/NMMJg14T/JXY-0646-L-min.jpg",

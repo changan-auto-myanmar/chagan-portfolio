@@ -5,13 +5,14 @@ import CarGallary from "../components/CarDetail/CarGallary";
 import Footer from "../components/Footer";
 import CarModelShow from "../components/HomePage/CarModelShow/CarModelShow";
 import { carData } from "../components/HomePage/CarModelShow/TabModel";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function CarDetail() {
+  const { id } = useParams();
   return (
     <>
       <CarBanner carData={carData} />
-      <CarColorChanger />
+      <CarColorChanger carData={carData[id]?.color} />
       <CarDesign carData={carData} />
       <CarGallary carData={carData} />
       <CarModelShow />
