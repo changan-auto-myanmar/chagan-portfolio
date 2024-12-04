@@ -29,7 +29,7 @@ function HeroBanner() {
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 40 }}
         transition={{ duration: 1 }}
-        className="absolute bottom-[64px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px]"
+        className="absolute bottom-[64px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block"
       >
         <SwiperButtonPrev />
         <SwiperButtonNext />
