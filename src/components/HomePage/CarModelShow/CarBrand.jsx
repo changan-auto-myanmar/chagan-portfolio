@@ -26,7 +26,7 @@ export default function CarBrand() {
         </div>
         <div
           className="flex-1 text-center overflow-hidden cursor-pointer lg:hidden"
-          onClick={() => handleClick(1)}
+          onClick={() => handleClick(2)}
         >
           <img
             alt="Deepal"
@@ -37,7 +37,7 @@ export default function CarBrand() {
         <div
           className="flex-1 text-center absolute left-1/2 transform -translate-x-1/2 z-10 cursor-pointer hidden lg:block"
           style={{ clipPath: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)" }}
-          onClick={() => handleClick(1)}
+          onClick={() => handleClick(2)}
         >
           <img
             alt="Deepal"
@@ -47,7 +47,7 @@ export default function CarBrand() {
         </div>
         <div
           className="flex-1 text-center overflow-hidden cursor-pointer"
-          onClick={() => handleClick(2)}
+          onClick={() => handleClick(1)}
         >
           <img
             alt="Kaicheng"

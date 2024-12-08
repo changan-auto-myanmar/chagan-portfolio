@@ -14,6 +14,13 @@ const datas = [
     footer: `These experts are strategically stationed in "Six Countries and Ten Places", including Chongqing (China), Beijing (China), Shanghai (China), Dingzhou (China), Hefei (China), Turin (Italy), Yokohama (Japan), Birmingham (United Kingdom), Detroit (United States), and Munich (Germany). This strategic placement forms a comprehensive global collaborative research and development framework with distinct regional focuses`,
   },
   {
+    id: 3,
+    name: "KAICHENG",
+    image: kaicheng,
+    desc: "Kaicene Star Truck is a small commercial vehicle that's powered by an efficient 4-cylinder gasoline engine that measures at 1.2 L in displacement and is Euro 4 compliant.",
+    body: "Kaicene Star is a series of trucks and microvans built and sold by Changan Automobile under the Changan brand since 1999. The Changan Star series was later repositioned under the Kaicene sub-brand of Changan Automobile.",
+  },
+  {
     id: 2,
     name: "DEEPAL",
     image: deepal,
@@ -21,13 +28,6 @@ const datas = [
     body: `At this crucial moment when the automotive industry is transitioning to a new track, we witness the convergence of technology and manufacturing, bringing software-defined cars to reality, and the advent of "automotive robots". DEEPAL is firmly convinced that China is poised to deliver globally recognized Chinese brands.`,
     footer:
       "With an unwavering commitment to overcoming challenges, DEEPAL will explore digital technology and energy technology. DEEPAL aims to become a world-class electric vehicle brand in rapidly growing mainstream markets, providing more enticing green mobility experiences. Our goal is to introduce more people to the captivating experience of BEV driving, leading the way into the future.",
-  },
-  {
-    id: 3,
-    name: "KAICHENG",
-    image: kaicheng,
-    desc: "Kaicene Star Truck is a small commercial vehicle that's powered by an efficient 4-cylinder gasoline engine that measures at 1.2 L in displacement and is Euro 4 compliant.",
-    body: "Kaicene Star is a series of trucks and microvans built and sold by Changan Automobile under the Changan brand since 1999. The Changan Star series was later repositioned under the Kaicene sub-brand of Changan Automobile.",
   },
 ];
 
