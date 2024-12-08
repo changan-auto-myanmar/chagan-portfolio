@@ -17,7 +17,7 @@ const CarDesign = ({ carData }) => {
                     <img
                       src={item}
                       alt="interier"
-                      className="w-full h-[450px] object-cover"
+                      className="w-full h-[600px] object-cover"
                     />
                   </div>
                   <p className="mt-4">{item.desc}</p>
@@ -43,7 +43,7 @@ const CarDesign = ({ carData }) => {
                     <img
                       src={item}
                       alt="interier"
-                      className="w-full h-[450px] object-cover"
+                      className="w-full h-[400px] object-cover"
                     />
                   </div>
                   <p className="mt-4">{item.desc}</p>

@@ -145,7 +145,7 @@ export const carData = [
       "https://i.postimg.cc/WN2xWZMs/JXY-0331-L-min.jpg",
       "https://i.postimg.cc/NMMJg14T/JXY-0646-L-min.jpg",
       "https://i.postimg.cc/kGRTSqLg/JXY-1440-L4-min.jpg",
-      "https://i.postimg.cc/2jqYGvDV/JXY-1516-L-min.jpp",
+      "https://i.postimg.cc/2jqYGvDV/JXY-1516-L-min.jpg",
       "https://i.postimg.cc/pVr4xtG7/Wechat-IMG524-L5-min.jpg",
     ],
     interier: [
