@@ -13,11 +13,7 @@ function CarGallary({ carData }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {carData[id].gallery.map((car, index) => (
               <div key={index} className={index % 2 === 0 ? "" : "mt-10"}>
-                <img
-                  className="h-auto max-w-full rounded-lg"
-                  src={car}
-                  alt=""
-                />
+                <img className="h-auto max-w-full" src={car} alt="" />
               </div>
             ))}
           </div>
