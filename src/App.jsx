@@ -15,11 +15,6 @@ function App() {
     visible: { opacity: 1, scale: 1 },
   };
 
-  const rotateVariants = {
-    hidden: { opacity: 0, rotate: -90 },
-    visible: { opacity: 1, rotate: 0 },
-  };
-
   return (
     <div className="font-changan flex items-center justify-center h-screen bg-primary text-white">
       <div className="text-center">
