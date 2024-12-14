@@ -1,9 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
   font-family: "Changan Bold";
   src: local("CHANGANUNITYPE-BOLD"),
     url("./assets/fonts/CHANGANUNITYPE-BOLD.otf") format("truetype");
 }
+
+@font-face {
+  font-family: "Poppins";
+  src: local("Poppins-Regular"),
+    url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Poppins";
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
