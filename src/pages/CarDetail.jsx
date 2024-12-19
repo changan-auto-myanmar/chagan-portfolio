@@ -8,9 +8,9 @@ import { carData } from "../components/HomePage/CarModelShow/TabModel";
 import { useParams } from "react-router-dom";
 
 function CarDetail() {
-  console.log(carData, "detail");
+  // console.log(carData, "detail");
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   return (
     <>
       <CarBanner carData={carData} />

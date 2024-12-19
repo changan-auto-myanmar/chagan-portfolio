@@ -36,9 +36,9 @@ export const tabs = [
 const ContentTap = ({ data }) => {
   const [activeTab, setActiveTab] = useState("All");
   const tabLabels = ["All", "News", "Events", "Promotions"];
-  const [content, setContent] = useState(tabs);
+  // const [content, setContent] = useState(tabs);
 
-  console.log(content);
+  // console.log(content);
 
   return (
     <div className="w-full lg:w-[1000px] mx-auto flex flex-col items-center ">
@@ -64,7 +64,7 @@ const ContentTap = ({ data }) => {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {content.map((tab) => {
+        {tabs.map((tab) => {
           return (
             <div className="" key={tab.id}>
               <Content tab={tab} />

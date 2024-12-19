@@ -27,7 +27,7 @@ const NewDetailArray = [
 
 function NewDetailContent() {
   return (
-    <div className="lg:w-[1000px] mx-auto py-[64px] px-5">
+    <div className="lg:w-[1000px] mx-auto py-[64px] px-5 lg:px-0">
       {NewDetailArray.map((newdetail) => (
         <div key={newdetail.id} className="mt-10">
           <p className="header-text font-bold mt-5">{newdetail.title}</p>

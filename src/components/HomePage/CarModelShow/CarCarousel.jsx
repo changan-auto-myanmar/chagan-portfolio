@@ -16,7 +16,7 @@ const CarCarousel = ({ tab }) => {
   return (
     <div className="w-screen lg:w-[800px] relative">
       <Swiper
-        loop={true}
+        // loop={true}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
         pagination={{ clickable: true }}
@@ -53,10 +53,10 @@ const CarCarousel = ({ tab }) => {
           {/* </div> */}
         </div>
         <div className="absolute top-[50%] translate-y-[-50%] left-0  z-10 hidden lg:block">
-          <SwiperButtonPrev />
+          <SwiperButtonPrev activeSlideId={activeIndex} />
         </div>
         <div className="absolute top-[50%] translate-y-[-50%] right-0 z-10 hidden lg:block">
-          <SwiperButtonNext />
+          <SwiperButtonNext activeSlideId={activeIndex} total={tab.length} />
         </div>
       </Swiper>
     </div>

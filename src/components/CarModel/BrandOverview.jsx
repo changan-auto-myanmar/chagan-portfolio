@@ -50,8 +50,8 @@ function BrandOverview({ id }) {
           {/* ))} */}
           <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
             <div className="flex flex-col gap-5">
-              <SwiperButtonPrev />
-              <SwiperButtonNext />
+              <SwiperButtonPrev activeSlideId={0} />
+              <SwiperButtonNext a />
             </div>
           </div>
         </Swiper>

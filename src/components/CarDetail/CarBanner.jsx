@@ -6,7 +6,7 @@ import { HiOutlineDownload } from "react-icons/hi";
 function CarBanner({ carData }) {
   const { id } = useParams();
   // console.log(id);
-  console.log(carData[id]);
+  // console.log(carData[id]);
   return (
     <div className="w-full h-screen relative">
       <div className="backdrop-brightness-10 bg-black/30 w-full h-full absolute">

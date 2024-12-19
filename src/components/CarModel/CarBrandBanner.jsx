@@ -17,8 +17,9 @@ import BrandOverview from "./BrandOverview";
 import { useParams } from "react-router-dom";
 
 function CarBrandBanner() {
-  console.log("carModel", tabs);
+  // console.log("carModel", tabs);
   const { id } = useParams();
+  // console.log("id", id);
   const [activeSlideId, setActiveSlideId] = useState(id);
   // console.log("active", typeof activeSlideId);
   const carModelarray = [
@@ -42,8 +43,9 @@ function CarBrandBanner() {
   // console.log(tabs);
 
   const handleSlideChange = (swiper) => {
+    // console.log("swiper", swiper.activeIndex);
     setActiveSlideId(swiper.activeIndex);
-    console.log("Active Slide ID:", swiper.activeIndex);
+    // console.log("Active Slide ID:", swiper.activeIndex);
   };
 
   return (
@@ -54,7 +56,7 @@ function CarBrandBanner() {
         effect="fade"
         className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden"
         initialSlide={activeSlideId}
-        slidesPerView={3}
+        // slidesPerView={3}
         onSlideChange={handleSlideChange}
       >
         {carModelarray.map((item) => (
@@ -73,12 +75,15 @@ function CarBrandBanner() {
           </SwiperSlide>
         ))}
         <div className="absolute bottom-[34px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
-          <button className={activeSlideId === 0 ? "opacity-50" : ""}>
-            <SwiperButtonPrev />
-          </button>
-          <button className={activeSlideId === 2 ? "opacity-50" : ""}>
-            <SwiperButtonNext />
-          </button>
+          {/* <div className={activeSlideId === 0 ? "opacity-50 flex" : "flex"}> */}
+          <SwiperButtonPrev activeSlideId={activeSlideId} />
+          {/* </div> */}
+          {/* <div className={activeSlideId === 2 ? "opacity-50 flex" : "flex"}> */}
+          <SwiperButtonNext
+            activeSlideId={activeSlideId}
+            total={carModelarray.length}
+          />
+          {/* </div> */}
         </div>
       </Swiper>
       {/* car carousel */}

@@ -323,7 +323,7 @@ export const tabs = [
         name: "Deepal SL03",
       },
       {
-        id: "tab1",
+        id: "tab2",
         no: "6",
         img: "https://i.postimg.cc/8CS2cpMq/Sunset-Orange-min-min.png",
         name: "Deepal S7",

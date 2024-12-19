@@ -3,6 +3,15 @@ import { NavLink } from "react-router-dom";
 import logo from "./../assets/images/changanLogo.webp";
 import { FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
+const navLinks = [
+  { to: "/", name: "Home" },
+  { to: "/car-model/0", name: "Car Model" },
+  { to: "/about", name: "About Us" },
+  { to: "/services", name: "Services" },
+  { to: "/new", name: "New & Event" },
+  { to: "/contact", name: "Contact Us" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false); // State to manage the menu toggle
 
@@ -20,7 +29,7 @@ const Navbar = () => {
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-700 focus:outline-none"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-white  rounded-lg lg:hidden hover:text-primary focus:outline-none"
           aria-controls="navbar-default"
           aria-expanded={isOpen}
         >
@@ -48,80 +57,24 @@ const Navbar = () => {
           id="navbar-default"
         >
           <div className="space-x-4 flex flex-col lg:flex-row items-center ">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `text-white hover:text-white hover:opacity-100 p-2 ${
-                  isActive ? "text-white font-bold opacity-100" : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              Home
-            </NavLink>
-            <NavLink
-              to="/car-model/0"
-              className={({ isActive }) =>
-                `text-white hover:text-white p-2 ${
-                  isActive
-                    ? "text-white font-bold hover:opacity-100 opacity-100"
-                    : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              Car Model
-            </NavLink>
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                `text-white hover:text-white p-2 ${
-                  isActive
-                    ? "text-white font-bold hover:opacity-100 opacity-100"
-                    : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              About Us
-            </NavLink>
-            <NavLink
-              to="/services"
-              className={({ isActive }) =>
-                `text-white hover:text-white p-2 ${
-                  isActive
-                    ? "text-white font-bold hover:opacity-100 opacity-100"
-                    : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              Services
-            </NavLink>
-            <NavLink
-              to="/new"
-              className={({ isActive }) =>
-                `text-white hover:text-white p-2 ${
-                  isActive
-                    ? "text-white font-bold hover:opacity-100 opacity-100"
-                    : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              New & Event
-            </NavLink>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) =>
-                `text-white hover:opacity-100 hover:text-white p-2 ${
-                  isActive ? "text-white font-bold opacity-100" : "opacity-80"
-                }`
-              }
-              onClick={toggleMenu}
-            >
-              Contact Us
-            </NavLink>
+            <div>
+              {navLinks.map(({ to, name }) => (
+                <NavLink
+                  key={to} // Using the "to" property as a unique key
+                  to={to}
+                  className={({ isActive }) =>
+                    `text-white hover:text-white p-2 ${
+                      isActive
+                        ? "text-white font-bold opacity-100 hover:opacity-100"
+                        : "opacity-80"
+                    }`
+                  }
+                  onClick={toggleMenu}
+                >
+                  {name}
+                </NavLink>
+              ))}
+            </div>
             <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0 pb-5 lg:pb-0">
               <a href="https://www.facebook.com/changanmyanmarmotor">
                 <FaFacebook className="text-white text-xl" />

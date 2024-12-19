@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const CarColorChanger = ({ carData, name }) => {
-  console.log(carData);
-  console.log(carData);
+  // console.log(carData);
+  // console.log(carData);
   const [carColor, setCarColor] = useState(1); // Default color
-  console.log("carData", carData);
-  console.log("carColor", carColor);
+  // console.log("carData", carData);
+  // console.log("carColor", carColor);
 
   return (
     carData && (

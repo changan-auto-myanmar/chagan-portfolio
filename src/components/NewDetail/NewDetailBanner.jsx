@@ -8,8 +8,8 @@ function NewDetailBanner() {
         src={newbanner}
         className="w-full h-full object-cover brightness-50 bg-black"
       />
-      <div className="absolute bottom-0 p-10 z-10 mx-0 md:mx-10 backdrop-blur-sm bg-white/60">
-        <div>
+      <div className="absolute w-full bottom-0 z-10 mx-auto">
+        <div className="w-full lg:w-[1000px] mx-auto backdrop-blur-sm bg-white/30 py-10 px-5">
           <p className="text-[18px] md:text-[24px] font-bold">
             “The Vast Ocean “ : First batch of DEEPLE handover in Thailand
           </p>

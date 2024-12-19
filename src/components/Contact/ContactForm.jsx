@@ -1,6 +1,74 @@
-import { MdArrowRightAlt } from "react-icons/md";
+import { useRef, useState } from "react";
+// import { MdArrowRightAlt } from "react-icons/md";
+import uplaodContactUs from "../../api/contactUs";
+import MyButton from "../button/MyButton";
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const description = useRef("");
+  const [selectedSubject, setSelectedSubject] = useState("");
+  const [errors, setErrors] = useState("");
+
+  // Step 2: Create a handler to update the state
+  const handleSelectChange = (event) => {
+    setSelectedSubject(event.target.value);
+  };
+
+  // Step 3: Handle form submission
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Prevent default form submission
+    const data = {
+      name,
+      email,
+      phone,
+      description: description.current.value,
+      select_car: "no",
+      subject: selectedSubject,
+    };
+
+    const res = await uplaodContactUs(data);
+    console.log(res);
+    if (res.status === "success") {
+      setName("");
+      setEmail("");
+      setPhone("");
+      description.current.value = "";
+      setSelectedSubject("");
+    }
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      phone: validatePhone(e.target.value),
+    }));
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      email: validateEmail(e.target.value),
+    }));
+  };
+
+  const validateEmail = (email) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) return "Email is required.";
+    if (!emailPattern.test(email)) return "Email is not valid.";
+    return "";
+  };
+
+  const validatePhone = (phone) => {
+    const phonePattern = /^[0-9]{11}$/; // Adjust based on your phone format
+    if (!phone) return "Phone number is required.";
+    if (!phonePattern.test(phone)) return "Phone number must be 10 digits.";
+    return "";
+  };
+
   return (
     <div className="flex flex-col md:flex-row px-5 lg:w-[1000px] mx-auto py-[64px]">
       <div className="md:w-2/5 mb-8 md:mb-0">
@@ -16,47 +84,64 @@ const ContactForm = () => {
         </p>
       </div>
       <div className="md:w-3/5 md:px-10">
-        <form className="space-y-10">
+        <form className="space-y-10" onSubmit={handleSubmit}>
           <input
+            required
+            onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Name"
             className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
           />
           <div className="flex space-x-4">
-            <input
-              type="email"
-              placeholder="Email"
-              className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
-            />
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
-            />
+            <div>
+              <input
+                required
+                onChange={handleEmailChange}
+                type="email"
+                placeholder="Email"
+                className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
+              />
+              {errors.email && (
+                <span className="text-red-500">{errors.email}</span>
+              )}{" "}
+              {/* Error message */}
+            </div>
+            <div>
+              <input
+                required
+                onChange={handlePhoneChange}
+                type="tel"
+                placeholder="Phone Number"
+                className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
+              />
+              {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
+              {/* Error message */}
+            </div>
           </div>
           <div className="flex space-x-4">
-            <select className="flex-1 p-2 bg-white border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 text-blue-900">
-              <option>
-                <p className="text-blue-900">Subject (Optional)</p>
+            <select
+              className="flex-1 p-2 bg-white border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 text-blue-900"
+              value={selectedSubject}
+              onChange={handleSelectChange}
+            >
+              <option value="" disabled>
+                Subject (Optional){" "}
+                {/* Set a value and disable the placeholder option */}
               </option>
-              <option>Inquiry</option>
-              <option>Feedback</option>
-            </select>
-            <select className="flex-1 p-2 bg-white border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 text-blue-900">
-              <option>Select Car</option>
-              <option>Car 1</option>
-              <option>Car 2</option>
+              <option value="Inquiry">Inquiry</option>
+              <option value="Feedback">Feedback</option>
             </select>
           </div>
+
           <textarea
+            required
+            ref={description}
             placeholder="Description"
             className="w-full p-2 border-solid border-0 border-b border-blue-900  shadow-lg shadow-gray-300 placeholder:text-blue-900"
             rows="4"
           />
-          <button className="w-full bg-blue-white border border-blue-900 text-black p-2 rounded hover:bg-blue-900 hover:text-white transition">
-            SEND US MESSAGE
-            <MdArrowRightAlt className="inline-block ms-20 text-3xl text-blue-900 hover:text-white" />
-          </button>
+
+          <MyButton text={"SEND US MESSAGE"} />
         </form>
       </div>
     </div>

@@ -1,5 +1,5 @@
 function Banner({ data }) {
-  console.log(data);
+  // console.log(data);
   return (
     <div className="w-full h-[300px] md:h-screen relative">
       <img src={data.img} className="w-full h-full object-cover" />

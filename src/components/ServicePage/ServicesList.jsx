@@ -2,6 +2,7 @@ import paint from "./../../assets/images/services/paint.png";
 import mobile from "./../../assets/images/services/mobile.png";
 
 import { MdArrowRightAlt } from "react-icons/md";
+import ServiceFrom from "./ServiceFrom";
 
 function ServiceList() {
   return (
@@ -34,35 +35,7 @@ function ServiceList() {
             </p>
           </div>
           <div className="md:w-3/5 md:ps-10">
-            <form className="space-y-10">
-              <input
-                type="text"
-                placeholder="Name"
-                className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
-              />
-              <div className="flex space-x-4">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
-                />
-              </div>
-              <input
-                type="text"
-                placeholder="Car Model"
-                className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
-              />
-
-              <button className="w-full bg-blue-white border border-blue-900 text-black p-2 rounded hover:bg-blue-900 hover:text-white transition">
-                BOOK SERVICE NOW
-                <MdArrowRightAlt className="inline-block ms-5 text-3xl text-blue-900 hover:text-white" />
-              </button>
-            </form>
+            <ServiceFrom />
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
