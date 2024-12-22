@@ -1,5 +1,11 @@
 // src/App.js
-import { FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaYoutube,
+  FaTiktok,
+  FaViber,
+  FaInstagram,
+} from "react-icons/fa";
 import logo from "./assets/changan.png";
 import { motion } from "framer-motion";
 
@@ -19,7 +25,7 @@ function App() {
     <div className="font-changan flex items-center justify-center h-screen bg-primary text-white">
       <div className="text-center">
         <motion.h1
-          className="text-6xl font-bold mb-6"
+          className="text-7xl font-bold mb-[60px]"
           initial="hidden"
           animate="visible"
           variants={fadeInVariants}
@@ -38,14 +44,14 @@ function App() {
             <motion.img
               src={logo} // Add the path to your logo here
               alt="Changan Auto Logo"
-              className="h-15"
+              className="h-17"
               initial="hidden"
               animate="visible"
               variants={scaleUpVariants}
               transition={{ duration: 1, delay: 0.4 }}
             />
             <motion.span
-              className="text-xl font-Poppins font-bold ms-2"
+              className="text-[32px] font-Poppins font-bold ms-2"
               initial="hidden"
               animate="visible"
               variants={fadeInVariants}
@@ -55,7 +61,7 @@ function App() {
             </motion.span>
             {/* Social Media Icons */}
             <motion.div
-              className="mt-6 flex space-x-10 ms-2"
+              className="mt-6 flex space-x-[52px] ms-2"
               initial="hidden"
               animate="visible"
               variants={fadeInVariants}
@@ -81,6 +87,20 @@ function App() {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <FaTiktok className="text-white text-xl" />
+              </motion.a>
+              <motion.a
+                href="https://invite.viber.com/?g2=AQB5apDgxENNrUzcR%2BXGS2T4fziVsPpXwkuYrvUQeNtjOZS5U8UOCkpy9J6AFqFG&lang=en"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <FaViber className="text-white text-xl" />
+              </motion.a>
+              <motion.a
+                href="https://www.instagram.com/changanmyanmarmotor"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <FaInstagram className="text-white text-xl" />
               </motion.a>
             </motion.div>
           </div>
