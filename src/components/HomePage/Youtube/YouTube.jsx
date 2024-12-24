@@ -15,9 +15,9 @@ function YouTube() {
         {/* Right Column: Description and Button */}
         <div className="col-span-2 px-0 md:ps-10">
           <p className="mb-10 body-text font-semibold mt-5 md:mt-0">
-            As one of the top four automobile groups in China and the top
-            selling domestic Chinese automotive brand, Changan Automobile boasts
-            an industrial history stretching back 157 years.
+            Explore CHANGAN's latest innovations and model features through our
+            curated YouTube videos. Dive into exclusive content to see what sets
+            CHANGAN apart.
           </p>
           <a
             href="https://www.youtube.com/@ChanganMyanmarMotor"
