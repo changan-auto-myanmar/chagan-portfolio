@@ -12,16 +12,15 @@ const Showroom = ({ showroom, index }) => {
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
-          className="w-full h-auto rounded-lg object-cover"
+          className="w-full h-auto rounded-sm
+           object-cover"
         />
       </div>
       <div className="w-full lg:w-2/5 flex flex-col justify-center space-y-4 lg:space-y-6">
         <h2 className="text-xl sm:text-2xl font-bold">
           {showroom.name} Showroom
         </h2>
-        <p className="text-sm sm:text-base text-gray-600">
-          {showroom.description}
-        </p>
+        <p className="text-sm sm:text-base font-bold">{showroom.description}</p>
         <div className="w-full">
           <a
             href={`tel:${showroom.phone}`}

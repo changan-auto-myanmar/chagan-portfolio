@@ -1,5 +1,5 @@
-import ygn from "./../../../assets/images/yangonshowroom.png";
-import mdy from "./../../../assets/images/mandalayshowroom.png";
+import ygn from "./../../../assets/images/showroom/ygnshowroom.png";
+import mdy from "./../../../assets/images/showroom/mandalayshowroom.png";
 import Showroom from "./Showroom";
 const ShowroomList = () => {
   const showrooms = [

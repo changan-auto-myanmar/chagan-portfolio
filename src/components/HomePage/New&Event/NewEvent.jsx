@@ -30,7 +30,7 @@ function YouTube() {
 
         {/* Right Column: Description and Button */}
         <div className="col-span-2 md:ps-10">
-          <p className="mb-10 body-text mt-5 md:mt-0">
+          <p className="mb-10 body-text mt-5 md:mt-0 font-semibold">
             As one of the top four automobile groups in China and the top
             selling domestic Chinese automotive brand, Changan Automobile boasts
             an industrial history stretching back 157 years.
@@ -40,8 +40,8 @@ function YouTube() {
               to="/new"
               className="inline-flex items-center px-4 py-2 border border-gray-400 rounded hover:bg-gray-100 "
             >
-              <span className="mr-10">All News & Events</span>
-              <MdArrowRightAlt className="text-3xl" />
+              <span className="mr-10 font-semibold">All News & Events</span>
+              <MdArrowRightAlt className="text-3xl text-primary" />
             </Link>
 
             <div className="flex space-x-4 hidden md:block">

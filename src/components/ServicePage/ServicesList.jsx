@@ -9,9 +9,9 @@ function ServiceList() {
     <div className="mx-auto px-5 lg:px-0 py-[64px] lg:w-[1000px]">
       <div className="">
         <h1 className="header-text font-changan font-bold ">
-          Service for our Customer
+          Services for our Customer
         </h1>
-        <p className="mt-5 body-text font-medium">
+        <p className="mt-5 body-text font-semibold">
           At CHANGAN Myanmar, our skilled technicians provide trusted
           maintenance and repairs using genuine parts to keep your vehicle safe
           and reliable. Our 4S-standard workshop ensures every service meets the
@@ -27,7 +27,7 @@ function ServiceList() {
               After Sale Service
             </h1>
 
-            <p className="xs:text-md md:text-lg mt-4 text-gray-700">
+            <p className="xs:text-md md:text-lg mt-4">
               Providing quality service with Changan Myanmar's highly qualified
               technicians, we address customer concerns with thorough repairs
               and expert technical support. Genuine parts are used to ensure
@@ -47,8 +47,10 @@ function ServiceList() {
             />
             <div className="p-5  lg:h-[300px] flex flex-col justify-between">
               <div className="">
-                <h3 className="text-xl font-bold mb-4">Paint Booth</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-4 text-primary">
+                  Paint Booth
+                </h3>
+                <p className="mb-4">
                   Our Changan Myanmar's paint booth is dedicated to quality and
                   customer satisfaction. We use the original genuine paint codes
                   and high-quality coatings, ensuring a perfect finish. An
@@ -71,12 +73,14 @@ function ServiceList() {
             <img
               src={mobile}
               alt="Mechanics working under a raised car"
-              className="w-full h-[200px]"
+              className="w-full h-[200px] object-cover"
             />
             <div className="p-5 lg:h-[300px] flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-4">Mobile Service</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-4 text-primary">
+                  Mobile Service
+                </h3>
+                <p className="mb-4">
                   Our customer service team provides immediate assistance over
                   the phone, pinpointing breakdown locations and dispatching a
                   mobile service vehicle promptly. We offer quick roadside

@@ -10,9 +10,9 @@ function ServiceShow() {
     <div className="py-[64px]">
       <div className="p-5 lg:p-0 lg:w-[1000px] mx-auto">
         <h1 className="header-text font-changan font-bold ">
-          Service for our Customer
+          Services for our Customer
         </h1>
-        <p className="mt-5 body-text font-medium">
+        <p className="mt-5 body-text font-semibold">
           At CHANGAN Myanmar, our skilled technicians provide trusted
           maintenance and repairs using genuine parts to keep your vehicle safe
           and reliable. Our 4S-standard workshop ensures every service meets the
@@ -31,8 +31,10 @@ function ServiceShow() {
             />
             <div className="p-5 lg:h-[350px] flex flex-col justify-between">
               <div className="">
-                <h3 className="text-xl font-bold mb-4">After Sale Service</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-4 text-primary">
+                  After Sale Service
+                </h3>
+                <p className="mb-4">
                   Providing quality service with Changan Myanmar's highly
                   qualified technicians, we address customer concerns with
                   thorough repairs and expert technical support. Genuine parts
@@ -42,7 +44,7 @@ function ServiceShow() {
               </div>
               <Link
                 to="/services"
-                className="inline-flex w-full items-center font-semibold hover:text-primary"
+                className="inline-flex w-full items-center justify-between font-semibold hover:text-primary"
               >
                 VIEW SERVICES
                 <div className="bg-primary p-1 ms-5 rounded-sm">
@@ -59,8 +61,10 @@ function ServiceShow() {
             />
             <div className="p-5 lg:h-[350px] flex flex-col justify-between">
               <div className="">
-                <h3 className="text-xl font-bold mb-4">Paint Booth</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-4 text-primary">
+                  Paint Booth
+                </h3>
+                <p className="mb-4">
                   Our Changan Myanmar's paint booth is dedicated to quality and
                   customer satisfaction. We use the original genuine paint codes
                   and high-quality coatings, ensuring a perfect finish. An
@@ -70,7 +74,7 @@ function ServiceShow() {
               </div>
               <Link
                 to="/services"
-                className="inline-flex w-full items-center font-semibold hover:text-primary"
+                className="inline-flex w-full items-center justify-between font-semibold hover:text-primary"
               >
                 VIEW SERVICES
                 <div className="bg-primary p-1 ms-5 rounded-sm">
@@ -87,8 +91,10 @@ function ServiceShow() {
             />
             <div className="p-5 lg:h-[350px] flex flex-col justify-between">
               <div>
-                <h3 className="text-xl font-bold mb-4">Mobile Service</h3>
-                <p className="text-gray-600 mb-4">
+                <h3 className="text-xl font-bold mb-4 text-primary">
+                  Mobile Service
+                </h3>
+                <p className="mb-4">
                   Our customer service team provides immediate assistance over
                   the phone, pinpointing breakdown locations and dispatching a
                   mobile service vehicle promptly. We offer quick roadside
@@ -97,7 +103,7 @@ function ServiceShow() {
               </div>
               <Link
                 to="/services"
-                className="inline-flex w-full items-center font-semibold hover:text-primary"
+                className="inline-flex w-full items-center justify-between font-semibold hover:text-primary"
               >
                 VIEW SERVICES
                 <div className="bg-primary p-1 ms-5 rounded-sm">
