@@ -2,10 +2,10 @@ import sologran from "./../../assets/images/sologran.png";
 
 function MissionVision() {
   return (
-    <div className=" mx-auto lg:w-[1000px] mx-auto py-[64px]">
+    <div className="lg:w-[1000px] mx-auto py-[64px]">
       <img src={sologran} className="" />
 
-      <div className="mt-10 px-5">
+      <div className="mt-10 px-5 lg:px-0">
         <p className="font-changan header-text mb-5">Our Mission</p>
         <p className="body-text">
           Our mission is to deliver high-quality vehicles, exceptional service,
@@ -18,16 +18,14 @@ function MissionVision() {
           practices.
         </p>
       </div>
-      <div className="mt-10 px-5">
+      <div className="mt-10 px-5 lg:px-0">
         <p className="font-changan header-text mb-5">Our Vision</p>
         <p className="body-text">
-          We strive to go above and beyond for our clients no matter the
-          challenge. We aim to deliver our very best work every single day
-          across our services.To become the leading automotive destination in
-          Myanmar, offering an exceptional customer experience, various vehicle
-          options, and cutting-edge technology. We aim to set the standard for
-          quality, trust, and innovation, driving the nation’s automotive
-          industry toward a modern and sustainable future.
+          To become the leading automotive destination in Myanmar, offering an
+          exceptional customer experience, various vehicle options, and
+          cutting-edge technology. We aim to set the standard for quality,
+          trust, and innovation, driving the nation’s automotive industry toward
+          a modern and sustainable future.
         </p>
       </div>
     </div>

@@ -1,20 +1,21 @@
-import abtimg from "./../../../assets/images/aboutdetail1.png";
-import abtimg2 from "./../../../assets/images/aboutdetail2.png";
+import abtimg from "./../../../assets/images/about/aboutUs1.png";
+import abtimg2 from "./../../../assets/images/about/aboutUs2.png";
 import AboutDetail from "./AboutDetail";
 const AboutContent = () => {
   const showrooms = [
     {
       description: `
-As one of the top four automobile groups in China and the top selling domestic Chinese automotive brand, Changan Automobile boasts an industrial history stretching back 157 years. With 35 years of experience in building and selling passenger vehicles, Changan is an early leader in the Chinese auto industry.`,
+Myanmar Arr Thit Man Motor Company Limited is a key investment in Myanmar’s Motor industry and production sector, approved by the Myanmar Investment Commission on June 26, 2020.
+Aligned with market dynamics, we adopt a market-oriented approach across production layout, management systems, operations, and talent acquisition with the total investment of 1.3 million US Dollars.`,
       image: abtimg,
     },
     {
-      description: `“The Changan group dates back to the Westernization Movement that took place at the end of Qing Dynasty (1636-1912). In November 1862, Li Hongzhang (1823-1901), a Chinese politician, general, and diplomat, founded China's first western style engineering firm, and the beginnings of what has become Changan Automobile.”`,
+      description: `Positioned strategically, we’re prepared by the assembly, production and distribution of both ICEs and EVs using the SKD production system. We looked forward to transitioning to CKD system, enhancing our production capabilities to meet evolving market demands.`,
       image: abtimg2,
     },
   ];
   return (
-    <div className="container mx-auto mt-10 px-5 py-[64px] lg:w-[1000px] mx-auto">
+    <div className="container mx-auto mt-10 px-5 pb-[64px] lg:w-[1000px] mx-auto">
       <p className="header-text font-changan font-bold">About Us</p>
       <div className="flex flex-col gap-12">
         {showrooms.map((showroom, index) => (

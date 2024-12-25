@@ -56,7 +56,7 @@ export const carData = [
   {
     id: 2,
     img: "https://i.postimg.cc/Y07HVBGf/banni-Gallary1.jpg",
-    name: "Alsvin",
+    name: "Banni E Star",
     gallery: [
       "https://i.postimg.cc/Y07HVBGf/banni-Gallary1.jpg",
       "https://i.postimg.cc/PtFqfLnY/banni-Gallary2.jpg",
@@ -253,9 +253,9 @@ export const tabs = [
     id: "1",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={changan} className="w-[50px] h-[50px]" />
-        <p className="text-[8px] font-changan font-bold hidden md:block">
-          Changan
+        <img src={changan} className="w-[64px] h-[64px] object-cover" />
+        <p className="text-[24px] font-changan font-bold hidden md:block">
+          CHANGAN
         </p>
       </div>
     ),
@@ -284,8 +284,8 @@ export const tabs = [
     id: "2",
     label: (
       <div className="flex gap-2 items-center">
-        <img src={kaicene} className="w-[50px] h-[50px]" />
-        <p className="text-[8px] font-changan font-bold hidden md:block">
+        <img src={kaicene} className="w-[64px] h-[64px] object-cover" />
+        <p className="text-[24px] font-changan font-bold hidden md:block">
           KAICENE
         </p>
       </div>
@@ -309,8 +309,8 @@ export const tabs = [
     id: "3",
     label: (
       <div className="flex items-center">
-        <img src={deepal} className="w-[50px] h-[50px]" />
-        <p className="text-[8px] font-changan font-bold hidden md:block">
+        <img src={deepal} className="w-[64px] h-[64px] object-cover" />
+        <p className="text-[24px] font-changan font-bold hidden md:block">
           DEEPAL
         </p>
       </div>
@@ -336,19 +336,19 @@ const TabComponent = () => {
   const [activeTab, setActiveTab] = useState("1");
 
   return (
-    <div className="container mx-auto flex flex-col items-center pb-10">
-      <div className="tabs">
+    <div className=" mx-auto flex flex-col items-center pb-[64px]">
+      <div className="tabs w-full flex justify-center">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             className={`tab-button ${
-              activeTab === tab.id ? "bg-white text-blue-500" : ""
-            } py-2 px-4 focus:outline-none relative`}
+              activeTab === tab.id ? "bg-white" : ""
+            } py-2 px-4 w-[300px] flex justify-center focus:outline-none relative`}
             onClick={() => setActiveTab(tab.id)}
           >
             {tab.label}
             {activeTab === tab.id && (
-              <span className="absolute left-0 right-0 bottom-0 h-1 bg-blue-500"></span>
+              <span className="absolute left-0 right-0 bottom-0 h-1 bg-primary"></span>
             )}
           </button>
         ))}

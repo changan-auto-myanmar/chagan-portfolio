@@ -4,7 +4,7 @@ const AboutDetail = ({ showroom, index }) => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-6 mt-10 ${
+      className={`flex flex-col md:flex-row gap-6 mt-20 ${
         isReversed ? "" : "md:flex-row-reverse"
       }`}
     >
@@ -12,7 +12,7 @@ const AboutDetail = ({ showroom, index }) => {
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
-          className="w-full h-full rounded-lg"
+          className="w-full h-full rounded-sm object-cover"
         />
       </div>
       <div className="w-full md:w-1/2 flex flex-col justify-between">
