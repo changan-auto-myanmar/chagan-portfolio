@@ -9,9 +9,9 @@ function Content({ tab }) {
       :px-0"
       >
         <img src={tab.image} className="w-full" alt="Placeholder" />
-        <div className="flex justify-between items-center px-0 py-4">
+        <div className="flex justify-between space-x-4 items-center px-0 py-4">
           <p className="">{tab.desc}</p>
-          <Link to={"/new-detail"} className="bg-primary ms-20 p-2">
+          <Link to={"/new-detail"} className="bg-primary p-2">
             <MdArrowRightAlt className="text-white text-3xl" />
           </Link>
         </div>

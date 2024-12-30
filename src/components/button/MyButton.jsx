@@ -21,7 +21,7 @@ function MyButton({ text }) {
 
   return (
     <button
-      className={`w-full bg-blue-white border border-blue-900 text-black p-2 rounded hover:bg-blue-900 hover:text-white transition ${
+      className={`w-full bg-white border border-blue-900 text-black p-2 rounded hover:bg-blue-900 hover:text-white transition ${
         isActive ? "active" : ""
       }`}
       onMouseEnter={handleMouseEnter}

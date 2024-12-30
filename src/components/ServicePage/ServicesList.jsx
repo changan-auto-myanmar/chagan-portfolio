@@ -27,7 +27,7 @@ function ServiceList() {
               After Sale Service
             </h1>
 
-            <p className="xs:text-md md:text-lg mt-4">
+            <p className="mt-4">
               Providing quality service with Changan Myanmar's highly qualified
               technicians, we address customer concerns with thorough repairs
               and expert technical support. Genuine parts are used to ensure
