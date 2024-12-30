@@ -8,7 +8,7 @@ function ServiceFrom() {
   const [phone, setPhone] = useState("");
   const [car, setCar] = useState("");
   const [errors, setErrors] = useState({});
-
+  const [date, setDate] = useState("");
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
     setErrors((prevErrors) => ({
@@ -51,11 +51,12 @@ function ServiceFrom() {
     // console.log(data);
     const res = await serviceForm(data);
     if (res.code === 201) {
-      console.log("Success");
+      // console.log("Success");
       setName("");
       setEmail("");
       setPhone("");
       setCar("");
+      setDate("");
     }
     // console.log(res);
   };
@@ -63,14 +64,29 @@ function ServiceFrom() {
   return (
     <div>
       <form className="space-y-10" onSubmit={handleSubmit}>
-        <input
-          required
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          placeholder="Name"
-          className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
-        />
+        <div className="flex space-x-4">
+          <div className="w-1/2">
+            <input
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              type="text"
+              placeholder="Name"
+              className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
+            />
+          </div>
+          <div className="w-1/2">
+            <input
+              required
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              type="date"
+              placeholder="Name"
+              className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
+            />
+          </div>
+        </div>
+
         <div className="flex space-x-4">
           <div>
             <input

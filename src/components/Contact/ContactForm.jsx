@@ -73,7 +73,7 @@ const ContactForm = () => {
     <div className="flex flex-col md:flex-row px-5 lg:w-[1000px] mx-auto py-[64px]">
       <div className="md:w-2/5 mb-8 md:mb-0">
         <h1 className="header-text font-bold font-changan">
-          Contact Us Today We ' Are Here to Help
+          Contact Us Today We're Here to Help
         </h1>
 
         <p className="body-text mt-4 text-gray-700">
@@ -92,8 +92,8 @@ const ContactForm = () => {
             placeholder="Name"
             className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
           />
-          <div className="flex space-x-4">
-            <div>
+          <div className="w-full flex gap-4">
+            <div className="w-1/2">
               <input
                 required
                 onChange={handleEmailChange}
@@ -106,7 +106,7 @@ const ContactForm = () => {
               )}{" "}
               {/* Error message */}
             </div>
-            <div>
+            <div className="w-1/2">
               <input
                 required
                 onChange={handlePhoneChange}

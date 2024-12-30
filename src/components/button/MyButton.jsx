@@ -32,9 +32,9 @@ function MyButton({ text }) {
         setIsMotion(false);
       }} // Reset active state when mouse leaves
     >
-      {text}
+      <span className="font-bold">{text}</span>
       <MdArrowRightAlt
-        className={`inline-block ms-2 text-3xl duration-300 ${
+        className={`inline-block ms-5 text-3xl duration-300 ${
           isMotion ? "text-white" : "text-primary"
         } transition-transform ${isActive ? "translate-x-48" : ""}`} // Adding translation effect in active state
       />
