@@ -88,7 +88,7 @@ function ServiceFrom() {
         </div>
 
         <div className="flex space-x-4">
-          <div>
+          <div className="w-1/2">
             <input
               value={email}
               required
@@ -102,7 +102,7 @@ function ServiceFrom() {
             )}{" "}
             {/* Error message */}
           </div>
-          <div>
+          <div className="w-1/2">
             <input
               value={phone}
               required
