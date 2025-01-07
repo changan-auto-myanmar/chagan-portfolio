@@ -254,7 +254,7 @@ export const tabs = [
     label: (
       <div className="flex gap-2 items-center">
         <img src={changan} className="w-[64px] h-[64px] object-cover" />
-        <p className="text-[24px] font-changan font-bold hidden md:block">
+        <p className="text-[24px] md:text-[18px] font-changan font-bold hidden md:block">
           CHANGAN
         </p>
       </div>
@@ -285,7 +285,7 @@ export const tabs = [
     label: (
       <div className="flex gap-2 items-center">
         <img src={kaicene} className="w-[64px] h-[64px] object-cover" />
-        <p className="text-[24px] font-changan font-bold hidden md:block">
+        <p className="md:text-[18px] lg:text-[24px] font-changan font-bold hidden md:block">
           KAICENE
         </p>
       </div>
@@ -310,7 +310,7 @@ export const tabs = [
     label: (
       <div className="flex items-center">
         <img src={deepal} className="w-[64px] h-[64px] object-cover" />
-        <p className="text-[24px] font-changan font-bold hidden md:block">
+        <p className="md:text-[18px] lg:text-[24px] font-changan font-bold hidden md:block">
           DEEPAL
         </p>
       </div>
@@ -337,7 +337,7 @@ const TabComponent = () => {
 
   return (
     <div className=" mx-auto flex flex-col items-center pb-[64px]">
-      <div className="tabs w-full flex justify-center">
+      <div className="tabs w-full px-10 flex justify-center">
         {tabs.map((tab) => (
           <button
             key={tab.id}
