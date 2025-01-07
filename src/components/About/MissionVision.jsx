@@ -5,7 +5,7 @@ function MissionVision() {
     <div className="lg:w-[1000px] mx-auto py-[64px]">
       <img src={sologran} className="" />
 
-      <div className="mt-10 px-5 lg:px-0">
+      <div className="mt-10 px-5 sm:px-10 lg:px-0">
         <p className="font-changan header-text mb-5">Our Mission</p>
         <p className="body-text">
           Our mission is to deliver high-quality vehicles, exceptional service,
@@ -18,7 +18,7 @@ function MissionVision() {
           practices.
         </p>
       </div>
-      <div className="mt-10 px-5 lg:px-0">
+      <div className="mt-10 px-5 sm:px-10 lg:px-0">
         <p className="font-changan header-text mb-5">Our Vision</p>
         <p className="body-text">
           To become the leading automotive destination in Myanmar, offering an

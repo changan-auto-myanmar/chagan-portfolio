@@ -6,7 +6,7 @@ import ServiceFrom from "./ServiceFrom";
 
 function ServiceList() {
   return (
-    <div className="mx-auto px-5 lg:px-0 py-[64px] lg:w-[1000px]">
+    <div className="mx-auto px-5 sm:px-10 lg:px-0 py-[64px] lg:w-[1000px]">
       <div className="">
         <h1 className="header-text font-changan font-bold ">
           Services for our Customer

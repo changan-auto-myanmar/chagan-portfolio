@@ -33,7 +33,7 @@ const datas = [
 
 function BrandOverview({ id }) {
   return (
-    <div className="p-5 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
+    <div className="p-5 sm:p-10 lg:px-0 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
       <p className="header-text font-changan mb-5 ">
         Brand Overview for {datas[id].name}
       </p>

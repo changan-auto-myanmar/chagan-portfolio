@@ -15,7 +15,7 @@ Aligned with market dynamics, we adopt a market-oriented approach across product
     },
   ];
   return (
-    <div className="container mx-auto mt-10 px-5 pb-[64px] lg:w-[1000px] mx-auto">
+    <div className="mx-auto mt-10 px-5 sm:px-10 lg:px-0  pb-[64px] lg:w-[1000px] mx-auto">
       <p className="header-text font-changan font-bold">About Us</p>
       <div className="flex flex-col gap-12">
         {showrooms.map((showroom, index) => (

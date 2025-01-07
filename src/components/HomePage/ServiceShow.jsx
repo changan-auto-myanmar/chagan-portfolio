@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 function ServiceShow() {
   return (
-    <div className="py-[64px]">
-      <div className="p-5 lg:p-0 lg:w-[1000px] mx-auto">
+    <div className="py-[64px] px-5 sm:px-10 lg:px-0 lg:w-[1000px] mx-auto">
+      <div className="">
         <h1 className="header-text font-changan font-bold ">
           Services for our Customer
         </h1>
@@ -21,7 +21,7 @@ function ServiceShow() {
       </div>
 
       {/* service list */}
-      <div className="px-5 mt-10">
+      <div className="mt-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:w-[1000px] mx-auto">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <img

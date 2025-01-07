@@ -19,7 +19,7 @@ body {
 }
 
 .header-text {
-  @apply text-header md:text-[32px];
+  @apply text-header sm:text-[24px] md:text-[32px];
 }
 
 .body-text {

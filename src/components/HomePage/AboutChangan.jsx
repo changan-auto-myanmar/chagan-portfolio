@@ -31,7 +31,7 @@ function AboutChangan() {
           </div>
         </div>
       </div>
-      <div className="bg-primary py-10 lg:py-10 px-5">
+      <div className="bg-primary py-10 lg:py-10 px-5 sm:px-10">
         <div className="">
           <div className="lg:hidden">
             <h2 className="header-text text-white font-changan font-bold mb-4">

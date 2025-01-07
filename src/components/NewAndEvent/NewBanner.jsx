@@ -4,12 +4,12 @@ import { MdArrowRightAlt } from "react-icons/md";
 
 function NewBanner() {
   return (
-    <div className="w-full h-[300px] md:h-[600px] relative">
+    <div className="w-full h-[300px] md:h-[450px] lg:h-screen relative">
       <img
         src={newbanner}
         className="w-full h-full object-cover brightness-50 bg-black"
       />
-      <div className="absolute bottom-0 mx-5 p-10 md:right-10 z-5  md:ps-[64px] mb-0 md:mb-[200px] lg:mb-[50px] w-auto md:w-[450px] backdrop-blur-sm bg-white/60">
+      <div className="absolute bottom-0 md:mx-5 p-10 md:right-10 z-5 md:ps-[64px] mb-0 md:mb-[100px] lg:mb-[50px] w-full md:w-[450px] backdrop-blur-sm bg-white/60">
         <div className="">
           <p className="text-[18px] md:text-[20px] font-bold">
             “The Vast Ocean “ : First batch of DEEPLE handover in Thailand

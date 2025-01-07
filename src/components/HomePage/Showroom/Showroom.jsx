@@ -4,11 +4,11 @@ const Showroom = ({ showroom, index }) => {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row items-center gap-6 mt-10 ${
-        isReversed ? "lg:flex-row-reverse" : ""
+      className={`flex flex-col md:flex-row items-center gap-6 mt-10 ${
+        isReversed ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="w-full lg:w-3/5">
+      <div className="w-full md:w-3/5">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}
@@ -16,7 +16,7 @@ const Showroom = ({ showroom, index }) => {
            object-cover"
         />
       </div>
-      <div className="w-full lg:w-2/5 flex flex-col justify-center space-y-4 lg:space-y-6">
+      <div className="w-full md:w-2/5 flex flex-col justify-center space-y-4 lg:space-y-6">
         <h2 className="text-xl sm:text-2xl font-bold">
           {showroom.name} Showroom
         </h2>

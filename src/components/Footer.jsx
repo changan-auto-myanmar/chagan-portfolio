@@ -10,8 +10,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white p-5 lg:py-[64px]">
-      <div className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:justify-between lg:w-[1000px] mx-auto">
+    <footer className="bg-primary text-white p-5 sm:p-10 lg:px-0 lg:py-[64px]">
+      <div className="lg:flex justify-between lg:w-[1000px] mx-auto">
         {/* Logo and Slogan Section */}
         <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
           <img src={logo} alt="Changan Auto Logo" />
@@ -21,42 +21,40 @@ const Footer = () => {
         </Link>
 
         {/* Links Section */}
-        <div className="flex flex-col md:flex-row md:space-x-10 lg:space-x-20">
-          <div className="flex space-x-20">
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Brands</h3>
-              <ul className="space-y-5">
-                <li className="hover:-translate-x-1 transition-transform duration-300">
-                  <a href="/car-model/0">CHANGAN</a>
-                </li>
-                <li className="hover:-translate-x-1 transition-transform duration-300">
-                  <a href="/car-model/1">KAICENE</a>
-                </li>
-                <li className="hover:-translate-x-1 transition-transform duration-300">
-                  <a href="/car-model/2">DEEPEL</a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Other Links</h3>
-              <ul className="space-y-5">
-                <li className="hover:-translate-x-1 transition-transform duration-300">
-                  <Link to="/about" className="">
-                    About Us
-                  </Link>
-                </li>
-                <li className="hover:-translate-x-1 transition-transform duration-300">
-                  <Link to="/new" className="">
-                    News & Events
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        <div className="sm:flex sm:space-x-20 sm:pe-10 md:w-full lg:w-auto justify-between mt-10 lg:mt-0">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Brands</h3>
+            <ul className="space-y-5">
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <a href="/car-model/0">CHANGAN</a>
+              </li>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <a href="/car-model/1">KAICENE</a>
+              </li>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <a href="/car-model/2">DEEPEL</a>
+              </li>
+            </ul>
           </div>
 
-          <div className="mt-20 md:mt-0">
-            <h3 className="text-lg font-semibold mb-4">Visit Us on</h3>
+          <div className="mt-10 sm:mt-0">
+            <h3 className="text-xl font-bold mb-4">Other Links</h3>
+            <ul className="space-y-5">
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <Link to="/about" className="">
+                  About Us
+                </Link>
+              </li>
+              <li className="hover:-translate-x-1 transition-transform duration-300">
+                <Link to="/new" className="">
+                  News & Events
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="mt-10 sm:mt-0">
+            <h3 className="text-xl font-bold mb-4">Visit Us on</h3>
             <ul className="space-y-5 ms-2">
               <li className="hover:-translate-x-1 transition-transform duration-300">
                 <a

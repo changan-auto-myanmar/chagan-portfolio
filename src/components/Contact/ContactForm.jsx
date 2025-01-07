@@ -70,7 +70,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row px-5 lg:w-[1000px] mx-auto py-[64px]">
+    <div className="flex flex-col md:flex-row px-5 sm:px-10 lg:px-0 lg:w-[1000px] mx-auto py-[64px]">
       <div className="md:w-2/5 mb-8 md:mb-0">
         <h1 className="header-text font-bold font-changan">
           Contact Us Today We're Here to Help

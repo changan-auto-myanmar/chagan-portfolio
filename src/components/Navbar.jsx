@@ -20,8 +20,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute bg-white p-5 bg-opacity-10 backdrop-blur-sm z-40 w-full">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
+    <nav className="absolute bg-white py-5 bg-opacity-10 backdrop-blur-sm z-40 w-full">
+      <div className="flex flex-wrap items-center justify-between px-10">
         <div>
           <img src={logo} alt="Logo" className="w-8 md:w-14" />
         </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
           id="navbar-default"
         >
           <div className="space-x-4 flex flex-col lg:flex-row items-center ">
-            <div>
+            <div className="flex flex-col lg:flex-row">
               {navLinks.map(({ to, name }) => (
                 <NavLink
                   key={to} // Using the "to" property as a unique key
