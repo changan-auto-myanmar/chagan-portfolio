@@ -18,7 +18,7 @@ import "./App.css";
 
 const pageVariants = {
   initial: {
-    opacity: 0,
+    opacity: 1,
     x: "-100%",
   },
   in: {
@@ -26,7 +26,7 @@ const pageVariants = {
     x: 0,
   },
   out: {
-    opacity: 0,
+    opacity: 1,
     x: "100%",
   },
 };
@@ -39,6 +39,7 @@ const MotionDiv = ({ children }) => (
     exit="out"
     variants={pageVariants}
     transition={{ duration: 0.5 }}
+    // className="bg-primary"
   >
     {children}
   </motion.div>

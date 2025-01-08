@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "./../assets/images/changanLogo.webp";
+import logo from "./../assets/images/logo/changan-new-logo.png";
 import { FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const navLinks = [
@@ -20,10 +20,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute bg-white py-5 bg-opacity-10 backdrop-blur-sm z-40 w-full">
-      <div className="flex flex-wrap items-center justify-between px-10">
+    <nav className="absolute bg-white py-1 bg-opacity-10 backdrop-blur-sm z-40 w-full">
+      <div className="flex flex-wrap items-center justify-between px-1 md:px-10">
         <div>
-          <img src={logo} alt="Logo" className="w-8 md:w-14" />
+          <img src={logo} alt="Logo" className="w-[100px] md:w-[150px]" />
         </div>
 
         <button

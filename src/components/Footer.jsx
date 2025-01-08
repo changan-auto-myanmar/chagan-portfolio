@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "./../assets/images/navbar-logo.png";
+import logo from "./../assets/images/logo/changan-new-logo.png";
 import {
   FaFacebook,
   FaYoutube,
@@ -13,8 +13,8 @@ const Footer = () => {
     <footer className="bg-primary text-white p-5 sm:p-10 lg:px-0 lg:py-[64px]">
       <div className="lg:flex justify-between lg:w-[1000px] mx-auto">
         {/* Logo and Slogan Section */}
-        <Link to="/" className="mb-8 md:mb-0 md:flex-2 md:w-[350px]">
-          <img src={logo} alt="Changan Auto Logo" />
+        <Link to="/" className="text-center mt-[-30px]">
+          <img src={logo} alt="Changan Auto Logo" className="w-[250px]" />
           <span className="text-[24px] font-semibold text-center md:text-left">
             Smart, Your Future
           </span>
