@@ -54,7 +54,7 @@ function CarBrandBanner() {
         loop={false}
         modules={[EffectFade]}
         effect="fade"
-        className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden"
+        className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden bg-primary"
         initialSlide={activeSlideId}
         // slidesPerView={3}
         onSlideChange={handleSlideChange}

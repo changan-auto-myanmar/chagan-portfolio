@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import { EffectFade } from "swiper/modules";
 import { motion } from "framer-motion"; // Importing motion
-
 import banner from "./../../assets/images/heroBanner.png";
 import banner2 from "./../../assets/images/banner2.jpg";
 
@@ -16,10 +15,14 @@ function HeroBanner() {
     <Swiper
       modules={[EffectFade]}
       effect="fade"
-      className="relative h-[300px] md:h-[450px] lg:h-screen z-20"
+      className="relative h-[300px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
     >
       <SwiperSlide>
-        <img src={banner} className="w-full h-full object-cover" />
+        <img
+          src={banner}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
       </SwiperSlide>
       <SwiperSlide>
         <img src={banner2} className="w-full h-full object-cover" />
