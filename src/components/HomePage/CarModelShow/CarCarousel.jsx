@@ -27,8 +27,12 @@ const CarCarousel = ({ tab }) => {
         }}
       >
         {tab.map((item) => (
-          <SwiperSlide key={item.id} className=" flex items-center flex-col">
-            <img loading="lazy" src={item.img} className=" md:h-[300px]" />
+          <SwiperSlide key={item.id} className="flex items-center flex-col">
+            <img
+              loading="lazy"
+              src={item.img}
+              className="mx-auto md:h-[300px]"
+            />
           </SwiperSlide>
         ))}
         <div className="text-center">
