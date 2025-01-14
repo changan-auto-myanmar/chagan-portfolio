@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import changan from "./../../../assets/images/changan-banner.jpg";
+import changan from "./../../../assets/images/brandoverview/changan.png";
 import deepal from "./../../../assets/images/deepal-banner.jpg";
 import kaicheng from "./../../../assets/images/kaicheng-banner.png";
 

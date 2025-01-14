@@ -26,30 +26,30 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 
 // import StairTransition from "./components/transition/StairTransition";
 
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-  in: {
-    opacity: 1,
+// const pageVariants = {
+//   initial: {
+//     opacity: 0,
+//     transition: {
+//       duration: 0.5,
+//       ease: "easeInOut",
+//     },
+//   },
+//   in: {
+//     opacity: 1,
 
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-  out: {
-    opacity: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut",
-    },
-  },
-};
+//     transition: {
+//       duration: 0.5,
+//       ease: "easeInOut",
+//     },
+//   },
+//   out: {
+//     opacity: 0,
+//     transition: {
+//       duration: 0.5,
+//       ease: "easeInOut",
+//     },
+//   },
+// };
 
 const MotionDiv = ({ children }) => (
   <motion.div
@@ -117,7 +117,7 @@ function App() {
               </MotionDiv>
             }
           />
-          <Route path="/new-detail" element={<NewDetail />} />
+          <Route path="/new-detail/:id" element={<NewDetail />} />
           <Route
             path="/contact"
             element={
