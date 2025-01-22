@@ -1,20 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Toaster } from "sonner";
-
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Service from "./pages/Service";
-import PageNotFound from "./pages/PageNotFound";
-import Navbar from "./components/Navbar";
-// import CarModel from "./pages/CarModel";
-// import CarDetail from "./pages/CarDetail";
-// import NewAndEvent from "./pages/NewAndEvent";
-// import NewDetail from "./pages/NewDetail";
-// import ContactUs from "./pages/ContactUs";
-import ScrollToTop from "./ScrollToTop";
-import "./App.css";
 import { lazy } from "react";
+import Navbar from "./components/Navbar";
+import ScrollToTop from "./ScrollToTop";
+// Page
 const HomePage = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Service = lazy(() => import("./pages/Service"));
@@ -23,49 +13,11 @@ const CarDetail = lazy(() => import("./pages/CarDetail"));
 const NewAndEvent = lazy(() => import("./pages/NewAndEvent"));
 const NewDetail = lazy(() => import("./pages/NewDetail"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+import PageNotFound from "./pages/PageNotFound";
+// css
+import "./App.css";
 
-// import StairTransition from "./components/transition/StairTransition";
-
-// const pageVariants = {
-//   initial: {
-//     opacity: 0,
-//     transition: {
-//       duration: 0.5,
-//       ease: "easeInOut",
-//     },
-//   },
-//   in: {
-//     opacity: 1,
-
-//     transition: {
-//       duration: 0.5,
-//       ease: "easeInOut",
-//     },
-//   },
-//   out: {
-//     opacity: 0,
-//     transition: {
-//       duration: 0.5,
-//       ease: "easeInOut",
-//     },
-//   },
-// };
-
-const MotionDiv = ({ children }) => (
-  <motion.div
-  // key={Math.random()}
-  // initial="initial"
-  // animate="in"
-  // exit="out"
-
-  // variants={pageVariants}
-  // transition={{ duration: 0.5, ease: "easeInOut" }}
-
-  // className="bg-primary"
-  >
-    {children}
-  </motion.div>
-);
+const MotionDiv = ({ children }) => <motion.div>{children}</motion.div>;
 
 function App() {
   return (

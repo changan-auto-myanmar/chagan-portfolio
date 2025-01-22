@@ -5,12 +5,25 @@ import { EffectFade } from "swiper/modules";
 import { motion } from "framer-motion"; // Importing motion
 import banner from "./../../assets/images/heroBanner.png";
 import banner2 from "./../../assets/images/banner2.jpg";
+import { useQuery } from "@tanstack/react-query";
+
+// api
+import getHeroBanner from "../../api/home/herobanner";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 
 function HeroBanner() {
+  const { data, error, isLoading } = useQuery({
+    queryKey: ["photos"],
+    queryFn: getHeroBanner,
+    staleTime: 1000 * 60 * 5,
+    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+  });
+
+  console.log(data);
   return (
     <Swiper
       modules={[EffectFade]}
