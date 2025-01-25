@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 
 const CarCarousel = ({ tab }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  // console.log
   return (
     <div className="w-screen lg:w-[800px] relative">
       <Swiper
@@ -30,7 +31,9 @@ const CarCarousel = ({ tab }) => {
           <SwiperSlide key={item.id} className="flex items-center flex-col">
             <img
               loading="lazy"
-              src={item.img}
+              src={`${import.meta.env.VITE_API_URL}api/v1/${
+                item?.mockup?.filepath
+              }`}
               className="mx-auto md:h-[300px]"
             />
           </SwiperSlide>
@@ -44,11 +47,11 @@ const CarCarousel = ({ tab }) => {
             transition={{ duration: 0.5 }}
             className="text-xl font-semibold pt-3"
           >
-            {tab[activeIndex]?.name}
+            {tab[activeIndex]?.car_name}
           </motion.h2>
           {/* <div className="bg-red-500"> */}
           <Link
-            to={`/car-detail/${tab[activeIndex]?.no}`}
+            to={`/car-detail/${tab[activeIndex]?._id}`}
             className="mt-2 inline-block border border-black px-4 py-2 text-black rounded hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
           >
             EXPLORE

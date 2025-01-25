@@ -6,7 +6,7 @@ import { EffectFade } from "swiper/modules";
 import changan from "./../../assets/images/brandoverview/changan.png";
 import deepel from "./../../assets/images/brandoverview/deepal.jpg";
 import kaisen from "./../../assets/images/brandoverview/kaicheng.png";
-import { tabs } from "../HomePage/CarModelShow/TabModel";
+// import { tabs } from "../HomePage/CarModelShow/TabModel";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
 import BrandOverview from "./BrandOverview";
@@ -19,14 +19,6 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 function CarBrandBanner() {
-  const { data } = useQuery({
-    queryKey: ["carDetail"],
-    queryFn: getCarDetail,
-    staleTime: 1000 * 60 * 5,
-    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
-    refetchOnWindowFocus: false, // Don't refetch when window regains focus
-  });
-
   const { id } = useParams();
   const [activeSlideId, setActiveSlideId] = useState(id);
   const carModelarray = [
@@ -47,8 +39,20 @@ function CarBrandBanner() {
     },
   ];
 
+  const { data, refetch } = useQuery({
+    queryKey: ["carDetail", activeSlideId],
+    queryFn: () =>
+      getCarDetail(carModelarray[activeSlideId]?.name.split(" ")[0]), // Modify to accept a parameter
+    staleTime: 1000 * 60 * 5,
+    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    refetchOnWindowFocus: false,
+  });
+
+  console.log(data);
+
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);
+    refetch();
   };
 
   return (
@@ -91,12 +95,13 @@ function CarBrandBanner() {
       </Swiper>
       {/* car carousel */}
       <div className="flex justify-center">
-        {tabs.map(
+        {data && <CarCarousel tab={data} />}
+        {/* {tabs.map(
           (tab) =>
             tab.id == activeSlideId * 1 + 1 && (
               <CarCarousel key={tab.id} tab={tab.content} />
             )
-        )}
+        )} */}
       </div>
       {/* brand Overview */}
       <div className="mt-5">
