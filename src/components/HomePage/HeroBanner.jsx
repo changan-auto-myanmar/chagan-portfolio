@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import { EffectFade } from "swiper/modules";
 import { motion } from "framer-motion"; // Importing motion
-import banner from "./../../assets/images/heroBanner.png";
-import banner2 from "./../../assets/images/banner2.jpg";
 import { useQuery } from "@tanstack/react-query";
 
 // api
@@ -15,7 +13,7 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 
 function HeroBanner() {
-  const { data, error, isLoading } = useQuery({
+  const { data } = useQuery({
     queryKey: ["photos"],
     queryFn: getHeroBanner,
     staleTime: 1000 * 60 * 5,
@@ -23,23 +21,26 @@ function HeroBanner() {
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
 
-  console.log(data);
+  // console.log(data);
   return (
     <Swiper
       modules={[EffectFade]}
       effect="fade"
+      loop={true}
       className="relative h-[300px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
     >
-      <SwiperSlide>
-        <img
-          src={banner}
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={banner2} className="w-full h-full object-cover" />
-      </SwiperSlide>
+      {data?.data?.banners?.length > 0 &&
+        data?.data?.banners.map((banner) => (
+          <SwiperSlide key={banner._id}>
+            <img
+              src={`${import.meta.env.VITE_API_URL}api/v1/${banner?.filepath}`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <p>{banner.filepath}</p>
+          </SwiperSlide>
+        ))}
+
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}

@@ -3,6 +3,9 @@ import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import changan from "./../../assets/images/brandoverview/changanoverview.png";
 import deepal from "./../../assets/images/brandoverview/DSC00970.png";
 import kaicheng from "./../../assets/images/brandoverview/IMG_9898.png";
+import getbrandOverview from "../../api/home/getbrandoverview";
+import { useQuery } from "@tanstack/react-query";
+// import { image } from "framer-motion/client";
 
 const datas = [
   {
@@ -32,26 +35,51 @@ const datas = [
 ];
 
 function BrandOverview({ id }) {
+  const { data } = useQuery({
+    queryKey: ["brandoverview"],
+    queryFn: getbrandOverview,
+    staleTime: 1000 * 60 * 5,
+    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+  });
+  // console.log(data);
+
   return (
     <div className="p-5 sm:p-10 lg:px-0 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
-      <p className="header-text font-changan mb-5 ">
+      <p className="header-text font-changan mb-5">
         Brand Overview for {datas[id].name}
       </p>
       <p className="body-text">{datas[id].desc}</p>
       <div className="mt-5">
-        <Swiper spaceBetween={30} slidesPerView={"auto"}>
-          {/* {carData[id].exterier.map((item, index) => ( */}
-          <SwiperSlide className="w-full md:w-[750px]">
+        <Swiper spaceBetween={30} loop={true}>
+          {data?.data.brandOverview
+            .filter((item) => item.car_brand === datas[id].name)
+            .map((item) =>
+              item.images.map((image, index) => {
+                return (
+                  <SwiperSlide key={index} className="w-full md:w-[750px]">
+                    <img
+                      src={`${import.meta.env.VITE_API_URL}api/v1/${
+                        image.filepath
+                      }`}
+                      className="w-full"
+                      alt=""
+                    />
+                  </SwiperSlide>
+                );
+              })
+            )}
+          {/* <SwiperSlide className="w-full md:w-[750px]">
             <img src={datas[id].image} className="w-full" alt="" />
           </SwiperSlide>
           <SwiperSlide className="w-full md:w-[750px]">
             <img src={datas[id].image} className="w-full" alt="" />
-          </SwiperSlide>
+          </SwiperSlide> */}
           {/* ))} */}
           <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
             <div className="flex flex-col gap-5">
-              <SwiperButtonPrev activeSlideId={0} />
-              <SwiperButtonNext a />
+              <SwiperButtonPrev />
+              <SwiperButtonNext />
             </div>
           </div>
         </Swiper>
@@ -63,5 +91,4 @@ function BrandOverview({ id }) {
     </div>
   );
 }
-
 export default BrandOverview;

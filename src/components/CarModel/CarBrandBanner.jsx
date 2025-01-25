@@ -7,21 +7,28 @@ import changan from "./../../assets/images/brandoverview/changan.png";
 import deepel from "./../../assets/images/brandoverview/deepal.jpg";
 import kaisen from "./../../assets/images/brandoverview/kaicheng.png";
 import { tabs } from "../HomePage/CarModelShow/TabModel";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-fade";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
 import BrandOverview from "./BrandOverview";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import getCarDetail from "./../../api/home/getCarDetails.js";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 function CarBrandBanner() {
-  // console.log("carModel", tabs);
+  const { data } = useQuery({
+    queryKey: ["carDetail"],
+    queryFn: getCarDetail,
+    staleTime: 1000 * 60 * 5,
+    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+  });
+
   const { id } = useParams();
-  // console.log("id", id);
   const [activeSlideId, setActiveSlideId] = useState(id);
-  // console.log("active", typeof activeSlideId);
   const carModelarray = [
     {
       id: 1,
@@ -40,12 +47,8 @@ function CarBrandBanner() {
     },
   ];
 
-  // console.log(tabs);
-
   const handleSlideChange = (swiper) => {
-    // console.log("swiper", swiper.activeIndex);
     setActiveSlideId(swiper.activeIndex);
-    // console.log("Active Slide ID:", swiper.activeIndex);
   };
 
   return (
@@ -94,8 +97,6 @@ function CarBrandBanner() {
               <CarCarousel key={tab.id} tab={tab.content} />
             )
         )}
-
-        {/* <p>{activeSlideId}</p> */}
       </div>
       {/* brand Overview */}
       <div className="mt-5">

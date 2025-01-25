@@ -1,14 +1,24 @@
 import { MdArrowRightAlt } from "react-icons/md";
 
-import { tabs } from "./../../NewAndEvent/ContentTap/ContentTap";
+// import { tabs } from "./../../NewAndEvent/ContentTap/ContentTap";
 import Content from "../../NewAndEvent/ContentTap/Content";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
 import { IoMdArrowDropleft } from "react-icons/io";
 import { IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
+import getNews from "../../../api/home/getnews";
+import { useQuery } from "@tanstack/react-query";
 
 function YouTube() {
+  const { data } = useQuery({
+    queryKey: ["news"],
+    queryFn: getNews,
+    staleTime: 1000 * 60 * 5,
+    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    refetchOnWindowFocus: false, // Don't refetch when window regains focus
+  });
+  // console.log(data);
   const swiperRef = useRef(null);
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
@@ -63,17 +73,13 @@ function YouTube() {
       </div>
 
       <div className="mt-10 w-full">
-        <Swiper
-          className=""
-          spaceBetween={30}
-          slidesPerView={"auto"}
-          ref={swiperRef}
-        >
-          {tabs.map((tab, index) => (
-            <SwiperSlide key={index} className="xs:w-full sm:w-1/2 lg:w-1/3">
-              <Content tab={tab} />
-            </SwiperSlide>
-          ))}
+        <Swiper spaceBetween={30} slidesPerView={"auto"} ref={swiperRef}>
+          {data?.data?.CSR?.length > 0 &&
+            data?.data?.CSR?.map((tab, index) => (
+              <SwiperSlide key={index} className="xs:w-full sm:w-1/2 lg:w-1/3">
+                <Content tab={tab} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </div>
     </div>
