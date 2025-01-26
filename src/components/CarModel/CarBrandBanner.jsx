@@ -29,7 +29,7 @@ function CarBrandBanner() {
     },
     {
       id: 2,
-      name: "KAICENE Car Model",
+      name: "KAICHENG Car Model",
       img: kaisen,
     },
     {

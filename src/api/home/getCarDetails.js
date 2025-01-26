@@ -1,8 +1,9 @@
 import axios from "./../axios";
 
 const getCarDetail = async (brand) => {
+  console.log(brand);
   const res = await axios.get(`api/v1/showcases`);
-  // console.log(res);
+  console.log(res);
   const data =
     res?.data?.data?.showcases.filter(
       (showcase) => showcase.car_brand == brand

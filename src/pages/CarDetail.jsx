@@ -32,6 +32,7 @@ function CarDetail() {
             image={data?.data?.showcase?.car_banner?.filepath}
             sologram={data?.data?.showcase?.car_banner?.car_slogan || ""}
             name={data?.data?.showcase?.car_name || ""}
+            pdf={data?.data?.showcase?.car_porche.filepath || ""}
           />
           <CarColorChanger
             carData={data?.data?.showcase?.car_color || []}
