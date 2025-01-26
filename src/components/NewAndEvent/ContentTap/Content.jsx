@@ -2,7 +2,6 @@ import { MdArrowRightAlt } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Content({ tab }) {
-  console.log(tab);
   return (
     <div className="w-full">
       <img

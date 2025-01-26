@@ -1,19 +1,17 @@
-import { useParams } from "react-router-dom";
-
-function CarGallary({ carData }) {
-  // console.log("carData", carData);
-  const { id } = useParams();
-  // console.log(carDesign);
-  // console.log("design", carData[id].gallery);
+function CarGallary({ gallery }) {
   return (
     <div>
-      {carData[id]?.gallery && (
+      {gallery && (
         <div className="container mx-auto p-6">
           <h2 className="header-text font-bold mb-4">Gallary</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {carData[id].gallery.map((car, index) => (
+            {gallery.map((car, index) => (
               <div key={index} className={index % 2 === 0 ? "" : "mt-10"}>
-                <img className="h-auto max-w-full" src={car} alt="" />
+                <img
+                  className="h-auto max-w-full"
+                  src={`${import.meta.env.VITE_API_URL}api/v1/${car.filepath}`}
+                  alt=""
+                />
               </div>
             ))}
           </div>

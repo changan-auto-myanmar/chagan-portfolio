@@ -17,6 +17,7 @@ const CarCarousel = ({ tab }) => {
   return (
     <div className="w-screen lg:w-[800px] relative">
       <Swiper
+        key={activeIndex}
         // loop={true}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
@@ -27,8 +28,8 @@ const CarCarousel = ({ tab }) => {
           setActiveIndex(swiper.activeIndex); // Update active index on slide change
         }}
       >
-        {tab.map((item) => (
-          <SwiperSlide key={item.id} className="flex items-center flex-col">
+        {tab.map((item, index) => (
+          <SwiperSlide key={index} className="flex items-center flex-col">
             <img
               loading="lazy"
               src={`${import.meta.env.VITE_API_URL}api/v1/${
