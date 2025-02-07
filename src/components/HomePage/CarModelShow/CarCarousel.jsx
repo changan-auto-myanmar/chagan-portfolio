@@ -12,12 +12,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const CarCarousel = ({ tab }) => {
+  console.log(tab);
   const [activeIndex, setActiveIndex] = useState(0);
   // console.log
   return (
-    <div className="w-screen lg:w-[800px] relative">
+    <div className="w-screen lg:w-[800px] md:px-5 relative">
       <Swiper
-        key={activeIndex}
+        // key={activeIndex}
         // loop={true}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
@@ -28,20 +29,21 @@ const CarCarousel = ({ tab }) => {
           setActiveIndex(swiper.activeIndex); // Update active index on slide change
         }}
       >
-        {tab.map((item, index) => (
-          <SwiperSlide key={index} className="flex items-center flex-col">
+        {tab.map((item) => (
+          <SwiperSlide key={item._id} className="flex items-center flex-col">
+            {/* <p>{item?.car_name}</p> */}
             <img
               loading="lazy"
               src={`${import.meta.env.VITE_API_URL}api/v1/${
                 item?.mockup?.filepath
               }`}
-              className="mx-auto md:h-[300px]"
+              className="mx-auto w-[400px] sm:w-auto h-[230px] sm:h-[300px]"
             />
           </SwiperSlide>
         ))}
         <div className="text-center">
           <motion.h2
-            key={activeIndex} // Key should change for re-animation
+            key={activeIndex}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -50,7 +52,6 @@ const CarCarousel = ({ tab }) => {
           >
             {tab[activeIndex]?.car_name}
           </motion.h2>
-          {/* <div className="bg-red-500"> */}
           <Link
             to={`/car-detail/${tab[activeIndex]?._id}`}
             className="mt-2 inline-block border border-black px-4 py-2 text-black rounded hover:bg-black hover:text-white cursor-pointer transition-colors duration-300"
@@ -58,12 +59,11 @@ const CarCarousel = ({ tab }) => {
             EXPLORE
             <MdArrowRightAlt className="inline-block ms-10 text-3xl" />
           </Link>
-          {/* </div> */}
         </div>
-        <div className="absolute top-[50%] translate-y-[-50%] left-0  z-10 hidden lg:block">
+        <div className="absolute top-[50%] translate-y-[-50%] left-0  z-10 hidden md:block">
           <SwiperButtonPrev activeSlideId={activeIndex} />
         </div>
-        <div className="absolute top-[50%] translate-y-[-50%] right-0 z-10 hidden lg:block">
+        <div className="absolute top-[50%] translate-y-[-50%] right-0 z-10 hidden md:block">
           <SwiperButtonNext activeSlideId={activeIndex} total={tab.length} />
         </div>
       </Swiper>
