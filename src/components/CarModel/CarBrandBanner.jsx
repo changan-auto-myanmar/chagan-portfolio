@@ -3,10 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
 import { EffectFade } from "swiper/modules";
 
-import changan from "./../../assets/images/brandoverview/changan.png";
-import deepel from "./../../assets/images/brandoverview/deepal.jpg";
-import kaisen from "./../../assets/images/brandoverview/kaicheng.png";
-// import { tabs } from "../HomePage/CarModelShow/TabModel";
+import changan from "./../../assets/images/brandoverview/changan.svg";
+import deepel from "./../../assets/images/brandoverview/deepel.svg";
+import kaisen from "./../../assets/images/brandoverview/kaicene.svg";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
 import BrandOverview from "./BrandOverview";
@@ -48,7 +47,7 @@ function CarBrandBanner() {
     refetchOnWindowFocus: false,
   });
 
-  console.log(data);
+  // console.log(data);
 
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);
@@ -68,9 +67,9 @@ function CarBrandBanner() {
       >
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>
-            {/* <div className="brightness-50 bg-black h-full"> */}
-            <img src={item.img} className="w-full h-full object-cover" />
-            {/* </div> */}
+            <div className="brightness-50 bg-black h-full">
+              <img src={item.img} className="w-full h-full object-cover" />
+            </div>
             <p
               className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5xl font-changan font-bold hidden lg:block"
               style={{

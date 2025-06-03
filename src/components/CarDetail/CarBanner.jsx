@@ -1,11 +1,6 @@
-// import { useParams } from "react-router-dom";
 import { HiOutlineDownload } from "react-icons/hi";
-// import { carData } from "../HomePage/CarModelShow/TabModel";
 
 function CarBanner({ image, sologram, name, pdf }) {
-  // const { id } = useParams();
-  // console.log(id);
-  // console.log(carData[id]);
   return (
     <div className="w-full h-screen relative">
       <div className="backdrop-brightness-10 bg-black/30 w-full h-full absolute">
@@ -21,8 +16,8 @@ function CarBanner({ image, sologram, name, pdf }) {
           <p className="text-white text-[24px] font-bold">{sologram}</p>
         ) : (
           <p className=" text-white header-text drop-shadow-2xl font-changan font-bold">
-            "Drive Innovation,
-            <br /> Embrace Excellence."
+            &quot;Drive Innovation,
+            <br /> Embrace Excellence.&quot;
           </p>
         )}
         <span className="font-changan text-[24px] text-white ">{name}</span>

@@ -1,5 +1,5 @@
-import abtimg from "./../../../assets/images/about/aboutUs1.png";
-import abtimg2 from "./../../../assets/images/about/aboutUs2.png";
+import abtimg from "./../../../assets/images/about/aboutUs1.svg";
+import abtimg2 from "./../../../assets/images/about/aboutUs2.svg";
 import AboutDetail from "./AboutDetail";
 const AboutContent = () => {
   const showrooms = [
