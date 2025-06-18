@@ -42,11 +42,6 @@ function BrandOverview({ id }) {
     cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
-  console.log("brand", data);
-  const brandData = data?.data.brandOverview.filter(
-    (item) => item.car_brand === datas[id].name
-  );
-  console.log("brandData", brandData.brandImageUrls);
 
   return (
     <div className="p-5 sm:p-10 lg:px-0 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
