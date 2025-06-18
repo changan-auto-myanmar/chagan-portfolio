@@ -1,7 +1,8 @@
 import axios from "./../axios";
 
 const getHeroBanner = async () => {
-  const { data } = await axios.get("api/v1/banners/public");
+  const { data } = await axios.get("api/v1/banners");
+  // console.log("banner", data);
   return data;
 };
 

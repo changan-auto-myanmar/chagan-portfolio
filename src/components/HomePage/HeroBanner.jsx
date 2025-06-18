@@ -21,7 +21,7 @@ function HeroBanner() {
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
 
-  // console.log(data);
+  // console.log("banner", data.data.banners);
   return (
     <Swiper
       modules={[EffectFade]}
@@ -33,7 +33,7 @@ function HeroBanner() {
         data?.data?.banners.map((banner) => (
           <SwiperSlide key={banner._id}>
             <img
-              src={`${import.meta.env.VITE_API_URL}api/v1/${banner?.filepath}`}
+              src={banner.url}
               className="w-full h-full object-cover"
               loading="lazy"
             />

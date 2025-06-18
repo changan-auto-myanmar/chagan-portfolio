@@ -4,7 +4,7 @@ function NewDetailBanner({ image, title, date }) {
   return (
     <div className="w-full h-[300px] lg:h-[600px] relative">
       <img
-        src={`${import.meta.env.VITE_API_URL}api/v1/${image}`}
+        src={image}
         className="w-full h-full object-cover brightness-50 bg-black"
       />
       <div className="absolute w-full bottom-0 z-10 mx-auto">

@@ -15,6 +15,8 @@ function NewDetail() {
     enabled: !!id, // Ensure the query is only run if id is defined
   });
 
+  // console.log("newDetail", data.data.csrContent);
+
   // Optionally, you can use a side effect to manually refetch if needed
   useEffect(() => {
     if (id) {
@@ -25,11 +27,11 @@ function NewDetail() {
   return (
     <div>
       <NewDetailBanner
-        image={data?.data?.CSR?.images[0].filepath}
-        title={data?.data?.CSR?.title}
-        date={data?.data?.CSR?.createdAt}
+        image={data?.data?.csrContent?.csrImages[0].url}
+        title={data?.data?.csrContent?.title}
+        date={data?.data?.csrContent?.createdAt}
       />
-      <NewDetailContent desc={data?.data?.CSR?.body} />
+      <NewDetailContent desc={data?.data?.csrContent?.textBody} />
       <OtherNew />
       <Footer />
     </div>

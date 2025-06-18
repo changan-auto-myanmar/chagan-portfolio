@@ -23,21 +23,22 @@ function CarDetail() {
       refetch();
     }
   }, [id, refetch]);
+  console.log("data detail", data);
 
   return (
     <>
       {data?.data?.showcase && (
         <div>
           <CarBanner
-            image={data?.data?.showcase?.car_banner?.filepath}
+            image={data?.data?.showcase?.car_banner?.url}
             sologram={data?.data?.showcase?.car_banner?.car_slogan || ""}
             name={data?.data?.showcase?.car_name || ""}
-            pdf={data?.data?.showcase?.car_porche.filepath || ""}
+            pdf={data?.data?.showcase?.car_brochure?.url || ""}
           />
-          <CarColorChanger
+          {/* <CarColorChanger
             carData={data?.data?.showcase?.car_color || []}
             name={data?.data?.showcase?.car_name || ""}
-          />
+          /> */}
           <CarDesign
             exterier={data?.data?.showcase?.car_exterior}
             interier={data?.data?.showcase?.car_interior}

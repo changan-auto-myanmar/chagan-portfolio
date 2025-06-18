@@ -2,7 +2,7 @@ import { useState } from "react";
 import Content from "./Content";
 
 const ContentTap = ({ data }) => {
-  // console.log(data[0].category);
+  // console.log(data);
   const [activeTab, setActiveTab] = useState("All");
   const tabLabels = ["All", "News", "Events", "Promotions"];
   // const [content, setContent] = useState(tabs);

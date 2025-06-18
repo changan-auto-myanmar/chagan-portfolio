@@ -5,7 +5,7 @@ function Content({ tab }) {
   return (
     <div className="w-full">
       <img
-        src={`${import.meta.env.VITE_API_URL}api/v1/${tab?.images[0].filepath}`}
+        src={tab?.csrImages[0].url}
         className="w-full h-64 object-cover"
         alt="News Image"
       />

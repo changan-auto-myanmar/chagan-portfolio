@@ -47,7 +47,7 @@ function CarBrandBanner() {
     refetchOnWindowFocus: false,
   });
 
-  // console.log(data);
+  console.log("cardetail", data);
 
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);
@@ -81,26 +81,16 @@ function CarBrandBanner() {
           </SwiperSlide>
         ))}
         <div className="absolute bottom-[34px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">
-          {/* <div className={activeSlideId === 0 ? "opacity-50 flex" : "flex"}> */}
           <SwiperButtonPrev activeSlideId={activeSlideId} />
-          {/* </div> */}
-          {/* <div className={activeSlideId === 2 ? "opacity-50 flex" : "flex"}> */}
           <SwiperButtonNext
             activeSlideId={activeSlideId}
             total={carModelarray.length}
           />
-          {/* </div> */}
         </div>
       </Swiper>
       {/* car carousel */}
       <div className="flex justify-center">
         {data && <CarCarousel tab={data} />}
-        {/* {tabs.map(
-          (tab) =>
-            tab.id == activeSlideId * 1 + 1 && (
-              <CarCarousel key={tab.id} tab={tab.content} />
-            )
-        )} */}
       </div>
       {/* brand Overview */}
       <div className="mt-5">

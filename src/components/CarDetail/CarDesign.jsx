@@ -13,11 +13,9 @@ const CarDesign = ({ exterier, interier }) => {
                 <SwiperSlide key={index} className="w-[550px]">
                   <div className="relative">
                     <img
-                      src={`${import.meta.env.VITE_API_URL}api/v1/${
-                        item.filepath
-                      }`}
+                      src={item.url}
                       alt="interier"
-                      className="w-full h-[600px] object-cover"
+                      className="w-full h-[450px] object-cover"
                     />
                   </div>
                   {/* <p className="mt-4">{item.desc}</p> */}
@@ -41,11 +39,9 @@ const CarDesign = ({ exterier, interier }) => {
                 <SwiperSlide key={index} className="w-[550px]">
                   <div className="relative">
                     <img
-                      src={`${import.meta.env.VITE_API_URL}api/v1/${
-                        item.filepath
-                      }`}
+                      src={item.url}
                       alt="interier"
-                      className="w-full h-[400px] object-cover"
+                      className="w-full h-[450px] object-cover"
                     />
                   </div>
                   <p className="mt-4">{item.desc}</p>

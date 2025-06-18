@@ -12,17 +12,17 @@ function NewAndEvent() {
     queryKey: ["news"],
     queryFn: getNews, // Don't refetch when window regains focus
   });
-  // console.log(data);
+  // console.log("new", data.data.csrContents[0].csrImages[0].url);
   return (
     <div>
-      {data?.data?.CSR?.length > 0 && (
+      {data?.data?.csrContents?.length > 0 && (
         <div>
           <NewBanner
-            image={data?.data?.CSR[0]?.images[0].filepath}
-            title={data?.data?.CSR[0]?.title}
-            id={data?.data?.CSR[0]._id}
+            image={data?.data?.csrContents[0]?.csrImages[0].url}
+            title={data?.data?.csrContents[0]?.title}
+            id={data?.data?.csrContents[0]._id}
           />
-          <ContentTap data={data?.data?.CSR} />
+          <ContentTap data={data?.data?.csrContents} />
         </div>
       )}
       <YouTube />

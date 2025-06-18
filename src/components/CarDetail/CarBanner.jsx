@@ -5,7 +5,7 @@ function CarBanner({ image, sologram, name, pdf }) {
     <div className="w-full h-screen relative">
       <div className="backdrop-brightness-10 bg-black/30 w-full h-full absolute">
         <img
-          src={`${import.meta.env.VITE_API_URL}api/v1/${image}`}
+          src={image}
           className="w-full
         h-full object-cover "
         />
@@ -24,7 +24,7 @@ function CarBanner({ image, sologram, name, pdf }) {
       </div>
       <div className="absolute bottom-[100px] w-[300px] md:bottom-[64px] right-1/2 md:right-0 translate-x-[50%] md:translate-x-0 md:right-0 z-10 p-0 md:pe-[64px] space-x-[24px]">
         <a
-          href={`${import.meta.env.VITE_API_URL}api/v1/${pdf}`}
+          href={pdf}
           target="_blank"
           className="bg-white text-black px-6 py-3 rounded hover:bg-black hover:text-white font-bold flex items-center justify-center"
         >

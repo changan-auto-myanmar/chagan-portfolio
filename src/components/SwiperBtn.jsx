@@ -3,8 +3,8 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { IoMdArrowDropleft } from "react-icons/io";
 
 export const SwiperButtonNext = ({ children, activeSlideId, total }) => {
-  console.log("activeSlideId", activeSlideId);
-  console.log("total", total);
+  // console.log("activeSlideId", activeSlideId);
+  // console.log("total", total);
   const swiper = useSwiper();
 
   return (

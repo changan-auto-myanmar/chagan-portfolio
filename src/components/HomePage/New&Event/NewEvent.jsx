@@ -18,7 +18,7 @@ function YouTube() {
     cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
-  // console.log(data);
+  // console.log("new", data.data.csrContents);
   const swiperRef = useRef(null);
   const handleNext = () => {
     swiperRef.current.swiper.slideNext();
@@ -74,8 +74,8 @@ function YouTube() {
 
       <div className="mt-10 w-full">
         <Swiper spaceBetween={30} slidesPerView={"auto"} ref={swiperRef}>
-          {data?.data?.CSR?.length > 0 &&
-            data?.data?.CSR?.map((tab, index) => (
+          {data?.data?.csrContents?.length > 0 &&
+            data?.data?.csrContents?.map((tab, index) => (
               <SwiperSlide key={index} className="xs:w-full sm:w-1/2 lg:w-1/3">
                 <Content tab={tab} />
               </SwiperSlide>

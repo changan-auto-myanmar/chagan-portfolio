@@ -42,7 +42,11 @@ function BrandOverview({ id }) {
     cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
-  // console.log(data);
+  console.log("brand", data);
+  const brandData = data?.data.brandOverview.filter(
+    (item) => item.car_brand === datas[id].name
+  );
+  console.log("brandData", brandData.brandImageUrls);
 
   return (
     <div className="p-5 sm:p-10 lg:px-0 lg:py-[64px] lg:px-0 lg:w-[1000px] mx-auto leading-loose">
@@ -55,27 +59,19 @@ function BrandOverview({ id }) {
           {data?.data.brandOverview
             .filter((item) => item.car_brand === datas[id].name)
             .map((item) =>
-              item.images.map((image, index) => {
+              item.brandImageUrls.map((image, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full md:w-[750px]">
                     <img
-                      src={`${import.meta.env.VITE_API_URL}api/v1/${
-                        image.filepath
-                      }`}
-                      className="w-full"
-                      alt=""
+                      src={image.url}
+                      className="w-full h-[300px] md:h-[350px] object-cover"
+                      alt="brandoverview"
                     />
                   </SwiperSlide>
                 );
               })
             )}
-          {/* <SwiperSlide className="w-full md:w-[750px]">
-            <img src={datas[id].image} className="w-full" alt="" />
-          </SwiperSlide>
-          <SwiperSlide className="w-full md:w-[750px]">
-            <img src={datas[id].image} className="w-full" alt="" />
-          </SwiperSlide> */}
-          {/* ))} */}
+
           <div className="absolute top-1/2 -translate-y-[50%] right-0 z-10 pe-3 md:pe-[12px] space-x-[24px] hidden md:block">
             <div className="flex flex-col gap-5">
               <SwiperButtonPrev />

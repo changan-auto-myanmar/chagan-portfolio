@@ -25,3 +25,28 @@ body {
 .body-text {
   @apply text-body md:text-[18px] lg:text-[20px];
 }
+
+/* Custom Swiper styles */
+.car-gallery-swiper {
+  padding-bottom: 50px !important;
+}
+
+.car-gallery-swiper .swiper-pagination {
+  bottom: 10px !important;
+}
+
+.car-gallery-swiper .swiper-pagination-bullet {
+  background: #374151 !important;
+  opacity: 0.5 !important;
+}
+
+.car-gallery-swiper .swiper-pagination-bullet-active {
+  background: #1f2937 !important;
+  opacity: 1 !important;
+}
+
+/* Hide default navigation buttons */
+.car-gallery-swiper .swiper-button-next,
+.car-gallery-swiper .swiper-button-prev {
+  display: none !important;
+}

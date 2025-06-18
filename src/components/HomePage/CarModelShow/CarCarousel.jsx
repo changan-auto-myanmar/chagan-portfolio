@@ -12,7 +12,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const CarCarousel = ({ tab }) => {
-  console.log(tab);
+  console.log("tab", tab);
   const [activeIndex, setActiveIndex] = useState(0);
   // console.log
   return (
@@ -22,8 +22,8 @@ const CarCarousel = ({ tab }) => {
         // loop={true}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
-        pagination={{ clickable: true }}
-        navigation
+        // pagination={{ clickable: true }}
+        // navigation
         onSlideChange={(swiper) => {
           //console.log//("Slide changed to index:", swiper.activeIndex);
           setActiveIndex(swiper.activeIndex); // Update active index on slide change
@@ -34,9 +34,7 @@ const CarCarousel = ({ tab }) => {
             {/* <p>{item?.car_name}</p> */}
             <img
               loading="lazy"
-              src={`${import.meta.env.VITE_API_URL}api/v1/${
-                item?.mockup?.filepath
-              }`}
+              src={item?.mockup?.url}
               className="mx-auto w-[400px] sm:w-auto h-[230px] sm:h-[300px]"
             />
           </SwiperSlide>

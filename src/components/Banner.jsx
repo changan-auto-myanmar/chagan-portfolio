@@ -1,5 +1,5 @@
 function Banner({ data }) {
-  // console.log(data);
+  console.log(data);
   return (
     <div className="w-full h-[300px] md:h-[450px] lg:h-screen relative bg-primary">
       <img

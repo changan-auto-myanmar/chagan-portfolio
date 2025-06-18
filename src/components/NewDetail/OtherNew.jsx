@@ -7,7 +7,7 @@ function OtherNew() {
   const [news, setNews] = useState([]);
   const getNewsData = async () => {
     const data = await getNews();
-    setNews(data.data.CSR);
+    setNews(data.data.csrContents);
   };
 
   useEffect(() => {
