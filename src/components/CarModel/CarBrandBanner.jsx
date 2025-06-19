@@ -1,11 +1,13 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperButtonNext, SwiperButtonPrev } from "../SwiperBtn";
-import { EffectFade } from "swiper/modules";
-
-import changan from "./../../assets/images/brandoverview/changan.svg";
-import deepel from "./../../assets/images/brandoverview/deepel.svg";
-import kaisen from "./../../assets/images/brandoverview/kaicene.svg";
+import { Pagination, EffectFade } from "swiper/modules";
+import "swiper/css/pagination";
+import "swiper/css";
+import "swiper/css/navigation";
+import changan from "./../../assets/images/brandoverview/changanbanner.jpg";
+import deepel from "./../../assets/images/brandoverview/deepalbanner.jpg";
+import kaisen from "./../../assets/images/brandoverview/kaichengbanner.jpg";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
 import BrandOverview from "./BrandOverview";
@@ -28,13 +30,14 @@ function CarBrandBanner() {
     },
     {
       id: 2,
-      name: "KAICHENG Car Model",
-      img: kaisen,
+      name: "DEEPAL Car Model",
+      img: deepel,
     },
     {
       id: 3,
-      name: "DEEPAL Car Model",
-      img: deepel,
+
+      name: "KAICHENG Car Model",
+      img: kaisen,
     },
   ];
 
@@ -58,12 +61,19 @@ function CarBrandBanner() {
     <div>
       <Swiper
         loop={false}
-        modules={[EffectFade]}
+        modules={[EffectFade, Pagination]}
         effect="fade"
-        className="relative h-[300px] md:h-[500px] lg:h-screen overflow-hidden bg-primary"
+        pagination={{
+          clickable: true,
+        }}
+        className="relative h-[400px] md:h-[500px] lg:h-screen overflow-hidden bg-primary"
         initialSlide={activeSlideId}
-        // slidesPerView={3}
         onSlideChange={handleSlideChange}
+        style={{
+          "--swiper-pagination-color": "#FFBA08",
+          "--swiper-pagination-bullet-inactive-color": "#999999",
+          "--swiper-pagination-bullet-inactive-opacity": "1",
+        }}
       >
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>

@@ -4,11 +4,11 @@ const AboutDetail = ({ showroom, index }) => {
 
   return (
     <div
-      className={`flex flex-col md:flex-row gap-6 mt-20 ${
+      className={`flex flex-col md:flex-row gap-6 mt-10 lg:mt-20 ${
         isReversed ? "" : "md:flex-row-reverse"
       }`}
     >
-      <div className="w-full md:w-1/2 ">
+      <div className="w-full md:w-1/2">
         <img
           src={showroom.image}
           alt={`${showroom.name} Showroom`}

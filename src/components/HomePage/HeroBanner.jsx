@@ -27,7 +27,7 @@ function HeroBanner() {
       modules={[EffectFade]}
       effect="fade"
       loop={true}
-      className="relative h-[300px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
+      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
     >
       {data?.data?.banners?.length > 0 &&
         data?.data?.banners.map((banner) => (

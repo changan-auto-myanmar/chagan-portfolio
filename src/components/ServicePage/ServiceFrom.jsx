@@ -1,6 +1,7 @@
 import { useState } from "react";
 import MyButton from "../button/MyButton";
 import serviceForm from "../../api/ServiceFrom";
+import SuccessModal from "../Contact/SuccessModel";
 
 function ServiceFrom() {
   const [name, setName] = useState("");
@@ -9,6 +10,12 @@ function ServiceFrom() {
   const [car, setCar] = useState("");
   const [errors, setErrors] = useState({});
   const [date, setDate] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
+
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
     setErrors((prevErrors) => ({
@@ -57,6 +64,7 @@ function ServiceFrom() {
       setPhone("");
       setCar("");
       setDate("");
+      setShowSuccessModal(true);
     }
     // console.log(res);
   };
@@ -126,6 +134,9 @@ function ServiceFrom() {
 
         <MyButton text="BOOK SERVICE NOW" />
       </form>
+
+      {/* Success Modal */}
+      <SuccessModal isOpen={showSuccessModal} onClose={handleCloseModal} />
     </div>
   );
 }

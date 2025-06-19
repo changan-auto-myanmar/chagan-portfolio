@@ -2,7 +2,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 function NewDetailBanner({ image, title, date }) {
   return (
-    <div className="w-full h-[300px] lg:h-[600px] relative">
+    <div className="w-full h-[400px] lg:h-[600px] relative">
       <img
         src={image}
         className="w-full h-full object-cover brightness-50 bg-black"

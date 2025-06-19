@@ -50,13 +50,29 @@ function BrandOverview({ id }) {
       </p>
       <p className="body-text">{datas[id].desc}</p>
       <div className="mt-5">
-        <Swiper spaceBetween={30} loop={true}>
+        <Swiper
+          spaceBetween={30}
+          loop={true}
+          // slidesPerView={2}
+          centeredSlides={true}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
+        >
           {data?.data.brandOverview
             .filter((item) => item.car_brand === datas[id].name)
             .map((item) =>
               item.brandImageUrls.map((image, index) => {
                 return (
-                  <SwiperSlide key={index} className="w-full md:w-[750px]">
+                  <SwiperSlide key={index} style={{ width: "800px" }}>
                     <img
                       src={image.url}
                       className="w-full h-[300px] md:h-[350px] object-cover"

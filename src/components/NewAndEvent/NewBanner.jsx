@@ -4,7 +4,7 @@ import newbanner from "./../../assets/images/NewBanner.png";
 
 function NewBanner({ image, title, id }) {
   return (
-    <div className="w-full h-[300px] md:h-[450px] lg:h-screen relative">
+    <div className="w-full h-[400px] md:h-[450px] lg:h-screen relative">
       <img
         src={image}
         className="w-full h-full object-cover brightness-50 bg-black"

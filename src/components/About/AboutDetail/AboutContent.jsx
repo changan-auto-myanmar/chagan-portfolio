@@ -1,5 +1,5 @@
-import abtimg from "./../../../assets/images/about/aboutUs1.svg";
-import abtimg2 from "./../../../assets/images/about/aboutUs2.svg";
+import abtimg from "./../../../assets/images/about/aboutimage1.jpg";
+import abtimg2 from "./../../../assets/images/about/abtimg2.jpg";
 import AboutDetail from "./AboutDetail";
 const AboutContent = () => {
   const showrooms = [
@@ -15,9 +15,9 @@ Aligned with market dynamics, we adopt a market-oriented approach across product
     },
   ];
   return (
-    <div className="mx-auto mt-10 px-5 sm:px-10 lg:px-0  pb-[64px] lg:w-[1000px] mx-auto">
+    <div className="mx-auto mt-10 px-5 sm:px-10 lg:px-0 pb-[64px] lg:w-[1000px] mx-auto">
       <p className="header-text font-changan font-bold">About Us</p>
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col lg:gap-12">
         {showrooms.map((showroom, index) => (
           <AboutDetail key={index} showroom={showroom} index={index} />
         ))}

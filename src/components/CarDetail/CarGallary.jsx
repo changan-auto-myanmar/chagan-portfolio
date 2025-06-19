@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 
 function CarGallery({ gallery }) {
-  console.log("gallery", gallery);
+  // console.log("gallery", gallery);
 
   if (!gallery || gallery.length === 0) {
     return (

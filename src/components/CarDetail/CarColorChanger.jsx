@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const CarColorChanger = ({ carData, name }) => {
+  console.log("carDataColor", carData);
   const [carColor, setCarColor] = useState(0); // Default color
 
   return (
@@ -12,25 +13,19 @@ const CarColorChanger = ({ carData, name }) => {
         </h1>
         <div className="relative ">
           {
-            // carData.find((c) => c._id === carColor)?.image &&
-            //   console.log("c", c)
             <motion.img
-              src={`${import.meta.env.VITE_API_URL}api/v1/${
-                carData[carColor].car_image.filepath
-              }`}
+              src={carData[carColor].car_color_image.url}
               alt={carData[carColor]?.color_name}
-              className={`lg:w-[700px] lg:h-[400px] object-cover`}
+              className={`lg:w-[600px] lg:h-auto object-cover`}
             />
           }
         </div>
-        <div className="flex space-x-20 mt-4">
+        <div className="flex flex-wrap gap-4 md:gap-10 mt-4 px-10 md:px-0 items-center">
           {carData.map((color, index) => (
             <img
               key={color._id}
-              src={`${import.meta.env.VITE_API_URL}api/v1/${
-                color.car_image.filepath
-              }`}
-              className={`w-8 h-8 rounded-full border-2 border-gray-400 hover:border-gray-100 cursor-pointer`}
+              src={color.car_color_swatches.url}
+              className={`w-12 h-12 rounded-full border-2 border-gray-100 hover:border-gray-400 cursor-pointer`}
               onClick={() => setCarColor(index)}
               aria-label={color.name}
             />

@@ -1,10 +1,7 @@
 import Banner from "../components/Banner";
-// import ServicesList from "../components/ServicePage/ServicesList";
-import serviceimg from "./../assets/images/services/servicebanner.svg";
-// import NewEvent from "../components/HomePage/New&Event/NewEvent";
+import serviceimg from "./../assets/images/services/servicebanner.jpg";
 import Footer from "../components/Footer";
 import ShowroomList from "../components/HomePage/Showroom/Showroomlist";
-// import ServiceShow from "../components/HomePage/ServiceShow";
 import ServiceList from "../components/ServicePage/ServicesList";
 
 function Service() {
@@ -16,8 +13,6 @@ function Service() {
     <>
       <Banner data={services} />
       <ServiceList />
-      {/* <ServiceShow /> */}
-      {/* <NewEvent /> */}
       <ShowroomList />
       <Footer />
     </>

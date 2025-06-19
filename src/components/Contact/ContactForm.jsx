@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 // import { MdArrowRightAlt } from "react-icons/md";
 import uplaodContactUs from "../../api/contactUs";
 import MyButton from "../button/MyButton";
+import SuccessModal from "./SuccessModel";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -10,6 +11,11 @@ const ContactForm = () => {
   const description = useRef("");
   const [selectedSubject, setSelectedSubject] = useState("");
   const [errors, setErrors] = useState("");
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleCloseModal = () => {
+    setShowSuccessModal(false);
+  };
 
   // Step 2: Create a handler to update the state
   const handleSelectChange = (event) => {
@@ -31,6 +37,7 @@ const ContactForm = () => {
     const res = await uplaodContactUs(data);
     console.log(res);
     if (res.status === "success") {
+      setShowSuccessModal(true);
       setName("");
       setEmail("");
       setPhone("");
@@ -90,6 +97,7 @@ const ContactForm = () => {
             onChange={(e) => setName(e.target.value)}
             type="text"
             placeholder="Name"
+            value={name}
             className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
           />
           <div className="w-full flex gap-4">
@@ -99,6 +107,7 @@ const ContactForm = () => {
                 onChange={handleEmailChange}
                 type="email"
                 placeholder="Email"
+                value={email}
                 className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
               />
               {errors.email && (
@@ -112,6 +121,7 @@ const ContactForm = () => {
                 onChange={handlePhoneChange}
                 type="tel"
                 placeholder="Phone Number"
+                value={phone}
                 className="w-full flex-1 p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900"
               />
               {errors.phone && <p className="text-red-500">{errors.phone}</p>}{" "}
@@ -144,6 +154,8 @@ const ContactForm = () => {
           <MyButton text={"SEND US MESSAGE"} />
         </form>
       </div>
+      {/* Success Modal */}
+      <SuccessModal isOpen={showSuccessModal} onClose={handleCloseModal} />
     </div>
   );
 };

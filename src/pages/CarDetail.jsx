@@ -35,10 +35,10 @@ function CarDetail() {
             name={data?.data?.showcase?.car_name || ""}
             pdf={data?.data?.showcase?.car_brochure?.url || ""}
           />
-          {/* <CarColorChanger
+          <CarColorChanger
             carData={data?.data?.showcase?.car_color || []}
             name={data?.data?.showcase?.car_name || ""}
-          /> */}
+          />
           <CarDesign
             exterier={data?.data?.showcase?.car_exterior}
             interier={data?.data?.showcase?.car_interior}

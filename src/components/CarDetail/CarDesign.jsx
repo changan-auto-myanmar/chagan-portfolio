@@ -8,7 +8,23 @@ const CarDesign = ({ exterier, interier }) => {
         {exterier && (
           <div>
             <h2 className="header-text font-bold mb-4">Exterier Design</h2>
-            <Swiper loop={true} spaceBetween={30} slidesPerView={"auto"}>
+            <Swiper
+              loop={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+              }}
+            >
               {exterier.map((item, index) => (
                 <SwiperSlide key={index} className="w-[550px]">
                   <div className="relative">
@@ -34,7 +50,23 @@ const CarDesign = ({ exterier, interier }) => {
         {interier && (
           <div>
             <h2 className="header-text mt-5 font-bold mb-4">Interier Design</h2>
-            <Swiper loop={true} spaceBetween={30} slidesPerView={"auto"}>
+            <Swiper
+              loop={true}
+              breakpoints={{
+                640: {
+                  slidesPerView: 1,
+                  spaceBetween: 20,
+                },
+                768: {
+                  slidesPerView: 1,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 40,
+                },
+              }}
+            >
               {interier.map((item, index) => (
                 <SwiperSlide key={index} className="w-[550px]">
                   <div className="relative">
