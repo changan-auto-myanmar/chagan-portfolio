@@ -50,7 +50,7 @@ function CarBrandBanner() {
     refetchOnWindowFocus: false,
   });
 
-  console.log("cardetail", data);
+  // console.log("cardetail", data);
 
   const handleSlideChange = (swiper) => {
     setActiveSlideId(swiper.activeIndex);

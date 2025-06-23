@@ -27,9 +27,13 @@ function NewDetail() {
   return (
     <div>
       <NewDetailBanner
-        image={data?.data?.csrContent?.csrImages[0].url}
+        image={data?.data?.csrContent?.csrImages}
         title={data?.data?.csrContent?.title}
-        date={data?.data?.csrContent?.createdAt}
+        date={
+          data?.data?.csrContent?.eventDate
+            ? data?.data?.csrContent?.eventDate
+            : data?.data?.csrContent?.createdAt
+        }
       />
       <NewDetailContent desc={data?.data?.csrContent?.textBody} />
       <OtherNew />

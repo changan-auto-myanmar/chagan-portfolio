@@ -1,12 +1,36 @@
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectFade } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
 import { FaCalendarAlt } from "react-icons/fa";
+import { Autoplay } from "swiper/modules";
 
 function NewDetailBanner({ image, title, date }) {
   return (
-    <div className="w-full h-[400px] lg:h-[600px] relative">
-      <img
-        src={image}
-        className="w-full h-full object-cover brightness-50 bg-black"
-      />
+    <Swiper
+      modules={[EffectFade, Autoplay]}
+      effect="fade"
+      loop={true}
+      speed={1000}
+      autoplay={{
+        delay: 1000,
+      }}
+      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
+    >
+      {image?.length > 0 &&
+        image.map((banner) => (
+          <SwiperSlide key={banner._id}>
+            <img
+              src={banner.url}
+              className="w-full h-full object-cover brightness-50 bg-black"
+              loading="lazy"
+            />
+          </SwiperSlide>
+        ))}
+
       <div className="absolute w-full bottom-0 z-10 mx-auto">
         <div className="w-full lg:w-[1000px] mx-auto backdrop-blur-sm bg-white/30 py-10 px-5">
           <p className="text-[18px] md:text-[24px] font-bold">{title}</p>
@@ -16,7 +40,7 @@ function NewDetailBanner({ image, title, date }) {
           </p>
         </div>
       </div>
-    </div>
+    </Swiper>
   );
 }
 

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import MyButton from "../button/MyButton";
-import newbanner from "./../../assets/images/NewBanner.png";
 
 function NewBanner({ image, title, id }) {
   return (

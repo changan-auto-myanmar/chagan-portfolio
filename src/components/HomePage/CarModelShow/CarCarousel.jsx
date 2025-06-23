@@ -12,7 +12,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const CarCarousel = ({ tab }) => {
-  console.log("tab", tab);
+  // console.log("tab", tab);
   const [activeIndex, setActiveIndex] = useState(0);
   // console.log
   return (
