@@ -14,7 +14,7 @@ const CarColorChanger = ({ carData, name }) => {
         <div className="relative ">
           {
             <motion.img
-              src={carData[carColor].car_color_image.url}
+              src={carData[carColor].car_color_swatches.url}
               alt={carData[carColor]?.color_name}
               className={`lg:w-[600px] lg:h-auto object-cover`}
             />
@@ -24,7 +24,7 @@ const CarColorChanger = ({ carData, name }) => {
           {carData.map((color, index) => (
             <img
               key={color._id}
-              src={color.car_color_swatches.url}
+              src={color.car_color_image.url}
               className={`w-12 h-12 rounded-full border-2 border-gray-100 hover:border-gray-400 cursor-pointer`}
               onClick={() => setCarColor(index)}
               aria-label={color.name}
