@@ -1,9 +1,9 @@
 import { HiOutlineDownload } from "react-icons/hi";
 
-function CarBanner({ image, sologram, name, pdf }) {
+function CarBanner({ image, sologram, pdf }) {
   return (
     <div className="w-full h-[400px] md:h-[450px] lg:h-screen relative">
-      <div className="w-full h-full absolute filter">
+      <div className="w-full h-full absolute filters">
         <img src={image} className="w-full h-full object-cover" />
       </div>
 
@@ -30,12 +30,6 @@ function CarBanner({ image, sologram, name, pdf }) {
             <br /> Embrace Excellence.&quot;
           </p>
         )}
-        <span
-          className="font-changan text-[24px] text-white"
-          style={{ textShadow: "0px 0px 15px rgba(0, 0, 0, 1)" }}
-        >
-          {name}
-        </span>
       </div>
       <div className="absolute bottom-[10px] md:bottom-[64px] right-[70%] md:right-0 w-[200px] md:w-[300px] translate-x-[50%] md:translate-x-0 md:right-0 z-10 p-0 md:pe-[64px] space-x-[24px]">
         <a

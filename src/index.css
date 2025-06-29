@@ -35,6 +35,16 @@ body {
   bottom: 10px !important;
 }
 
+.car-carouselss .swiper-pagination {
+  bottom: 100px !important;
+  @apply block md:hidden;
+}
+
+.car-brand-banner .swiper-pagination {
+  /* bottom: 100px !important; */
+  @apply block md:hidden;
+}
+
 .car-gallery-swiper .swiper-pagination-bullet {
   background: #374151 !important;
   opacity: 0.5 !important;

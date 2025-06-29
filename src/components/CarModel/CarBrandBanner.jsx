@@ -66,7 +66,7 @@ function CarBrandBanner() {
         pagination={{
           clickable: true,
         }}
-        className="relative h-[400px] md:h-[500px] lg:h-screen overflow-hidden bg-primary"
+        className="relative h-[400px] md:h-[500px] lg:h-screen overflow-hidden bg-primary car-brand-banner"
         initialSlide={activeSlideId}
         onSlideChange={handleSlideChange}
         style={{

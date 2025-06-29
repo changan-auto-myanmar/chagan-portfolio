@@ -8,7 +8,7 @@ const navLinks = [
   { to: "/car-model/0", name: "Car Model" },
   { to: "/about", name: "About Us" },
   { to: "/services", name: "Services" },
-  { to: "/new", name: "New & Event" },
+  { to: "/new", name: "News & Events" },
   { to: "/contact", name: "Contact Us" },
 ];
 
@@ -63,7 +63,7 @@ const Navbar = () => {
                   key={to} // Using the "to" property as a unique key
                   to={to}
                   className={({ isActive }) =>
-                    `text-white hover:text-white p-2 ${
+                    `text-white hover:scale-95 p-2 ${
                       isActive
                         ? "text-white font-bold opacity-100 hover:opacity-100"
                         : "opacity-80"

@@ -83,14 +83,22 @@ function ServiceFrom() {
               className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
             />
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2 relative">
+            {!date && (
+              <label
+                htmlFor="date"
+                className="absolute top-1/2 translate-y-[-50%] left-2 text-blue-900 text-[16px] sm:hidden"
+              >
+                Select Date
+              </label>
+            )}
             <input
               required
-              value={date}
+              value={date || "Enter"}
               onChange={(e) => setDate(e.target.value)}
               type="date"
-              placeholder="Name"
-              className="w-full p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none"
+              placeholder="Date"
+              className="w-full webkit-appearance-none p-2 border-solid border-0 border-b border-blue-900 shadow-lg shadow-gray-300 placeholder:text-blue-900 focus:outline-none bg-white"
             />
           </div>
         </div>

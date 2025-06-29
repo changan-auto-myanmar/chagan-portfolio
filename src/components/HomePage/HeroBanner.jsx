@@ -27,11 +27,11 @@ function HeroBanner() {
       modules={[EffectFade]}
       effect="fade"
       loop={true}
-      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary"
+      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary relative"
     >
       {data?.data?.banners?.length > 0 &&
         data?.data?.banners.map((banner) => (
-          <SwiperSlide key={banner._id}>
+          <SwiperSlide key={banner._id} className="absolute filters">
             <img
               src={banner.url}
               className="w-full h-full object-cover"

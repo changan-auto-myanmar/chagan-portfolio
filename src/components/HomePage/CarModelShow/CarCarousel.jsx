@@ -18,20 +18,17 @@ const CarCarousel = ({ tab }) => {
   return (
     <div className="w-screen lg:w-[800px] md:px-5 relative">
       <Swiper
-        // key={activeIndex}
         // loop={true}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
-        // pagination={{ clickable: true }}
-        // navigation
+        className="car-carouselss"
+        pagination={{ clickable: true }}
         onSlideChange={(swiper) => {
-          //console.log//("Slide changed to index:", swiper.activeIndex);
           setActiveIndex(swiper.activeIndex); // Update active index on slide change
         }}
       >
         {tab.map((item) => (
           <SwiperSlide key={item._id} className="flex items-center flex-col">
-            {/* <p>{item?.car_name}</p> */}
             <img
               loading="lazy"
               src={item?.mockup?.url}

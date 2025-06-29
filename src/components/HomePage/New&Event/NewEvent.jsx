@@ -73,10 +73,25 @@ function YouTube() {
       </div>
 
       <div className="mt-10 w-full">
-        <Swiper spaceBetween={30} slidesPerView={"auto"} ref={swiperRef}>
+        <Swiper
+          spaceBetween={30}
+          // slidesPerView={"auto"}
+          ref={swiperRef}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 2,
+            },
+          }}
+        >
           {data?.data?.csrContents?.length > 0 &&
             data?.data?.csrContents?.map((tab, index) => (
-              <SwiperSlide key={index} className="xs:w-full sm:w-1/2 lg:w-1/3">
+              <SwiperSlide key={index}>
                 <Content tab={tab} />
               </SwiperSlide>
             ))}

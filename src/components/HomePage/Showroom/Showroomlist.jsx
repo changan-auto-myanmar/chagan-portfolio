@@ -21,7 +21,7 @@ const ShowroomList = () => {
   return (
     <div className="my-10 p-5 sm:p-10 lg:px-0 lg:py-[64px] lg:w-[1000px] mx-auto">
       <p className="header-text font-changan font-bold">
-        Our Showroom in Myanmar
+        Our Showrooms in Myanmar
       </p>
       <div className="flex flex-col md:gap-12">
         {showrooms.map((showroom, index) => (

@@ -23,7 +23,9 @@ function YouTube() {
             href="https://www.youtube.com/@ChanganMyanmarMotor"
             className="inline-flex items-center px-4 py-2 border border-gray-400 rounded hover:bg-gray-100 "
           >
-            <span className="mr-10 font-semibold">VIEW YOUTUBE CHANNEL</span>
+            <span className="mr-10 md:mr-20 font-semibold">
+              VIEW YOUTUBE CHANNEL
+            </span>
             <MdArrowRightAlt className="text-3xl text-primary font-bold" />
           </a>
         </div>
