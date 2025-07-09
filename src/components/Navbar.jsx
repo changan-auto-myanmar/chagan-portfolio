@@ -23,7 +23,7 @@ const Navbar = () => {
     <nav className="absolute bg-white py-1 bg-opacity-10 backdrop-blur-sm z-40 w-full">
       <div className="flex flex-wrap items-center justify-between px-1 md:px-10">
         <div>
-          <img src={logo} alt="Logo" className="w-[100px] md:w-[150px]" />
+          <img src={logo} alt="Logo" className="w-[100px] md:w-[120px]" />
         </div>
 
         <button

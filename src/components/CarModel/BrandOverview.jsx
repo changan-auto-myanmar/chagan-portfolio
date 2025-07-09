@@ -27,7 +27,7 @@ const datas = [
   },
   {
     id: 3,
-    name: "KAICHENG",
+    name: "KAICHEN",
     image: kaicheng,
     desc: "Kaicene Star Truck is a small commercial vehicle that's powered by an efficient 4-cylinder gasoline engine that measures at 1.2 L in displacement and is Euro 4 compliant.",
     body: "Kaicene Star is a series of trucks and microvans built and sold by Changan Automobile under the Changan brand since 1999. The Changan Star series was later repositioned under the Kaicene sub-brand of Changan Automobile.",

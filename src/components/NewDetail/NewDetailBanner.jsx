@@ -25,7 +25,7 @@ function NewDetailBanner({ image, title, date }) {
           <SwiperSlide key={banner._id}>
             <img
               src={banner.url}
-              className="w-full h-full object-cover brightness-50 bg-black"
+              className="w-full h-full object-cover"
               loading="lazy"
             />
           </SwiperSlide>

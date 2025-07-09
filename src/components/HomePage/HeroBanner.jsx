@@ -27,11 +27,11 @@ function HeroBanner() {
       modules={[EffectFade]}
       effect="fade"
       loop={true}
-      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary relative"
+      className="relative h-[400px] md:h-[450px] lg:h-[100vh] z-20 bg-primary relative"
     >
       {data?.data?.banners?.length > 0 &&
         data?.data?.banners.map((banner) => (
-          <SwiperSlide key={banner._id} className="absolute filters">
+          <SwiperSlide key={banner._id} className="">
             <img
               src={banner.url}
               className="w-full h-full object-cover"
@@ -51,7 +51,7 @@ function HeroBanner() {
         <SwiperButtonPrev />
         <SwiperButtonNext />
       </motion.div>
-      <motion.span
+      {/* <motion.span
         className="absolute bottom-[64px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-[34px] lg:text-[64px] font-changan font-bold"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ function HeroBanner() {
       >
         CHANGAN,
         <br /> Smart Your Future
-      </motion.span>
+      </motion.span> */}
     </Swiper>
   );
 }

@@ -1,7 +1,7 @@
 import axios from "./../axios";
 
 const getCarDetail = async (brand) => {
-  // console.log("brand", brand);
+  console.log("brand", brand);
   const res = await axios.get(`api/v1/changan-showcase`);
   // console.log("detail api", res);
   const data =

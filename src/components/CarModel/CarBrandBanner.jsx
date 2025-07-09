@@ -77,17 +77,9 @@ function CarBrandBanner() {
       >
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="brightness-50 bg-black h-full">
+            <div className="h-full">
               <img src={item.img} className="w-full h-full object-cover" />
             </div>
-            <p
-              className="absolute bottom-[34px] md:bottom-[64px] left-0 z-10 ps-3 md:ps-[64px] text-white text-[20px] md:text-5xl font-changan font-bold hidden lg:block"
-              style={{
-                textShadow: " 2px 2px 4px #0B457F",
-              }}
-            >
-              {item.name}
-            </p>
           </SwiperSlide>
         ))}
         <div className="absolute bottom-[34px] md:bottom-[64px] right-0 z-10 pe-3 md:pe-[64px] space-x-[24px] hidden md:block">

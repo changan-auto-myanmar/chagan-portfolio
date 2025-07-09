@@ -3,11 +3,11 @@ import { HiOutlineDownload } from "react-icons/hi";
 function CarBanner({ image, sologram, pdf }) {
   return (
     <div className="w-full h-[400px] md:h-[450px] lg:h-screen relative">
-      <div className="w-full h-full absolute filters">
-        <img src={image} className="w-full h-full object-cover" />
+      <div className="w-full h-full absolute">
+        <img src={image} className="w-full h-full" />
       </div>
 
-      <div className="absolute bottom-[74px] md:bottom-[102px] left-[5%] z-10">
+      {/* <div className="absolute bottom-[74px] md:bottom-[102px] left-[5%] z-10">
         {sologram ? (
           <p
             className="text-white text-[24px] font-bold"
@@ -30,7 +30,7 @@ function CarBanner({ image, sologram, pdf }) {
             <br /> Embrace Excellence.&quot;
           </p>
         )}
-      </div>
+      </div> */}
       <div className="absolute bottom-[10px] md:bottom-[64px] right-[70%] md:right-0 w-[200px] md:w-[300px] translate-x-[50%] md:translate-x-0 md:right-0 z-10 p-0 md:pe-[64px] space-x-[24px]">
         <a
           href={pdf}
