@@ -27,7 +27,7 @@ const datas = [
   },
   {
     id: 3,
-    name: "KAICHEN",
+    name: "KAICENE",
     image: kaicheng,
     desc: "Kaicene Star Truck is a small commercial vehicle that's powered by an efficient 4-cylinder gasoline engine that measures at 1.2 L in displacement and is Euro 4 compliant.",
     body: "Kaicene Star is a series of trucks and microvans built and sold by Changan Automobile under the Changan brand since 1999. The Changan Star series was later repositioned under the Kaicene sub-brand of Changan Automobile.",
@@ -55,24 +55,14 @@ function BrandOverview({ id }) {
           spaceBetween={30}
           loop={true}
           centeredSlides={true}
-          breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 2,
-            },
-          }}
+          slidesPerView={1}
         >
           {data?.data.brandOverview
             .filter((item) => item.car_brand === datas[id].name)
             .map((item) =>
               item.brandImageUrls.map((image, index) => {
                 return (
-                  <SwiperSlide key={index} style={{ width: "800px" }}>
+                  <SwiperSlide key={index}>
                     <img
                       src={image.url}
                       className="w-full h-[300px] md:h-[350px] object-cover"

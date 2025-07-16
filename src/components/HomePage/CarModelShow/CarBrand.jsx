@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import changan from "./../../../assets/images/brandoverview/changan.png";
 import deepal from "./../../../assets/images/deepal-banner.jpg";
-import kaicheng from "./../../../assets/images/kaicheng-banner.png";
+import kaicheng from "./../../../assets/images/kaicheng.svg";
 
 export default function CarBrand() {
   const navigate = useNavigate();
@@ -52,7 +52,7 @@ export default function CarBrand() {
           <img
             alt="Kaicheng"
             src={kaicheng}
-            className="translate-x-0 lg:translate-x-[100px] hover:scale-110 transition duration-300"
+            className="translate-x-0 lg:translate-x-[150px] hover:scale-110 transition duration-300 lg:w-[355px]"
           />
         </div>
       </div>

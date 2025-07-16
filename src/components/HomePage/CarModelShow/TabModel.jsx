@@ -38,7 +38,7 @@ export const tabs = [
       <div className="flex gap-2 items-center">
         <img src={kaicene} className="w-[64px] h-[64px] object-cover" />
         <p className="md:text-[18px] lg:text-[24px] font-changan font-bold hidden md:block">
-          KAICHEN
+          KAICENE
         </p>
       </div>
     ),
