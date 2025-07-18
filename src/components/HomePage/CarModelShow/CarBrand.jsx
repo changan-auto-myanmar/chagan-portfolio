@@ -52,7 +52,7 @@ export default function CarBrand() {
           <img
             alt="Kaicheng"
             src={kaicheng}
-            className="translate-x-0 lg:translate-x-[150px] hover:scale-110 transition duration-300 lg:w-[355px]"
+            className="translate-x-0 lg:translate-x-[180px] hover:scale-110 transition duration-300 lg:w-[355px]"
           />
         </div>
       </div>
