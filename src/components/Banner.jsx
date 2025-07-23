@@ -1,7 +1,7 @@
 function Banner({ data }) {
   // console.log(data);
   return (
-    <div className="w-full h-[400px] md:h-[450px] lg:h-screen relative bg-primary">
+    <div className="w-full h-[400px] md:h-[450px] lg:h-[calc(100vh-80px)] relative bg-primary">
       <div className="w-full h-full">
         <img src={data.img} className="w-full h-full object-cover" />
       </div>

@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css";
 import "swiper/css/navigation";
 import changan from "./../../assets/images/brandoverview/changanbanner.jpg";
-import deepel from "./../../assets/images/brandoverview/deepalbanner.jpg";
+import deepel from "./../../assets/images/brandoverview/deepalBanner.png";
 import kaisen from "./../../assets/images/brandoverview/kaichengbanner.jpg";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
 import { useState } from "react";
@@ -66,7 +66,7 @@ function CarBrandBanner() {
         pagination={{
           clickable: true,
         }}
-        className="relative h-[400px] md:h-[500px] lg:h-screen overflow-hidden bg-primary car-brand-banner"
+        className="relative h-[400px] md:h-[500px] lg:h-[calc(100vh-80px)] overflow-hidden bg-primary car-brand-banner"
         initialSlide={activeSlideId}
         onSlideChange={handleSlideChange}
         style={{

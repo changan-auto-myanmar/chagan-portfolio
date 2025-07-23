@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "./../assets/images/logo/changan-new-logo.png";
+import logo from "./../assets/images/logo/navbar-logo.png";
 import { FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const navLinks = [
@@ -20,34 +20,40 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute bg-white py-1 bg-opacity-10 backdrop-blur-sm z-40 w-full">
-      <div className="flex flex-wrap items-center justify-between px-1 md:px-10">
-        <div>
-          <img src={logo} alt="Logo" className="w-[100px] md:w-[120px]" />
+    <nav className="py-1 bg-primary w-full">
+      <div className="flex flex-wrap items-center justify-between px-1 md:px-5">
+        <div className="py-3 lg:py-0">
+          <img src={logo} alt="Logo" className="w-[150px] md:w-[290px]" />
         </div>
 
         <button
           onClick={toggleMenu}
           type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-white  rounded-lg lg:hidden hover:text-primary focus:outline-none"
+          className="inline-flex items-center p-2 w-10 h-10 justify-center text-white  rounded-lg lg:hidden hover:scale-105 focus:outline-none"
           aria-controls="navbar-default"
           aria-expanded={isOpen}
         >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
+          {!isOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#fff"
+            >
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+          )}
         </button>
 
         <div
@@ -56,14 +62,14 @@ const Navbar = () => {
           } w-full lg:block lg:w-auto transition-all duration-300 ease-in-out`}
           id="navbar-default"
         >
-          <div className="space-x-4 flex flex-col lg:flex-row items-center ">
-            <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-5 lg:py-0">
+            <div className="flex flex-col lg:flex-row ">
               {navLinks.map(({ to, name }) => (
                 <NavLink
                   key={to} // Using the "to" property as a unique key
                   to={to}
                   className={({ isActive }) =>
-                    `text-white hover:scale-95 p-2 ${
+                    `text-white text-[14px] hover:scale-95 hover:opacity-100 p-2 transition-all duration-300 ease-in-out ${
                       isActive
                         ? "text-white font-bold opacity-100 hover:opacity-100"
                         : "opacity-80"
@@ -75,15 +81,15 @@ const Navbar = () => {
                 </NavLink>
               ))}
             </div>
-            <div className="flex gap-4 lg:ps-5 mt-2 lg:mt-0 pb-5 lg:pb-0">
+            <div className="flex gap-5 p-2 lg:p-0">
               <a href="https://www.facebook.com/changanmyanmarmotor">
-                <FaFacebook className="text-white text-xl" />
+                <FaFacebook className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
               <a href="https://www.youtube.com/@ChanganMyanmarMotor">
-                <FaYoutube className="text-white text-xl" />
+                <FaYoutube className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
               <a href="https://www.tiktok.com/@changan_myanmar">
-                <FaTiktok className="text-white text-xl" />
+                <FaTiktok className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
             </div>
           </div>

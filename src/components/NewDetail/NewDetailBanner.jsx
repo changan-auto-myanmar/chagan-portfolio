@@ -18,7 +18,7 @@ function NewDetailBanner({ image, title, date }) {
       autoplay={{
         delay: 1000,
       }}
-      className="relative h-[400px] md:h-[450px] lg:h-screen z-20 bg-primary bg-cover bg-center bg-no-repeat"
+      className="relative h-[400px] md:h-[450px] lg:h-[calc(100vh-80px)] z-20 bg-primary bg-cover bg-center bg-no-repeat"
     >
       {image?.length > 0 &&
         image.map((banner) => (

@@ -16,6 +16,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs"));
 import PageNotFound from "./pages/PageNotFound";
 // css
 import "./App.css";
+import AlertBox from "./components/alertbox/AlertBox";
 
 const MotionDiv = ({ children }) => <motion.div>{children}</motion.div>;
 
@@ -26,7 +27,6 @@ function App() {
         <Toaster position="top-center" richColors />
         <ScrollToTop />
         <Navbar />
-
         <Routes>
           <Route
             path="/"
@@ -80,6 +80,7 @@ function App() {
           />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
+        <AlertBox />
       </Router>
     </AnimatePresence>
   );
