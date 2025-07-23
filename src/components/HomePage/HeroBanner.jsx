@@ -17,11 +17,9 @@ function HeroBanner() {
     queryKey: ["photos"],
     queryFn: getHeroBanner,
     staleTime: 1000 * 60 * 5,
-    cacheTime: 1000 * 60 * 10, // Cache for 10 minutes
+    cacheTime: 1000 * 60 * 5, // Cache for 10 minutes
     refetchOnWindowFocus: false, // Don't refetch when window regains focus
   });
-
-  // console.log("banner", data.data.banners);
   return (
     <Swiper
       modules={[EffectFade]}

@@ -37,14 +37,9 @@ function AlertBox() {
             </p>
             <motion.button
               onClick={handleDismiss}
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "var(--color-primary)",
-                color: "white",
-              }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.5 }}
-              className="text-primary border border-primary px-5 py-2 rounded-md transition-colors duration-200"
+              className="text-primary hover:scale-105 border border-primary px-5 py-2 rounded-md transition-colors duration-200"
             >
               Dismiss
             </motion.button>

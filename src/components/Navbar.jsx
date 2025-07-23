@@ -82,13 +82,19 @@ const Navbar = () => {
               ))}
             </div>
             <div className="flex gap-5 p-2 lg:p-0">
-              <a href="https://www.facebook.com/changanmyanmarmotor">
+              <a
+                href="https://www.facebook.com/changanmyanmarmotor"
+                target="_blank"
+              >
                 <FaFacebook className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
-              <a href="https://www.youtube.com/@ChanganMyanmarMotor">
+              <a
+                href="https://www.youtube.com/@ChanganMyanmarMotor"
+                target="_blank"
+              >
                 <FaYoutube className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
-              <a href="https://www.tiktok.com/@changan_myanmar">
+              <a href="https://www.tiktok.com/@changan_myanmar" target="_blank">
                 <FaTiktok className="text-white text-xl hover:scale-105 transition-all duration-300 ease-in-out" />
               </a>
             </div>
