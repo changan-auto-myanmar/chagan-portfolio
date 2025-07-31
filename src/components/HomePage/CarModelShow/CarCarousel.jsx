@@ -32,7 +32,7 @@ const CarCarousel = ({ tab }) => {
             <img
               loading="lazy"
               src={item?.mockup?.url}
-              className="mx-auto w-[400px] sm:w-auto h-[230px] sm:h-[300px]"
+              className="mx-auto w-[400px] sm:w-auto h-auto sm:h-[350px]"
             />
           </SwiperSlide>
         ))}
