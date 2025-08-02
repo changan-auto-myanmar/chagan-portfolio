@@ -15,13 +15,11 @@ const Home = () => {
         <a
           href="https://m.me/100830611622590"
           target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 bg-white px-3 md:px-5 py-3 rounded-lg"
+          rel="noopener noreferrer "
+          className="flex items-center text-primary gap-2 bg-white px-3 md:px-5 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors duration-300 ease-in-out"
         >
           <FaFacebookMessenger color="#0866FF" size={24} />
-          <span className="text-primary font-medium hidden md:block">
-            Contact Support
-          </span>
+          <span className="font-medium hidden md:block">Contact Support</span>
         </a>
       </div>
       <HeroBanner />
