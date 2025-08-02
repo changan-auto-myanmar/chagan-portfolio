@@ -7,7 +7,7 @@ function CarBanner({ image, pdf }) {
         <img src={image} className="w-full h-full object-cover" />
       </div>
 
-      <div className="absolute bottom-[10px] md:bottom-[64px] right-[20%] md:right-0 w-[200px] md:w-[300px] translate-x-[50%] md:translate-x-0 md:right-0 z-10 p-0 md:pe-[64px] space-x-[24px]">
+      <div className="absolute bottom-[10px] md:bottom-[64px] right-[30%] md:right-0 w-[200px] md:w-[300px] translate-x-[50%] md:translate-x-0 md:right-0 z-10 p-0 md:pe-[64px] space-x-[24px]">
         <a
           href={pdf}
           target="_blank"
