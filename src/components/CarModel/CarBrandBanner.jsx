@@ -9,7 +9,7 @@ import changan from "./../../assets/images/brandoverview/changanbanner.jpg";
 import deepel from "./../../assets/images/brandoverview/deepalBanner.png";
 import kaisen from "./../../assets/images/brandoverview/kaichengbanner.jpg";
 import CarCarousel from "../HomePage/CarModelShow/CarCarousel";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BrandOverview from "./BrandOverview";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -19,7 +19,11 @@ import getCarDetail from "./../../api/home/getCarDetails.js";
 import "swiper/css";
 import "swiper/css/effect-fade";
 
-function CarBrandBanner() {
+const bannerImages = [changan, deepel, kaisen];
+
+function CarBrandBanner({ onBannerLoaded }) {
+  const [loadedCount, setLoadedCount] = useState(0);
+  const totalImages = bannerImages.length;
   const { id } = useParams();
   const [activeSlideId, setActiveSlideId] = useState(id);
   const carModelarray = [
@@ -40,6 +44,18 @@ function CarBrandBanner() {
       img: kaisen,
     },
   ];
+
+  const handleImageLoad = () => {
+    setLoadedCount((prevCount) => prevCount + 1);
+  };
+
+  useEffect(() => {
+    // When the count of loaded images equals the total images,
+    // call the parent's function to signal that it's done.
+    if (loadedCount === totalImages) {
+      onBannerLoaded();
+    }
+  }, [loadedCount, totalImages, onBannerLoaded]);
 
   const { data, refetch } = useQuery({
     queryKey: ["carDetail", activeSlideId],
@@ -78,7 +94,11 @@ function CarBrandBanner() {
         {carModelarray.map((item) => (
           <SwiperSlide key={item.id}>
             <div className="h-full">
-              <img src={item.img} className="w-full h-full object-cover" />
+              <img
+                src={item.img}
+                onLoad={handleImageLoad}
+                className="w-full h-full object-cover"
+              />
             </div>
           </SwiperSlide>
         ))}
